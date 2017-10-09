@@ -1,11 +1,16 @@
 body {
   position: relative;
+  font: normal 16px arial, "sans-serif";
 }
 
-html body .mainSlider {
-  background-color: #F44336;
-  color: #fff;
+.SliderWrapper {
+  background-color: greenyellow;
+}
+
+.mainSlider {
+  color: green;
   height: 200px;
+  color: green;
 }
 
 .affix {
@@ -18,52 +23,70 @@ html body .mainSlider {
   margin-bottom: 0px;
 }
 
-.affix~.container-fluid {
+.affix~.container {
   position: relative;
   top: 50px;
 }
 
 /*************** MAIN ***************/
+.section1Wrapper {  
+  background-color: #1E88E5;
+}
+
+.section2Wrapper { 
+  background-color: #673ab7;
+}
+
+.section3Wrapper {  
+  background-color: #ff9800;
+}
+
+.section4Wrapper { 
+  background-color: #1E88E5;
+}
+
+.section5Wrapper {  
+  background-color: #673ab7;
+}
+
+.section6Wrapper { 
+  background-color: #ff9800;
+}
+
 #section1 {
   padding-top: 50px;
   height: 500px;
   color: #fff;
-  background-color: #1E88E5;
 }
 
 #section2 {
   padding-top: 50px;
   height: 500px;
   color: #fff;
-  background-color: #673ab7;
 }
 
 #section3 {
   padding-top: 50px;
   height: 500px;
   color: #fff;
-  background-color: #ff9800;
 }
 
 #section4 {
   padding-top: 50px;
   height: 500px;
   color: #fff;
-  background-color: #1E88E5;
 }
 
 #section5 {
   padding-top: 50px;
   height: 500px;
   color: #fff;
-  background-color: #673ab7;
 }
 
 #section6 {
   padding-top: 50px;
   height: 500px;
   color: #fff;
-  background-color: #ff9800;
 }
 /* #section41 {
   padding-top: 50px;
@@ -86,8 +109,8 @@ html body .mainSlider {
 footer {
   padding-top: 100px;
   height: 500px;
-  color: blue;
-  background-color: #ccc;
+  color: #fff;
+  background-color: navy;
   /* outline: 3px solid red; */
 }
 
