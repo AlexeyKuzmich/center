@@ -1,115 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   position: relative;
-  font: normal 16px arial, "sans-serif";
+  font: 16px 'Open Sans', Arial, sans-serif;
+  color: #010101;
 }
 
-.SliderWrapper {
-  background-color: greenyellow;
-}
-
-.mainSlider {
-  color: green;
-  height: 200px;
-  color: green;
-}
-
-.affix {
-  top: 0;
+.mainSliderC img {
   width: 100%;
-  z-index: 9999 !important;
+  height: auto;
 }
 
-.navbar {
-  margin-bottom: 0px;
+/*************** NAVIGATION ***************/
+.navC {
+  /* background-color: blue; */
+}
+/*************** / NAVIGATION ***************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************** SLIDER ***************/
+.mainSliderC .slider-1,
+.mainSliderC .slider-2,
+.mainSliderC .slider-3{
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.affix~.container {
-  position: relative;
-  top: 50px;
+.mainSliderC .slider-1{
+  background-image: url(../images/mainSlider/1.jpg);
 }
 
-/*************** MAIN ***************/
-.section1Wrapper {  
-  background-color: #1E88E5;
+.mainSliderC .slider-2{
+  background-image: url(../images/mainSlider/2.jpg);
 }
 
-.section2Wrapper { 
-  background-color: #673ab7;
+.mainSliderC .slider-3{
+  background-image: url(../images/mainSlider/3.jpg);
 }
+/*************** / SLIDER ***************/
 
-.section3Wrapper {  
-  background-color: #ff9800;
-}
 
-.section4Wrapper { 
-  background-color: #1E88E5;
-}
 
-.section5Wrapper {  
-  background-color: #673ab7;
-}
 
-.section6Wrapper { 
-  background-color: #ff9800;
-}
 
-#section1 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
-}
 
-#section2 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
+/*************** PARALLAX ***************/
+.parallax-window {
+    min-height: 450px;
+    background: transparent;
 }
+/*************** / PARALLAX ***************/
 
-#section3 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
-}
 
-#section4 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
-}
 
-#section5 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
-}
-
-#section6 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
-}
-/* #section41 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
-  background-color: #00bcd4;
-}
-
-#section42 {
-  padding-top: 50px;
-  height: 500px;
-  color: #fff;
-  background-color: #009688;
-} */
-/*************** ? MAIN ***************/
 
 
 
 /*************** FOOTER ***************/
 footer {
   padding-top: 100px;
-  height: 500px;
-  color: #fff;
+  height: 250px;
+  color: lightblue;
   background-color: navy;
   /* outline: 3px solid red; */
 }
@@ -117,6 +83,37 @@ footer {
 footer p {
   display: table;
   margin: 0 auto;
-  font-size: 30px;
 }
 /*************** / FOOTER ***************/
+
+
+
+
+
+
+
+/*************** MEDIAQUERY ***************/
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575px) {
+  .dropdown-menu > li > a {
+    white-space: normal;  
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767px) {
+  
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991px) {
+  
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1199px) {
+  
+}
