@@ -4,14 +4,11 @@
 }
 
 body {
+  padding-top: 50px;
   position: relative;
   font: 16px 'Open Sans', Arial, sans-serif;
   color: #010101;
-}
-
-.mainSliderC img {
-  width: 100%;
-  height: auto;
+  line-height: 2;
 }
 
 /*************** NAVIGATION ***************/
@@ -34,6 +31,11 @@ body {
 
 
 /*************** SLIDER ***************/
+.mainSliderC img {
+  width: 100%;
+  height: auto;
+}
+
 .mainSliderC .slider-1,
 .mainSliderC .slider-2,
 .mainSliderC .slider-3{

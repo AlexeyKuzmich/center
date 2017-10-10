@@ -13,6 +13,6 @@ $(document).ready(function() {
 
 
   // parallax
-  $('.parallax-window').parallax({imageSrc: "images/parallax/bg1.jpg"});
+  $('.parallax-window').parallax({imageSrc: "images/parallax/paralax1.jpg"});
 
 });
