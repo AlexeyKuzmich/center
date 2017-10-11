@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // slider height
   function caruselHeightDetect(){
-    var caruselHeight = $(window).height() / 2;
+    var caruselHeight = $(window).height() * 2 / 3;
     $("#mainSliderC .item").css("height", caruselHeight);
     console.log("caruselHeight" + caruselHeight);
   };

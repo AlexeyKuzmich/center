@@ -125,6 +125,14 @@ nav li a {
   border-color: blue;
   background-color: blue;
 }
+
+.carousel-control {
+  color: blue;
+}
+
+.carousel-control:hover {
+  color: lightblue;
+}
 /*************** / SLIDER ***************/
 
 
