@@ -11,9 +11,70 @@ body {
   line-height: 2;
 }
 
+/*************** COMMON STYLES ***************/
+h1 {
+  margin: 100px 0;
+  text-align: center;
+  font-size: 50px;
+  color: blue;
+}
+
+hr.hrStyle {
+    border: 0;
+    height: 3px;
+    background-image: -webkit-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
+    background-image:    -moz-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
+    background-image:     -ms-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
+    background-image:      -o-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
+    background-image: linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
+}
+    
+/*************** / COMMON STYLES **************
+
+
+
+
+
+
+
+
+
+
 /*************** NAVIGATION ***************/
-.navC {
-  /* background-color: blue; */
+.navbar-inverse,
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: transparent;
+}
+
+.navC,
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+  background: blue;
+  background: -webkit-linear-gradient(top, lightblue, #2F58C8);
+  background: -o-linear-gradient(top, lightblue, #2F58C8);
+  background: -moz-linear-gradient(top, lightblue, #2F58C8);
+  background: linear-gradient(to bottom, #1F10C8, #4364C8);
+}
+
+.navbar-nav>li:hover,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+  background: linear-gradient(to top, #1F10C8, #4364C8);
+}
+
+nav li,
+nav li a {
+  transition: all .3s ease;
+}
+
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+  background-color: transparent;
+  border-color: transparent;
 }
 /*************** / NAVIGATION ***************/
 
@@ -54,6 +115,16 @@ body {
 .mainSliderC .slider-3{
   background-image: url(../images/mainSlider/3.jpg);
 }
+
+.carousel-indicators li {
+  border-color: blue;
+  background-color: transparent;
+}
+
+.carousel-indicators .active {
+  border-color: blue;
+  background-color: blue;
+}
 /*************** / SLIDER ***************/
 
 
@@ -71,15 +142,29 @@ body {
 
 
 
+.department img {
+  width: 30%;
+  height: auto;
+  margin: 0 30px 30px 0;
+}
+
+
+
+
+
+
 
 
 /*************** FOOTER ***************/
 footer {
   padding-top: 100px;
   height: 250px;
-  color: lightblue;
-  background-color: navy;
-  /* outline: 3px solid red; */
+  color: #9d9d9d;
+  background: blue;
+  background: -webkit-linear-gradient(top, #1F10C8, #2F58C8);
+  background: -o-linear-gradient(top, #1F10C8, #2F58C8);
+  background: -moz-linear-gradient(top, #1F10C8, #2F58C8);
+  background: linear-gradient(to top, #1F10C8, #4364C8);
 }
 
 footer p {
@@ -107,7 +192,17 @@ footer p {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a,
+  .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus,
+  .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover {
+    background-color: blue;
+  }
   
+  .department img {
+    width: 100%;
+  }
+
+ 
 }
 
 /* Large devices (desktops, 992px and up) */

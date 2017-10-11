@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // slider height
   function caruselHeightDetect(){
-    var caruselHeight = $(window).height() * 2 / 3;
+    var caruselHeight = $(window).height() / 2;
     $("#mainSliderC .item").css("height", caruselHeight);
     console.log("caruselHeight" + caruselHeight);
   };
@@ -13,6 +13,6 @@ $(document).ready(function() {
 
 
   // parallax
-  $('.parallax-window').parallax({imageSrc: "images/parallax/paralax1.jpg"});
+  $(".parallax-window").parallax({imageSrc: "images/parallax/paralax1.jpg"});
 
 });
