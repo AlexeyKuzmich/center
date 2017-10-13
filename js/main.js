@@ -15,7 +15,11 @@ $(document).ready(function() {
   hoveredUl();// see $(window).resize();
 
   $(".ToggleButton").click(function(){
-    $(".mainNav").css("left", 0);
+    $(".mainNav").toggleClass("activeMenu");
+  });
+
+  $(".liHovered").click(function(){
+    $(".liHovered > ul").toggleClass("activePart");
   });
 
 
@@ -42,7 +46,7 @@ $(document).ready(function() {
 
   // scroll to top
   $(window).scroll(function() {
-    var height = $(window).height();
+    var height = $(window).height() / 2;
     if($(this).scrollTop() > height) {
       $(".scrollToTop").fadeIn();
     } else {
