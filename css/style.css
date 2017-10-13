@@ -1,17 +1,21 @@
+/*************** COMMON STYLES ***************/
 body {
-  padding-top: 50px;
   position: relative;
   font: 16px 'Open Sans', Arial, sans-serif;
   color: #010101;
   line-height: 1.5;
 }
 
-/*************** COMMON STYLES ***************/
 h1 {
   margin: 100px 0;
   text-align: center;
   font-size: 50px;
   color: blue;
+}
+
+a,
+a:hover {
+  text-decoration: none;
 }
 
 hr.hrStyle {
@@ -22,8 +26,7 @@ hr.hrStyle {
     background-image:     -ms-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
     background-image:      -o-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
     background-image: linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
-}
-    
+}    
 /*************** / COMMON STYLES **************
 
 
@@ -36,40 +39,86 @@ hr.hrStyle {
 
 
 /*************** NAVIGATION ***************/
-.navbar-inverse,
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border-color: transparent;
-}
-
-.navC,
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:focus,
-.navbar-inverse .navbar-nav>.active>a:hover {
+.mainNav {
+  height: 50px;
   background: blue;
-  background: -webkit-linear-gradient(top, lightblue, #2F58C8);
-  background: -o-linear-gradient(top, lightblue, #2F58C8);
-  background: -moz-linear-gradient(top, lightblue, #2F58C8);
-  background: linear-gradient(to bottom, #1F10C8, #4364C8);
+  background: -webkit-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
+  background: -o-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
+  background: -moz-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
+  background: linear-gradient(to bottom, #1F10C8, #4364C8, #1F10C8);
 }
 
-.navbar-nav>li:hover,
-.navbar-inverse .navbar-nav>.open>a,
-.navbar-inverse .navbar-nav>.open>a:focus,
-.navbar-inverse .navbar-nav>.open>a:hover {
-  background: linear-gradient(to top, #1F10C8, #4364C8);
+.mainNav li {
+  display: block;
+  float: left;
 }
 
-nav li,
-nav li a {
-  transition: all .3s ease;
+.mainNav > div > ul > li {
+  position: relative;
 }
 
-.navbar-inverse .navbar-toggle,
-.navbar-inverse .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle:hover {
+.mainNav > div > ul > li:first-child {
+  /* margin-left: -15px; */
+}
+
+.mainNav li a {
+  line-height: 40px;
+  padding: 5px 15px;
+  display: block;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  transition: all .3s;
+}
+
+.mainNav li a:hover {
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+}
+
+.mainNav > div > ul > li > ul {
+  display: none;
+}
+
+.mainNav > div > ul > li.hovered:hover > ul {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 300;
+}
+
+.mainNav > div > ul > li > ul > li {
+  float: none;
+}
+
+.mainNav > div > ul > li > ul > li > a {
+  line-height: 1.5;
+  text-align: left;
+  color: #fff;
+}
+
+.ToggleButton {
+  position: fixed;
+  top: 6px;
+  left: 17px;
+  width: 40px;
+  height: 38px;
   background-color: transparent;
-  border-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: none;
+  z-index: 500;
+}
+
+.ToggleButton span {
+  display: block;
+  width: 28px;
+  height: 5px;
+  margin: 5px 5px;
+  background-color: #fff;
+  border: 1px solid #fff;
 }
 /*************** / NAVIGATION ***************/
 
@@ -164,10 +213,10 @@ footer {
   height: 250px;
   color: #9d9d9d;
   background: blue;
-  background: -webkit-linear-gradient(top, #1F10C8, #2F58C8);
-  background: -o-linear-gradient(top, #1F10C8, #2F58C8);
-  background: -moz-linear-gradient(top, #1F10C8, #2F58C8);
-  background: linear-gradient(to top, #1F10C8, #4364C8);
+  background: -webkit-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
+  background: -o-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
+  background: -moz-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
+  background: linear-gradient(to bottom, #1F10C8, #4364C8, #1F10C8);
 }
 
 footer p {
@@ -188,7 +237,7 @@ footer p {
   bottom: 60px;
   width: 80px;
   height: 51px;
-  z-index: 900;
+  z-index: 100;
   text-align: center;
   font: normal 30px arial;
   transform: rotate(-90deg);
@@ -221,49 +270,84 @@ footer p {
 
 
 
-/*************** MEDIAQUERY ***************/
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query since this is the default in Bootstrap */
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 575px) {
-  .dropdown-menu > li > a {
-    white-space: normal;  
-  }
+
+
+
+
+
+
+
+
+
+/******************************************/
+/*************** MEDIAQUERY ***************/
+/******************************************/
+
+@media (max-width: 575px) { /*************** 575 ***************/
+  
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 767px) {
-  .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a,
-  .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus,
-  .navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover {
-    background-color: blue;
-  }
-  
-  .department img {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  h1 {
+@media (max-width: 767px) { /*************** 767 ***************/
+  /* COMMON STYLES */
+    h1 {
     margin: 50px 0;
     font-size: 30px;
   }
 
+  /* NAVIGATION */
+  .ToggleButton {
+    display: block;
+  }
+
+  .mainNav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background: rgba(0, 0, 0, .3);
+    z-index: 150;
+    transition: left .3s;
+  }
+
+  .mainNav li {
+    float: none;
+  }
+  
+  .mainNav > div > ul > li:first-child {
+    margin-left: 0;
+  }
+  
+  .mainNav li a {
+    line-height: 1.5;
+    white-space: normal;
+    text-align: left;
+  }  
+ 
+  /* SLIDER */
+  .department img {
+    width: 100%;
+    margin-right: 0;
+  }
+  
   .scrollToTop {
     transform: rotate(-90deg) scale(.7);
     right: -20px;
     bottom: 5px;
   }
- 
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 991px) {
-  
+
+@media (max-width: 991px) { /*************** 991 ***************/
+  .mainNav li a {
+    text-align: left;
+    padding: 5px 9px;
+  }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1199px) {
-  
+
+@media (max-width: 1199px) { /*************** 1199 ***************/
+
 }
