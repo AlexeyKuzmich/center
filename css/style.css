@@ -1,9 +1,10 @@
 /*************** COMMON STYLES ***************/
-body {
+body, h1, h2, h3, h4, h5, h6 {
   position: relative;
   font: 16px 'Open Sans', Arial, sans-serif;
   color: #010101;
   line-height: 1.5;
+  /* overflow: hidden; */
 }
 
 h1 {
@@ -39,29 +40,31 @@ hr.hrStyle {
 
 
 /*************** NAVIGATION ***************/
-.ToggleButton {
+.toggleButton {
   position: fixed;
   top: 6px;
-  left: 17px;
+  left: 8px;
   width: 40px;
   height: 38px;
   background-color: transparent;
   border: 1px solid transparent;
   cursor: pointer;
   display: none;
-  z-index: 500;
+  z-index: 9999;
+  transition: left .3s;
 }
 
-.ToggleButton span {
+.toggleButton span {
   display: block;
   width: 28px;
   height: 5px;
   margin: 5px 5px;
   background-color: #1F10C8;
   border: 1px solid #1F10C8;
+  border-radius: 3px;
 }
 
-.mainNav {
+nav {
   height: 50px;
   background: blue;
   background: -webkit-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
@@ -70,48 +73,59 @@ hr.hrStyle {
   background: linear-gradient(to bottom, #1F10C8, #4364C8, #1F10C8);
 }
 
-.mainNav li {
+.nav:before,
+.nav:after {
+  content: " "; 
+  display: table; 
+}
+.nav:after {
+  clear: both;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+    position: relative;
+}
+.nav > li {
+    float: left;
+}
+
+.nav li a {
   display: block;
-  float: left;
-}
-
-.mainNav > div > ul > li {
-  position: relative;
-}
-
-.mainNav li a {
-  line-height: 40px;
   padding: 5px 15px;
-  display: block;
+  line-height: 40px;
   color: #fff;
   white-space: nowrap;
   text-align: center;
   transition: all .3s;
 }
 
-.mainNav li a:hover {
+.nav > li a:hover {
   background-color: rgba(0, 0, 0, .5);
   color: #fff;
 }
 
-.mainNav > div > ul > li > ul {
+.nav > li > ul {
   display: none;
 }
 
-.mainNav > div > ul > li.hovered:hover > ul {
+.nav > li.hover:hover > ul {
   display: block;
   position: absolute;
   top: 50px;
   left: 0;
   background-color: rgba(0, 0, 0, .5);
-  z-index: 300;
+  z-index: 500;
 }
 
-.mainNav > div > ul > li > ul > li {
+.nav li li {
   float: none;
 }
 
-.mainNav > div > ul > li > ul > li > a {
+.nav li li a {
   line-height: 1.5;
   text-align: left;
   color: #fff;
@@ -231,8 +245,8 @@ footer p {
   position: fixed;
   right: 20px;
   bottom: 60px;
-  width: 80px;
-  height: 51px;
+  width: 51px;
+  height: 50px;
   z-index: 100;
   text-align: center;
   font: normal 30px arial;
@@ -292,11 +306,13 @@ footer p {
   }
 
   /* NAVIGATION */
-  .ToggleButton {
-    display: block;
+  nav {
+    height: 0;
   }
-
-  .mainNav {
+  .toggleButton {
+    display: block;
+  }  
+  .nav {
     position: fixed;
     top: 0;
     left: -100%;
@@ -304,54 +320,50 @@ footer p {
     height: 100%;
     padding-top: 50px;
     background: rgba(0, 0, 0, .5);
-    z-index: 150;
+    z-index: 900;
     transition: left .3s;
   }
-
   .activeMenu {
     left: 0;
+    overflow: scroll;
+    z-index: 9000;
   }
-
-  .mainNav > div > ul > li > ul.activePart {
+  .nav > li > ul {
     display: block;
   }
-
-  .mainNav li {
+  .nav li {
     float: none;
-  }
-  
-  .mainNav > div > ul > li:first-child {
+  }  
+  .nav > li:first-child {
     margin-left: 0;
-  }
-  
-  .mainNav li a {
+  }  
+  .nav li a {
     line-height: 1.5;
     white-space: normal;
     text-align: left;
   }
-
-  .mainNav > div > ul > li > ul > li > a {
+  .nav li li a {
     padding-left: 15px;
     font-size: 14px;
     line-height: 1;
   }
- 
+
   /* SLIDER */
   .department img {
     width: 100%;
     margin-right: 0;
-  }
-  
+  }  
   .scrollToTop {
     transform: rotate(-90deg) scale(.8);
-    right: -20px;
+    right: 5px;
     bottom: 5px;
   }
 }
 
 
 @media (max-width: 991px) { /*************** 991 ***************/
-  .mainNav li a {
+  /* NAVIGATION */
+  .nav li a {
     text-align: left;
     padding: 5px 9px;
   }

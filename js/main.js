@@ -4,37 +4,43 @@ $(document).ready(function() {
 
   /* NAVIGATION */
   //menu - :hover vs :notNover
-  function hoveredUl() {
-    var hov = $(".liHovered");
+  function hover() {
+    var hov = $(".hover");
     if ($(window).width() > 767) {
-      hov.addClass("hovered");
+      hov.addClass("hover");
     } else {
-      hov.removeClass("hovered");
+      hov.removeClass("hover");
     }
   }
-  hoveredUl();// see $(window).resize();
+  hover();// see $(window).resize();
 
-  $(".ToggleButton").click(function(){
-    $(".mainNav").toggleClass("activeMenu");
+  $(".toggleButton").click(function() {
+    var $toggleButton = $(this),
+        ww = $(window).width() - 67;
+    $toggleButton.toggleClass("activeButton");
+    $(".nav").toggleClass("activeMenu");
+    if ($toggleButton.hasClass("activeButton")) {
+      $toggleButton.css("left", ww);
+    } else {
+      $toggleButton.css("left",8);
+    }
   });
 
-  $(".liHovered").click(function(){
-    $(".liHovered > ul").toggleClass("activePart");
-  });
+
 
 
 
   /* SLIDER */
   // slider height
-  function caruselHeightDetect(){
+  function caruselHeightDetect() {
     var caruselHeight = $(window).height() * .6;
     $("#mainSliderC .item").css("height", caruselHeight);
   };
   caruselHeightDetect();// see $(window).resize();
 
-  $(window).resize(function(){
+  $(window).resize(function() {
     caruselHeightDetect();
-    hoveredUl();
+    hover();
   });
 
 
