@@ -25,16 +25,10 @@ $(window).bind('resize orientationchange', function() {
 
 var adjustMenu = function() {
 	if (ww < 768) {
-		$toggleMenu.css("display", "inline-block");
-		if (!$toggleMenu.hasClass("active")) {
-			$nav.hide();
-		} else {
-			$nav.show();
-		}
+
 		$(".nav li").unbind('hover');
-		$(".nav li a.parent").unbind('click').bind('click', function(e) {
+		$(".nav li a.parent").unbind('click').bind('click', function() {
 			// must be attached to anchor element to prevent bubbling
-			e.preventDefault();
 			$(this).parent("li").toggleClass("hover");
 		});
 	}

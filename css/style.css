@@ -43,7 +43,7 @@ hr.hrStyle {
 .toggleButton {
   position: fixed;
   top: 6px;
-  left: 8px;
+  left: 17px;
   width: 40px;
   height: 38px;
   background-color: transparent;
@@ -59,9 +59,13 @@ hr.hrStyle {
   width: 28px;
   height: 5px;
   margin: 5px 5px;
-  background-color: #1F10C8;
-  border: 1px solid #1F10C8;
-  border-radius: 3px;
+  background-color: royalblue;
+  border: 1px solid royalblue;
+}
+
+.toggleButton:active span {
+  background-color: limegreen;
+  border-color: limegreen;
 }
 
 nav {
@@ -129,6 +133,10 @@ nav {
   line-height: 1.5;
   text-align: left;
   color: #fff;
+}
+
+nav div .nav .active {
+  background-color: royalblue;
 }
 /*************** / NAVIGATION ***************/
 
