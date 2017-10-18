@@ -61,11 +61,12 @@ hr.hrStyle {
   margin: 5px 5px;
   background-color: royalblue;
   border: 1px solid royalblue;
+  border-radius: 2px;
 }
 
 .toggleButton:active span {
-  background-color: limegreen;
-  border-color: limegreen;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 nav {
@@ -130,9 +131,13 @@ nav {
 }
 
 .nav li li a {
-  line-height: 1.5;
+  line-height: 1.2;
   text-align: left;
   color: #fff;
+}
+
+.nav li li:first-child a {
+  margin-top: 15px;
 }
 
 nav div .nav .active {
@@ -319,7 +324,7 @@ footer p {
   }
   .toggleButton {
     display: block;
-  }  
+  }
   .nav {
     position: fixed;
     top: 0;
@@ -333,7 +338,7 @@ footer p {
   }
   .activeMenu {
     left: 0;
-    overflow: scroll;
+    overflow: auto;
     z-index: 9000;
   }
   .nav > li > ul {
@@ -354,6 +359,10 @@ footer p {
     padding-left: 15px;
     font-size: 14px;
     line-height: 1;
+  }
+
+  .nav li li:first-child a {
+    margin-top: 0px;
   }
 
   /* SLIDER */

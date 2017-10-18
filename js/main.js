@@ -1,48 +1,60 @@
-$(document).ready(function() {  
+$(document).ready(function() {
 
   var c = console.log;
 
   /* NAVIGATION */
   $(".nav li").each(function() {
-    if ($(this).children().length > 1) {
+    if ( $(this).children().length > 1 ) {
       $(this).addClass("parent");
     }
   });
 
+  // active menu element
+  $(".nav a").click(function() {
+    $("a").removeClass("active");
+    $(this).addClass("active");
+  });
 
-  function active() { // active menu element
-    $(".nav a").click(function() {
-      $("a").removeClass("active");
-      $(this).addClass("active");
-    });    
-  }
-  active();
 
   function adjustMenu() {
-    var $toggleButton = $(".toggleButton"),
+    var ww = $(document).width(),
+        $toggleButton = $(".toggleButton"),
         $nav = $(".nav"),
-        $parent = $(".nav li.parent"),
-        ww = document.body.clientWidth;
+        $parent = $(".nav > li.parent");
 
     if ( ww < 768 ) {
+      $parent.removeClass("hover");
+
+      /*$(".nav > li.parent > ul").hide();*/
 
       $toggleButton.click(function() {
+        $toggleButton.toggleClass("activeButton");
         $nav.toggleClass("activeMenu");
+
+        /*$parent.click(function() {
+          $(".nav > li.parent > ul").toggle();
+        });*/
       });
 
-      $parent.removeClass("hover");
-      $("li").unbind('click').bind('click');
-
     } else if ( ww >= 768 ) {
-      $parent.addClass("hover");
+        $toggleButton.removeClass("activeButton");
+        $nav.removeClass("activeMenu");
+        $parent.addClass("hover");
     }
+
+    /*function temp_func() {
+      if (!$child.is(":hover") ) {
+        $child.hide();
+      }
+    }
+      temp_func();
+    setTimeout(temp_func(), 500);*/
   }
   adjustMenu();
 
 
-
-  $(window).resize(function() {
-
+  $(window).bind("resize orientationchange", function() {
+    var ww = $(document).width();
     adjustMenu();
     caruselHeightDetect();
   });
@@ -72,7 +84,7 @@ $(document).ready(function() {
     var caruselHeight = $(window).height() * .6;
     $("#mainSliderC .item").css("height", caruselHeight);
   };
-  caruselHeightDetect();// see $(window).resize();
+  caruselHeightDetect(); // see $(window).resize();
 
   
 
@@ -85,7 +97,7 @@ $(document).ready(function() {
   // scroll to top
   $(window).scroll(function() {
     var height = $(window).height() / 2;
-    if($(this).scrollTop() > height) {
+    if ( $(this).scrollTop() > height ) {
       $(".scrollToTop").fadeIn();
     } else {
       $(".scrollToTop").fadeOut();
