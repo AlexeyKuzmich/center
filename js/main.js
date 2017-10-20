@@ -3,6 +3,22 @@ $(document).ready(function() {
   var c = console.log;
 
   /* NAVIGATION */
+  // topInfo scroll
+  $(window).scroll(function() {
+    var $nav = $("nav"),
+        fixHeight = 200 + 50;
+    if ( $(this).scrollTop() > fixHeight ) {
+      $nav.addClass("fixedElement");
+    } else {
+      $nav.removeClass("fixedElement");
+    }
+  });
+
+  $(".scrollToTop").click(function() {
+    $("body, html").animate({scrollTop: 0}, 500);
+  });
+
+
   $(".nav li").each(function() {
     if ( $(this).children().length > 1 ) {
       $(this).addClass("parent");
@@ -17,7 +33,7 @@ $(document).ready(function() {
 
 
   function adjustMenu() {
-    var ww = $(document).width(),
+    var ww = $(document).width() + 17, // clientWidth + verticalScroll = 17px
         $toggleButton = $(".toggleButton"),
         $nav = $(".nav"),
         $parent = $(".nav > li.parent");

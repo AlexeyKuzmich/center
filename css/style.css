@@ -27,7 +27,17 @@ hr.hrStyle {
     background-image:     -ms-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
     background-image:      -o-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
     background-image: linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
-}    
+}
+
+ /* CLEAR  */
+/* .clearfix:before,
+.clearfix:after {
+  content: " "; 
+  display: table; 
+}
+.clearfix:after {
+  clear: both;
+} */
 /*************** / COMMON STYLES **************
 
 
@@ -41,17 +51,28 @@ hr.hrStyle {
 
 /*************** NAVIGATION ***************/
 .topInfo {
+  height: 200px;
   background-color: lightblue;
 }
 
 .topInfo div {
-  outline: 1px solid red;
+  float: left;
+  /* outline: 1px solid red; */
 }
 
 .topInfo img {
   width: 200px;
   height: auto;
   border-radius: 50%;
+}
+
+.fixedElement {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, .5);
 }
 
 .toggleButton {
@@ -90,6 +111,7 @@ nav {
   background: -o-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
   background: -moz-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
   background: linear-gradient(to bottom, #1F10C8, #4364C8, #1F10C8);
+  transition: 1s;  
 }
 
 .nav:before,
