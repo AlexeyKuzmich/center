@@ -40,6 +40,20 @@ hr.hrStyle {
 
 
 /*************** NAVIGATION ***************/
+.topInfo {
+  background-color: lightblue;
+}
+
+.topInfo div {
+  outline: 1px solid red;
+}
+
+.topInfo img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
 .toggleButton {
   position: fixed;
   top: 6px;

@@ -85,7 +85,6 @@ $(document).ready(function() {
     $("#mainSliderC .item").css("height", caruselHeight);
   };
   caruselHeightDetect(); // see $(window).resize();
-
   
 
 
