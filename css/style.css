@@ -22,11 +22,11 @@ a:hover {
 hr.hrStyle {
     border: 0;
     height: 3px;
-    background-image: -webkit-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
-    background-image:    -moz-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
-    background-image:     -ms-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
-    background-image:      -o-linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
-    background-image: linear-gradient(left, rgba(56, 3, 246,0), rgba(56, 3, 246,1), rgba(56, 3, 246,0));
+    background-image: -webkit-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
+    background-image:    -moz-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
+    background-image:     -ms-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
+    background-image:      -o-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
+    background-image: linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
 }
 
  /* CLEAR  */
@@ -51,8 +51,8 @@ hr.hrStyle {
 
 /*************** NAVIGATION ***************/
 .topInfo {
-  height: 200px;
-  background-color: lightblue;
+  height: 150px;
+  background-color: #E4F1FE;
 }
 
 .topInfo div {
@@ -61,7 +61,7 @@ hr.hrStyle {
 }
 
 .topInfo img {
-  width: 200px;
+  width: 150px;
   height: auto;
   border-radius: 50%;
 }
@@ -72,46 +72,30 @@ hr.hrStyle {
   right: 0;
   top: 0;
   z-index: 9999;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(68,108,179, .8);
 }
 
-.toggleButton {
+#toggleButton {
   position: fixed;
-  top: 6px;
-  left: 17px;
+  top: 10px;
+  left: 10px;
+  transform: rotate(90deg);
   width: 40px;
-  height: 38px;
-  background-color: transparent;
-  border: 1px solid transparent;
+  height: auto;
   cursor: pointer;
   display: none;
   z-index: 9999;
-  transition: left .3s;
-}
-
-.toggleButton span {
-  display: block;
-  width: 28px;
-  height: 5px;
-  margin: 5px 5px;
-  background-color: royalblue;
-  border: 1px solid royalblue;
-  border-radius: 2px;
-}
-
-.toggleButton:active span {
-  background-color: #fff;
-  border-color: #fff;
+  transition: .3s;
 }
 
 nav {
   height: 50px;
-  background: blue;
-  background: -webkit-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
-  background: -o-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
-  background: -moz-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
-  background: linear-gradient(to bottom, #1F10C8, #4364C8, #1F10C8);
-  transition: 1s;  
+  background: #446CB3;
+  background: -webkit-linear-gradient(top, #446CB3, #52B3D9);
+  background: -o-linear-gradient(top, #446CB3, #52B3D9);
+  background: -moz-linear-gradient(top, #446CB3, #52B3D9);
+  background: linear-gradient(to bottom, #446CB3, #52B3D9);
+  transition: 1s;
 }
 
 .nav:before,
@@ -145,7 +129,7 @@ nav {
 }
 
 .nav > li a:hover {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: #446CB3;
   color: #fff;
 }
 
@@ -158,7 +142,7 @@ nav {
   position: absolute;
   top: 50px;
   left: 0;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(68,108,179, .8);
   z-index: 500;
 }
 
@@ -177,7 +161,8 @@ nav {
 }
 
 nav div .nav .active {
-  background-color: royalblue;
+  background-color: rgba(68,108,179, .5);
+  cursor: default;
 }
 /*************** / NAVIGATION ***************/
 
@@ -195,46 +180,55 @@ nav div .nav .active {
 
 
 /*************** SLIDER ***************/
-.mainSliderC img {
+/* #mainSliderC img {
   width: 100%;
   height: auto;
-}
+} */
 
-.mainSliderC .slider-1,
-.mainSliderC .slider-2,
-.mainSliderC .slider-3{
+#mainSlider .slider-1,
+#mainSlider .slider-2,
+#mainSlider .slider-3 {
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.mainSliderC .slider-1{
+#mainSlider .slider-1 {
   background-image: url(../images/mainSlider/1.jpg);
 }
 
-.mainSliderC .slider-2{
+#mainSlider .slider-2 {
   background-image: url(../images/mainSlider/2.jpg);
 }
 
-.mainSliderC .slider-3{
+#mainSlider .slider-3 {
   background-image: url(../images/mainSlider/3.jpg);
 }
 
+.carousel-inner div {
+  outline: 1px solid red;
+}
+
 .carousel-indicators li {
-  border-color: blue;
+  border-color: #59ABE3;
   background-color: transparent;
 }
 
 .carousel-indicators .active {
-  border-color: blue;
-  background-color: blue;
+  border-color: #446CB3;
+  background-color: #446CB3;
 }
 
 .carousel-control {
-  color: blue;
+  color: #446CB3;  
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
 }
 
 .carousel-control:hover {
-  color: lightblue;
+  color: #52B3D9;
 }
 /*************** / SLIDER ***************/
 
@@ -270,12 +264,12 @@ nav div .nav .active {
 footer {
   padding-top: 100px;
   height: 250px;
-  color: #9d9d9d;
+  color: #fff;
   background: blue;
-  background: -webkit-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
-  background: -o-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
-  background: -moz-linear-gradient(top, #1F10C8, #4364C8, #1F10C8);
-  background: linear-gradient(to bottom, #1F10C8, #4364C8, #1F10C8);
+  background: -webkit-linear-gradient(top, #446CB3, #52B3D9);
+  background: -o-linear-gradient(top, #446CB3, #52B3D9);
+  background: -moz-linear-gradient(top, #446CB3, #52B3D9);
+  background: linear-gradient(to bottom, #446CB3, #52B3D9);
 }
 
 footer p {
@@ -289,41 +283,23 @@ footer p {
 
 
 /*************** scroll up button ***************/
-.scrollToTop {
+#scrollToTop {
   display: none;
   position: fixed;
   right: 20px;
-  bottom: 60px;
-  width: 51px;
-  height: 50px;
-  z-index: 100;
-  text-align: center;
-  font: normal 30px arial;
-  transform: rotate(-90deg);
+  bottom: 20px;
   cursor: pointer;
-  background: rgba(0, 0, 0, .1);
+  opacity: .5;
+  z-index: 100;
+  transition: .3s;
+  opacity: .5;
 }
 
-.scrollToTop span {
-  display: block;
-  position: absolute;
-  bottom: 7px;
-  right: 50px;
-  color: #777;  
-  
-  animation-name: buttonUP;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+#scrollToTop:hover {
+  opacity: 1;
 }
 
-@keyframes buttonUP {
-  0%   {left:0px;  opacity: 0;}
-  30%  {left:10px; opacity: 1;}
-  100% {left:25px; opacity: 0;}
-}
+
 /*************** / scroll up button ***************/
 
 
@@ -358,7 +334,7 @@ footer p {
   nav {
     height: 0;
   }
-  .toggleButton {
+  #toggleButton {
     display: block;
   }
   .nav {
@@ -368,7 +344,7 @@ footer p {
     width: 100%;
     height: 100%;
     padding-top: 50px;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(68,108,179, .8);
     z-index: 900;
     transition: left .3s;
   }
@@ -406,10 +382,12 @@ footer p {
     width: 100%;
     margin-right: 0;
   }  
-  .scrollToTop {
-    transform: rotate(-90deg) scale(.8);
-    right: 5px;
-    bottom: 5px;
+  #scrollToTop {
+    opacity: 1;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: auto;
   }
 }
 

@@ -2,12 +2,10 @@ $(document).ready(function() {
 
   var c = console.log;
 
-  /* NAVIGATION */
   // topInfo scroll
   $(window).scroll(function() {
-    var $nav = $("nav"),
-        fixHeight = 200 + 50;
-    if ( $(this).scrollTop() > fixHeight ) {
+    var $nav = $("nav");
+    if ( $(this).scrollTop() > 200 ) {
       $nav.addClass("fixedElement");
     } else {
       $nav.removeClass("fixedElement");
@@ -18,7 +16,7 @@ $(document).ready(function() {
     $("body, html").animate({scrollTop: 0}, 500);
   });
 
-
+  // navigation
   $(".nav li").each(function() {
     if ( $(this).children().length > 1 ) {
       $(this).addClass("parent");
@@ -31,25 +29,37 @@ $(document).ready(function() {
     $(this).addClass("active");
   });
 
-
+  // adaptive menu
   function adjustMenu() {
-    var ww = $(document).width() + 17, // clientWidth + verticalScroll = 17px
-        $toggleButton = $(".toggleButton"),
+    var ww = $(document).width() - 80,
+        $toggleButton = $("#toggleButton"),
         $nav = $(".nav"),
-        $parent = $(".nav > li.parent");
+        $parent = $(".nav > li.parent"),
+        $child = $(".nav > li.parent > ul");
 
     if ( ww < 768 ) {
       $parent.removeClass("hover");
 
-      /*$(".nav > li.parent > ul").hide();*/
-
       $toggleButton.click(function() {
         $toggleButton.toggleClass("activeButton");
         $nav.toggleClass("activeMenu");
+            if ($toggleButton.hasClass("activeButton")) {
+              $toggleButton.css({
+                "left": ww,
+                "transform": "rotate(-90deg)"
+              });
+          } else {
+              $toggleButton.css({
+                "left": 10,
+                "transform": "rotate(90deg)"
+              });
+          }
+      });
 
-        /*$parent.click(function() {
-          $(".nav > li.parent > ul").toggle();
-        });*/
+      $child.hide();
+
+      $parent.click(function() {
+        $child.slideToggle();
       });
 
     } else if ( ww >= 768 ) {
@@ -57,14 +67,6 @@ $(document).ready(function() {
         $nav.removeClass("activeMenu");
         $parent.addClass("hover");
     }
-
-    /*function temp_func() {
-      if (!$child.is(":hover") ) {
-        $child.hide();
-      }
-    }
-      temp_func();
-    setTimeout(temp_func(), 500);*/
   }
   adjustMenu();
 
@@ -77,30 +79,12 @@ $(document).ready(function() {
 
 
 
-/*  function toggle() {
-    var $toggle = $(".toggleButton"),
-        ww = $(window).width() - 67;
-    $toggle.click(function() {
-      $toggle.toggleClass("activeButton");
-      $(".nav").toggleClass("activeMenu");
-      if ($toggle.hasClass("activeButton")) {
-        $toggle.css("left", ww);
-      } else {
-        $toggle.css("left", 8);
-      }
-    });
-  }
-  toggle();*/
-
-
-
-  /* SLIDER */
-  // slider height
+  // slider
   function caruselHeightDetect() {
     var caruselHeight = $(window).height() * .6;
-    $("#mainSliderC .item").css("height", caruselHeight);
+    $("#mainSlider .item").css("height", caruselHeight);
   };
-  caruselHeightDetect(); // see $(window).resize();
+  caruselHeightDetect();
   
 
 
@@ -111,15 +95,16 @@ $(document).ready(function() {
 
   // scroll to top
   $(window).scroll(function() {
-    var height = $(window).height() / 2;
+    var height = $(window).height(),
+        $scrollToTop = $("#scrollToTop");
     if ( $(this).scrollTop() > height ) {
-      $(".scrollToTop").fadeIn();
+      $scrollToTop.fadeIn();
     } else {
-      $(".scrollToTop").fadeOut();
+      $scrollToTop.fadeOut();
     }
   });
 
-  $(".scrollToTop").click(function() {
+  $("#scrollToTop").click(function() {
     $("body, html").animate({scrollTop: 0}, 500);
   });
 
