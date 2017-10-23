@@ -27,6 +27,7 @@ $(document).ready(function() {
   $(".nav a").click(function() {
     $("a").removeClass("active");
     $(this).addClass("active");
+    $(this).parent().addClass("active");
   });
 
   // adaptive menu

@@ -1,17 +1,31 @@
 /*************** COMMON STYLES ***************/
 body, h1, h2, h3, h4, h5, h6 {
   position: relative;
-  font: 16px 'Open Sans', Arial, sans-serif;
-  color: #010101;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
+  color: #555;
   /* overflow: hidden; */
 }
 
 h1 {
-  margin: 100px 0;
+  margin: 50px 0;
   text-align: center;
-  font-size: 50px;
+  font-size: 2.5em;
   color: blue;
+}
+
+h2 {
+  margin: 25px 0;
+  text-align: center;
+  font-size: 1.875em;
+  color: blue;
+}
+
+p {
+  margin: 10px;
+  text-align: left;
 }
 
 a,
@@ -50,21 +64,59 @@ hr.hrStyle {
 
 
 /*************** NAVIGATION ***************/
+body > div {
+  background-color: #E4F1FE;
+}
+
 .topInfo {
   height: 150px;
-  background-color: #E4F1FE;
+  padding: 40px 20px;
+  line-height: 1;
+  font-size: 1.3em;
+  /* background-color: #E4F1FE; */
 }
 
 .topInfo div {
   float: left;
-  /* outline: 1px solid red; */
+  font-weight: bold;
+  color: #7FC560;
+  outline: 1px solid red;
 }
 
-.topInfo img {
+.topInfo div:first-child {
+  margin-right: 60px;
+}
+
+.topInfo a {
+  display: block;
+  font-size: 2em;
+  color: #7FC560;
+}
+
+.topInfo a span {
+  color: #499FFF;
+}
+
+.topInfo a:hover {
+  color: #499FFF;
+}
+
+.topInfo div:last-child {
+  float: right;
+}
+
+.topInfo div:last-child a {
+  float: right;
+  font-size: 1em;
+}
+
+/* .topInfo img {
   width: 150px;
   height: auto;
   border-radius: 50%;
-}
+} */
+
+
 
 .fixedElement {
   position: fixed;
@@ -129,7 +181,7 @@ nav {
 }
 
 .nav > li a:hover {
-  background-color: #446CB3;
+  background-color: #3A539B;
   color: #fff;
 }
 
@@ -161,7 +213,7 @@ nav {
 }
 
 nav div .nav .active {
-  background-color: rgba(68,108,179, .5);
+  background-color: #3A539B;
   cursor: default;
 }
 /*************** / NAVIGATION ***************/
@@ -315,13 +367,37 @@ footer p {
 
 
 
-/******************************************/
-/*************** MEDIAQUERY ***************/
-/******************************************/
 
-@media (max-width: 575px) { /*************** 575 ***************/
-  
+/*************** MEDIAQUERY **************************************/
+@media (max-width: 1199px) { /*************** 1199 ***************/
+  .topInfo div {
+    margin: 0 auto;
+  }
+  .topInfo div:first-child {
+    margin-right: 20px;
+  }
+  .topInfo div:last-child {
+    display: none;
+  }
 }
+  
+
+@media (max-width: 991px) { /*************** 991 ***************/
+  .topInfo {
+    font-size: 1em;
+  }
+  /* NAVIGATION */
+  
+  
+
+
+
+  .nav li a {
+    text-align: left;
+    padding: 5px 9px;
+  }
+}
+
 
 @media (max-width: 767px) { /*************** 767 ***************/
   /* COMMON STYLES */
@@ -331,6 +407,16 @@ footer p {
   }
 
   /* NAVIGATION */
+  .topInfo div:first-child {
+    margin-top: 30px;
+    font-size: .8em;
+    text-align: center;
+  }
+  .topInfo div:nth-child(2) {
+    display: none;
+  }
+
+
   nav {
     height: 0;
   }
@@ -392,15 +478,6 @@ footer p {
 }
 
 
-@media (max-width: 991px) { /*************** 991 ***************/
-  /* NAVIGATION */
-  .nav li a {
-    text-align: left;
-    padding: 5px 9px;
-  }
-}
-
-
-@media (max-width: 1199px) { /*************** 1199 ***************/
-
+@media (max-width: 575px) { /*************** 575 ***************/
+  
 }
