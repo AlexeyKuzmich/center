@@ -1,22 +1,30 @@
-body, nav, ul, li, a  {margin: 0; padding: 0;}
-body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-a {text-decoration: none;}
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 10px auto;
-    outline: 1px solid red;
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
 }
 .toggleMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    padding: 15px 25px;
     display:  none;
-    background: #666;
-    padding: 10px 15px;
+    background: #5174C5;
     color: #fff;
 }
 .nav {
     list-style: none;
-     *zoom: 1;
-     background: #5174C5;
+    background: #5174C5;
 }
 .nav:before,
 .nav:after {
@@ -28,10 +36,10 @@ a {text-decoration: none;}
 }
 .nav ul {
     list-style: none;
-    width: 9em;
+    width: 15em;
 }
 .nav a {
-    padding: 10px 15px;
+    padding: 10px 30px;
     color:#fff;
 }
 .nav li {
@@ -40,7 +48,7 @@ a {text-decoration: none;}
 }
 .nav > li {
     float: left;
-    border-top: 1px solid #104336;
+    border-top: 1px solid #ccc;
 }
 .nav > li > .parent {
     background-image: url("images/downArrow.png");
@@ -50,7 +58,7 @@ a {text-decoration: none;}
 .nav > li > a {
     display: block;
 }
-.nav li  ul {
+.nav li ul {
     position: absolute;
     left: -9999px;
 }
@@ -70,14 +78,40 @@ a {text-decoration: none;}
 }
 .nav li li li a {
     background:#249578;
-    z-index:200;
+    z-index: 200;
     border-top: 1px solid #1d7a62;
 }
 
+
+
 @media screen and (max-width: 768px) {
     .active {
-        display: block;
+        position: fixed;
     }
+
+
+
+
+    .nav {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        transition: all .3s;
+    }
+
+    .activeMenu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+
+
+
+
     .nav > li {
         float: none;
     }
@@ -97,5 +131,4 @@ a {text-decoration: none;}
    .nav li li.hover ul {
         position: static;
     }
-
 }

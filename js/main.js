@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   var c = console.log;
+      ww = $(document).width();
 
   // topInfo scroll
   $(window).scroll(function() {
@@ -27,13 +28,11 @@ $(document).ready(function() {
   $(".nav a").click(function() {
     $("a").removeClass("active");
     $(this).addClass("active");
-    $(this).parent().addClass("active");
   });
 
   // adaptive menu
   function adjustMenu() {
-    var ww = $(document).width() - 80,
-        $toggleButton = $("#toggleButton"),
+    var $toggleButton = $("#toggleButton"),
         $nav = $(".nav"),
         $parent = $(".nav > li.parent"),
         $child = $(".nav > li.parent > ul");
@@ -46,7 +45,7 @@ $(document).ready(function() {
         $nav.toggleClass("activeMenu");
             if ($toggleButton.hasClass("activeButton")) {
               $toggleButton.css({
-                "left": ww,
+                "left": 10,
                 "transform": "rotate(-90deg)"
               });
           } else {
@@ -60,7 +59,7 @@ $(document).ready(function() {
       $child.hide();
 
       $parent.click(function() {
-        $child.slideToggle();
+        $child.toggle();
       });
 
     } else if ( ww >= 768 ) {
@@ -72,8 +71,8 @@ $(document).ready(function() {
   adjustMenu();
 
 
-  $(window).bind("resize orientationchange", function() {
-    var ww = $(document).width();
+  $(window).resize(function() {
+    ww = $(document).width();
     adjustMenu();
     caruselHeightDetect();
   });

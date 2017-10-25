@@ -187,6 +187,7 @@ nav {
 
 .nav > li > ul {
   display: none;
+  min-width: 350px;
 }
 
 .nav > li.hover:hover > ul {
