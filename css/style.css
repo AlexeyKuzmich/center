@@ -1,5 +1,12 @@
-/*************** COMMON STYLES ***************/
-body, h1, h2, h3, h4, h5, h6 {
+  /*************** COMMON STYLES ***************/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   position: relative;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
@@ -34,16 +41,20 @@ a:hover {
 }
 
 hr.hrStyle {
-    border: 0;
-    height: 3px;
-    background-image: -webkit-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
-    background-image:    -moz-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
-    background-image:     -ms-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
-    background-image:      -o-linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
-    background-image: linear-gradient(left, rgba(68,108,179,0), rgba(68,108,179,1), rgba(68,108,179,0));
+  border: 0;
+  height: 3px;
+  background-image: -webkit-linear-gradient(left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
+  background-image: -moz-linear-gradient(left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
+  background-image: -ms-linear-gradient(left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
+  background-image: -o-linear-gradient(left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
+  background-image: linear-gradient(left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
 }
 
- /* CLEAR  */
+
+
+/* CLEAR  */
+
+
 /* .clearfix:before,
 .clearfix:after {
   content: " "; 
@@ -52,6 +63,8 @@ hr.hrStyle {
 .clearfix:after {
   clear: both;
 } */
+
+
 /*************** / COMMON STYLES **************
 
 
@@ -64,7 +77,8 @@ hr.hrStyle {
 
 
 /*************** NAVIGATION ***************/
-body > div {
+
+body>div {
   background-color: #E4F1FE;
 }
 
@@ -110,13 +124,13 @@ body > div {
   font-size: 1em;
 }
 
+
+
 /* .topInfo img {
   width: 150px;
   height: auto;
   border-radius: 50%;
 } */
-
-
 
 .fixedMenu {
   position: fixed;
@@ -124,7 +138,7 @@ body > div {
   right: 0;
   top: 0;
   z-index: 9000;
-  background: rgba(68,108,179, .8);
+  background: rgba(68, 108, 179, .8);
 }
 
 nav {
@@ -150,92 +164,89 @@ nav {
 }
 
 .nav {
-    list-style: none;
+  list-style: none;
 }
 
 .nav:before,
 .nav:after {
-  content: " "; 
-  display: table; 
+  content: " ";
+  display: table;
 }
+
 .nav:after {
   clear: both;
 }
 
-.nav ul { 
-  list-style: none; /* ? */ 
+.nav ul {
+  list-style: none;
 }
 
 .nav li {
-    position: relative;
-}
-.nav > li {
-    float: left;
+  position: relative;
 }
 
-.nav > li > .parent {
-    background-image: url("images/downArrow.png");
-    background-repeat: no-repeat;
-    background-position: right;
+.nav>li {
+  float: left;
 }
 
-.nav > li > a {
+.nav>li>.parent {
+  background-image: url("../images/downArrow.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.nav>li>a {
   display: block;
-  /* padding: 5px 15px;
+  padding: 5px 15px;
   line-height: 40px;
   color: #fff;
   white-space: nowrap;
   text-align: center;
-  transition: all .3s; */
+  transition: all .3s;
 }
 
 .nav li ul {
-    position: absolute;
-    left: -9999px;
+  position: absolute;
+  left: -9999px;
 }
 
-.nav > li.hover > ul {
+.nav>li.hover>ul {
   left: 0;
-  /* top: 50px;
-  background-color: rgba(68,108,179, .8); */
+  top: 50px;
+  background-color: rgba(68, 108, 179, .8);
 }
 
 .nav li li.hover ul {
-    left: 100%;
-    top: 0;
-}
-.nav li li a {
-    display: block;
-    background: #1d7a62;
-    position: relative;
-    z-index:100;
-    border-top: 1px solid #175e4c;
-}
-.nav li li li a {
-    background:#249578;
-    z-index: 200;
-    border-top: 1px solid #1d7a62;
+  left: 100%;
+  top: 0;
 }
 
-/* .nav li li:first-child a {
+.nav li li a {
+  display: block;
+  background: #1d7a62;
+  position: relative;
+  z-index: 100;
+  border-top: 1px solid #175e4c;
+}
+
+.nav li li li a {
+  background: #249578;
+  z-index: 200;
+  border-top: 1px solid #1d7a62;
+}
+
+.nav li li:first-child a {
   margin-top: 15px;
-} */
+}
+
+
+
 /*************** / NAVIGATION ***************/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*************** SLIDER ***************/
+
+
 /* #mainSliderC img {
   width: 100%;
   height: auto;
@@ -275,7 +286,7 @@ nav {
 }
 
 .carousel-control {
-  color: #446CB3;  
+  color: #446CB3;
 }
 
 .carousel-control.right,
@@ -286,22 +297,22 @@ nav {
 .carousel-control:hover {
   color: #52B3D9;
 }
+
+
+
 /*************** / SLIDER ***************/
 
 
-
-
-
-
 /*************** PARALLAX ***************/
+
 .parallax-window {
-    min-height: 450px;
-    background: transparent;
+  min-height: 450px;
+  background: transparent;
 }
+
+
+
 /*************** / PARALLAX ***************/
-
-
-
 
 .department img {
   width: 30%;
@@ -316,7 +327,10 @@ nav {
 
 
 
+
+
 /*************** FOOTER ***************/
+
 footer {
   padding-top: 100px;
   height: 250px;
@@ -332,13 +346,14 @@ footer p {
   display: table;
   margin: 0 auto;
 }
+
+
+
 /*************** / FOOTER ***************/
 
 
-
-
-
 /*************** scroll up button ***************/
+
 .scrollToTop {
   display: none;
   position: fixed;
@@ -356,24 +371,15 @@ footer p {
 }
 
 
+
+
 /*************** / scroll up button ***************/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*************** MEDIAQUERY **************************************/
-@media (max-width: 1199px) { /*************** 1199 ***************/
+
+@media (max-width: 1199px) {
+  /*************** 1199 ***************/
   .topInfo div {
     margin: 0 auto;
   }
@@ -384,28 +390,25 @@ footer p {
     display: none;
   }
 }
-  
 
-@media (max-width: 991px) { /*************** 991 ***************/
+
+@media (max-width: 991px) {
+  /*************** 991 ***************/
   .topInfo {
     font-size: 1em;
   }
   /* NAVIGATION */
-  
-  
-
-
-
-  /* .nav li a {
+  .nav li a {
     text-align: left;
     padding: 5px 9px;
-  } */
+  }
 }
 
 
-@media (max-width: 767px) { /*************** 767 ***************/
+@media (max-width: 767px) {
+  /*************** 767 ***************/
   /* COMMON STYLES */
-    h1 {
+  h1 {
     margin: 50px 0;
     font-size: 30px;
   }
@@ -419,117 +422,54 @@ footer p {
   .topInfo div:nth-child(2) {
     display: none;
   }
-
-
-
+  .active {
+    position: fixed;
+  }
+  nav {
+    height: 0;
+  }
   .active {
     position: fixed;
   }
 
   .nav {
-        position: absolute;
-        top: 50px;
-        bottom: 0;
-        left: -100%;
-        width: 100%;
-        transition: all .3s;
-    }
-
-    .activeMenu {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
-
-
-
-
-
-    .nav > li {
-        float: none;
-    }
-    .nav > li > .parent {
-        background-position: 95% 50%;
-    }
-    .nav li li .parent {
-        background-image: url("images/downArrow.png");
-        background-repeat: no-repeat;
-        background-position: 95% 50%;
-    }
-    .nav ul {
-        display: block;
-        width: 100%;
-    }
-   .nav > li.hover > ul,
-   .nav li li.hover ul {
-        position: static;
-    }
-
-
-  /* nav {
-    height: 0;
-  }
-  .toggleMenu {
-    display: block;
-  }
-  
-  
-  .nav {
     position: fixed;
     top: 0;
+    bottom: 0;
     left: -100%;
     width: 100%;
-    height: 100%;
-    padding-top: 50px;
-    background: rgba(68,108,179, .8);
+    padding-top: 70px;
+    transition: all .3s;
+    background-color: rgba(68, 108, 179, .8);
     z-index: 900;
-    transition: left .3s;
+    overflow-y: auto;
   }
+
   .activeMenu {
     left: 0;
-    overflow: auto;
-    z-index: 9000;
   }
-  .nav > li > ul {
-    display: block;
-  }
-  .nav li {
+
+  .nav>li {
     float: none;
-  }  
-  .nav > li:first-child {
-    margin-left: 0;
-  }  
-  .nav li a {
-    line-height: 1.5;
-    white-space: normal;
-    text-align: left;
   }
-  .nav li li a {
-    padding-left: 15px;
-    font-size: 14px;
-    line-height: 1;
+  .nav>li>.parent {
+    background-position: 95% 50%;
   }
-  
-  .nav li li:first-child a {
-    margin-top: 0px;
-  } */
-
-  /* SLIDER */
-  .department img {
+  .nav li li .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+  }
+  .nav ul {
+    display: block;
     width: 100%;
-    margin-right: 0;
-  }  
-  #scrollToTop {
-    opacity: 1;
-    right: 10px;
-    bottom: 10px;
-    width: 40px;
-    height: auto;
   }
-}
+  .nav>li.hover>ul,
+  .nav li li.hover ul {
+    position: static;
+  }
 
 
-@media (max-width: 575px) { /*************** 575 ***************/
-  
-}
+  @media (max-width: 575px) {
+    /*************** 575 ***************/
+  }

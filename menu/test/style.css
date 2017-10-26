@@ -89,9 +89,6 @@ a {
         position: fixed;
     }
 
-
-
-
     .nav {
         position: absolute;
         top: 50px;
@@ -107,11 +104,6 @@ a {
         left: 0;
         width: 100%;
     }
-
-
-
-
-
     .nav > li {
         float: none;
     }

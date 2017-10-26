@@ -1,3 +1,5 @@
+/* PERINATAL CENTER */
+
 $(document).ready(function() {
   var ww = document.body.clientWidth,
       c = console.log;
@@ -13,25 +15,19 @@ $(document).ready(function() {
   });
 
   // navigation
-  $(".nav li").each(function() {
-    if ( $(this).children().length > 1 ) {
+  $(".nav li a").each(function() {
+    if ( $(this).next().length > 0 ) {
       $(this).addClass("parent");
     }
   });
-
-  // active menu element
-/*  $(".nav a").click(function() {
-    $("a").removeClass("active");
-    $(this).addClass("active");
-  });*/
 
   $(window).bind('resize orientationchange', function() {
     ww = document.body.clientWidth;
     adjustMenu();
     caruselHeightDetect();
   });
-  // adaptive menu
 
+  // adaptive menu
   function adjustMenu() {
     var counter = 0;
 
