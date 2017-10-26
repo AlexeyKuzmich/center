@@ -118,26 +118,13 @@ body > div {
 
 
 
-.fixedElement {
+.fixedMenu {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  z-index: 9999;
+  z-index: 9000;
   background: rgba(68,108,179, .8);
-}
-
-#toggleButton {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  transform: rotate(90deg);
-  width: 40px;
-  height: auto;
-  cursor: pointer;
-  display: none;
-  z-index: 9999;
-  transition: .3s;
 }
 
 nav {
@@ -150,6 +137,22 @@ nav {
   transition: 1s;
 }
 
+.toggleMenu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  transition: .3s;
+}
+
+.nav {
+    list-style: none;
+}
+
 .nav:before,
 .nav:after {
   content: " "; 
@@ -159,8 +162,8 @@ nav {
   clear: both;
 }
 
-.nav ul {
-  list-style: none;
+.nav ul { 
+  list-style: none; /* ? */ 
 }
 
 .nav li {
@@ -170,53 +173,53 @@ nav {
     float: left;
 }
 
-.nav li a {
+.nav > li > .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.nav > li > a {
   display: block;
-  padding: 5px 15px;
+  /* padding: 5px 15px;
   line-height: 40px;
   color: #fff;
   white-space: nowrap;
   text-align: center;
-  transition: all .3s;
+  transition: all .3s; */
 }
 
-.nav > li a:hover {
-  background-color: #3A539B;
-  color: #fff;
+.nav li ul {
+    position: absolute;
+    left: -9999px;
 }
 
-.nav > li > ul {
-  display: none;
-  min-width: 350px;
-}
-
-.nav > li.hover:hover > ul {
-  display: block;
-  position: absolute;
-  top: 50px;
+.nav > li.hover > ul {
   left: 0;
-  background-color: rgba(68,108,179, .8);
-  z-index: 500;
+  /* top: 50px;
+  background-color: rgba(68,108,179, .8); */
 }
 
-.nav li li {
-  float: none;
+.nav li li.hover ul {
+    left: 100%;
+    top: 0;
 }
-
 .nav li li a {
-  line-height: 1.2;
-  text-align: left;
-  color: #fff;
+    display: block;
+    background: #1d7a62;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #175e4c;
+}
+.nav li li li a {
+    background:#249578;
+    z-index: 200;
+    border-top: 1px solid #1d7a62;
 }
 
-.nav li li:first-child a {
+/* .nav li li:first-child a {
   margin-top: 15px;
-}
-
-nav div .nav .active {
-  background-color: #3A539B;
-  cursor: default;
-}
+} */
 /*************** / NAVIGATION ***************/
 
 
@@ -336,7 +339,7 @@ footer p {
 
 
 /*************** scroll up button ***************/
-#scrollToTop {
+.scrollToTop {
   display: none;
   position: fixed;
   right: 20px;
@@ -348,7 +351,7 @@ footer p {
   opacity: .5;
 }
 
-#scrollToTop:hover {
+.scrollToTop:hover {
   opacity: 1;
 }
 
@@ -393,10 +396,10 @@ footer p {
 
 
 
-  .nav li a {
+  /* .nav li a {
     text-align: left;
     padding: 5px 9px;
-  }
+  } */
 }
 
 
@@ -418,12 +421,60 @@ footer p {
   }
 
 
-  nav {
+
+  .active {
+    position: fixed;
+  }
+
+  .nav {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        transition: all .3s;
+    }
+
+    .activeMenu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+
+
+
+
+    .nav > li {
+        float: none;
+    }
+    .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > li.hover > ul,
+   .nav li li.hover ul {
+        position: static;
+    }
+
+
+  /* nav {
     height: 0;
   }
-  #toggleButton {
+  .toggleMenu {
     display: block;
   }
+  
+  
   .nav {
     position: fixed;
     top: 0;
@@ -459,10 +510,10 @@ footer p {
     font-size: 14px;
     line-height: 1;
   }
-
+  
   .nav li li:first-child a {
     margin-top: 0px;
-  }
+  } */
 
   /* SLIDER */
   .department img {

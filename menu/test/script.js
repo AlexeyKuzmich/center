@@ -2,7 +2,7 @@ $(document).ready(function() {
   var ww = document.body.clientWidth;
 
   $(".nav li a").each(function() {
-    if ($(this).next().length > 0) {
+    if ( $(this).next().length > 0 ) {
       $(this).addClass("parent");
     }
   });
@@ -22,12 +22,12 @@ $(document).ready(function() {
       $(".toggleMenu").click(function(e) {
         e.preventDefault();
         if ( counter === 0 ) {
-          console.log("counter = " + counter);
+          /*console.log("counter = " + counter);*/
           $(this).addClass("active");
           $(".nav").addClass("activeMenu");
           counter = 1;
-        } else if ( counter === 1 ) {
-          console.log("counter = " + counter);
+        } else {
+          /*console.log("counter = " + counter);*/
           $(this).removeClass("active");
           $(".nav").removeClass("activeMenu");
           counter = 0;
