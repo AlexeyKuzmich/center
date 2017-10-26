@@ -39,16 +39,19 @@ $(document).ready(function() {
         e.preventDefault();
         if ( counter === 0 ) {
           /*console.log("counter = " + counter);*/
-          $(this).addClass("active");
+          $(this)
+              .addClass("activeButton")
+                  .css("transform", "rotate(180deg)");
           $(".nav").addClass("activeMenu");
           counter = 1;
         } else {
           /*console.log("counter = " + counter);*/
-          $(this).removeClass("active");
-          $(".nav").removeClass("activeMenu");
+          $(this)
+              .removeClass("activeButton")
+                  .css("transform", "rotate(0)");
+          $(".nav").removeClass("activeMenu");              
           counter = 0;
-        }
-        
+        }        
       });
 
       $(".nav li").unbind('mouseenter mouseleave');

@@ -78,7 +78,7 @@ hr.hrStyle {
 
 /*************** NAVIGATION ***************/
 
-body>div {
+body > div {
   background-color: #E4F1FE;
 }
 
@@ -153,8 +153,8 @@ nav {
 
 .toggleMenu {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 0;
+  left: 0;
   width: 40px;
   height: auto;
   cursor: pointer;
@@ -187,6 +187,7 @@ nav {
 
 .nav>li {
   float: left;
+  white-space: nowrap;
 }
 
 .nav>li>.parent {
@@ -200,7 +201,6 @@ nav {
   padding: 5px 15px;
   line-height: 40px;
   color: #fff;
-  white-space: nowrap;
   text-align: center;
   transition: all .3s;
 }
@@ -212,8 +212,8 @@ nav {
 
 .nav>li.hover>ul {
   left: 0;
-  top: 50px;
-  background-color: rgba(68, 108, 179, .8);
+  background: rgba(68, 108, 179, .8);
+  color: #fff;
 }
 
 .nav li li.hover ul {
@@ -221,23 +221,27 @@ nav {
   top: 0;
 }
 
+.nav li:hover {
+  background: #249578;
+}
+
 .nav li li a {
   display: block;
-  background: #1d7a62;
   position: relative;
+  padding: 0 15px;
+  min-width: 350px;
   z-index: 100;
-  border-top: 1px solid #175e4c;
+  color: #fff;
 }
 
 .nav li li li a {
   background: #249578;
   z-index: 200;
-  border-top: 1px solid #1d7a62;
 }
 
-.nav li li:first-child a {
+/* .nav li li:first-child a {
   margin-top: 15px;
-}
+} */
 
 
 
@@ -422,14 +426,11 @@ footer p {
   .topInfo div:nth-child(2) {
     display: none;
   }
-  .active {
+  .activeButton {
     position: fixed;
   }
   nav {
     height: 0;
-  }
-  .active {
-    position: fixed;
   }
 
   .nav {
