@@ -124,14 +124,6 @@ body > div {
   font-size: 1em;
 }
 
-
-
-/* .topInfo img {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-} */
-
 .fixedMenu {
   position: fixed;
   left: 0;
@@ -153,15 +145,20 @@ nav {
 
 .toggleMenu {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: auto;
+  top: 10px;
+  left: 10px;
   cursor: pointer;
   display: none;
   z-index: 9999;
   transition: .3s;
 }
+
+.toggleMenu img {
+    display: block;
+    width: 40px;
+    height: auto;
+    outline: 1px solid red;
+  }
 
 .nav {
   list-style: none;
@@ -221,7 +218,8 @@ nav {
   top: 0;
 }
 
-.nav li:hover {
+.nav li:hover,
+.nav a:hover {
   background: #249578;
 }
 
@@ -238,12 +236,6 @@ nav {
   background: #249578;
   z-index: 200;
 }
-
-/* .nav li li:first-child a {
-  margin-top: 15px;
-} */
-
-
 
 /*************** / NAVIGATION ***************/
 
@@ -384,6 +376,9 @@ footer p {
 
 @media (max-width: 1199px) {
   /*************** 1199 ***************/
+  .topInfo {
+    padding: 20px;
+  }
   .topInfo div {
     margin: 0 auto;
   }
@@ -426,9 +421,24 @@ footer p {
   .topInfo div:nth-child(2) {
     display: none;
   }
-  .activeButton {
+  /* .activeButton {
     position: fixed;
-  }
+    top: 0;
+    left: 0;
+  } */
+
+/*   .toggleMenu {
+  display: block;
+  width: 50px;
+  height: 50px;
+  top: 50px;
+  left: 50px;
+  outline: 1px solid red;
+  z-index: 15000;
+} */
+
+
+
   nav {
     height: 0;
   }
@@ -456,7 +466,7 @@ footer p {
   .nav>li>.parent {
     background-position: 95% 50%;
   }
-  .nav li li .parent {
+  .nav li.parent {
     background-image: url("images/downArrow.png");
     background-repeat: no-repeat;
     background-position: 95% 50%;

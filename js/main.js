@@ -33,22 +33,22 @@ $(document).ready(function() {
 
     if (ww < 768) {
 
-      $(".toggleMenu").css("display", "inline-block");
+      $(".toggleMenu").css("display", "block");
 
       $(".toggleMenu").click(function(e) {
         e.preventDefault();
         if ( counter === 0 ) {
           /*console.log("counter = " + counter);*/
           $(this)
-              .addClass("activeButton")
+              /*.addClass("activeButton")*/
                   .css("transform", "rotate(180deg)");
           $(".nav").addClass("activeMenu");
           counter = 1;
         } else {
           /*console.log("counter = " + counter);*/
           $(this)
-              .removeClass("activeButton")
-                  .css("transform", "rotate(0)");
+              /*.removeClass("activeButton")*/
+                  .css("transform", "rotate(0deg)");
           $(".nav").removeClass("activeMenu");              
           counter = 0;
         }        
