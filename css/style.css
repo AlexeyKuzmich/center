@@ -87,14 +87,12 @@ body > div {
   padding: 40px 20px;
   line-height: 1;
   font-size: 1.3em;
-  /* background-color: #E4F1FE; */
 }
 
 .topInfo div {
   float: left;
   font-weight: bold;
   color: #7FC560;
-  outline: 1px solid red;
 }
 
 .topInfo div:first-child {
@@ -140,7 +138,6 @@ nav {
   background: -o-linear-gradient(top, #446CB3, #52B3D9);
   background: -moz-linear-gradient(top, #446CB3, #52B3D9);
   background: linear-gradient(to bottom, #446CB3, #52B3D9);
-  transition: 1s;
 }
 
 .toggleMenu {
@@ -157,21 +154,11 @@ nav {
     display: block;
     width: 40px;
     height: auto;
-    outline: 1px solid red;
   }
 
 .nav {
   list-style: none;
-}
-
-.nav:before,
-.nav:after {
-  content: " ";
-  display: table;
-}
-
-.nav:after {
-  clear: both;
+  transition: 1.5s;
 }
 
 .nav ul {
@@ -182,18 +169,20 @@ nav {
   position: relative;
 }
 
-.nav>li {
+.nav > li {
   float: left;
   white-space: nowrap;
 }
 
-.nav>li>.parent {
+.nav > li > a.parent,
+.nav > li > a.parent:hover,
+.nav > li > a.parent:focus {
   background-image: url("../images/downArrow.png");
   background-repeat: no-repeat;
   background-position: right;
 }
 
-.nav>li>a {
+.nav > li > a {
   display: block;
   padding: 5px 15px;
   line-height: 40px;
@@ -207,10 +196,11 @@ nav {
   left: -9999px;
 }
 
-.nav>li.hover>ul {
+.nav > li.hover:hover > ul {
   left: 0;
   background: rgba(68, 108, 179, .8);
   color: #fff;
+  z-index: 9000;
 }
 
 .nav li li.hover ul {
@@ -218,15 +208,15 @@ nav {
   top: 0;
 }
 
-.nav li:hover,
-.nav a:hover {
+nav .nav a:hover,
+nav .nav a:focus {
   background: #249578;
 }
 
 .nav li li a {
   display: block;
   position: relative;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   min-width: 350px;
   z-index: 100;
   color: #fff;
@@ -353,6 +343,8 @@ footer p {
 .scrollToTop {
   display: none;
   position: fixed;
+  width: 40px;
+  height: auto;
   right: 20px;
   bottom: 20px;
   cursor: pointer;
@@ -414,31 +406,12 @@ footer p {
 
   /* NAVIGATION */
   .topInfo div:first-child {
-    margin-top: 30px;
+    margin: 50px 0 0 -10px;
     font-size: .8em;
-    text-align: center;
   }
   .topInfo div:nth-child(2) {
     display: none;
   }
-  /* .activeButton {
-    position: fixed;
-    top: 0;
-    left: 0;
-  } */
-
-/*   .toggleMenu {
-  display: block;
-  width: 50px;
-  height: 50px;
-  top: 50px;
-  left: 50px;
-  outline: 1px solid red;
-  z-index: 15000;
-} */
-
-
-
   nav {
     height: 0;
   }
@@ -449,26 +422,31 @@ footer p {
     bottom: 0;
     left: -100%;
     width: 100%;
-    padding-top: 70px;
+    padding-top: 50px;
     transition: all .3s;
     background-color: rgba(68, 108, 179, .8);
     z-index: 900;
-    overflow-y: auto;
+    overflow-x: auto;
   }
-
   .activeMenu {
     left: 0;
   }
-
-  .nav>li {
+  .nav > li {
     float: none;
+    white-space: normal;
   }
-  .nav>li>.parent {
-    background-position: 95% 50%;
+  .nav li a {
+    float: none;
+    white-space: normal;
+    line-height: 30px;
   }
-  .nav li.parent {
-    background-image: url("images/downArrow.png");
-    background-repeat: no-repeat;
+  .nav li li {
+    padding: 5px 0 5px 15px;
+    font-size: 85%;
+  }
+  .nav > li > a.parent,
+  .nav > li > a.parent:hover,
+  .nav > li > a.parent:focus {
     background-position: 95% 50%;
   }
   .nav ul {

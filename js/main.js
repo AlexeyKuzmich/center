@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   // topInfo scroll
   $(window).scroll(function() {
-    var $nav = $("nav");
+    var $nav = $(".nav");
     if ( $(this).scrollTop() > 200 ) {
       $nav.addClass("fixedMenu");
     } else {
@@ -29,6 +29,7 @@ $(document).ready(function() {
 
   // adaptive menu
   function adjustMenu() {
+    ww = document.body.clientWidth + 17;
     var counter = 0;
 
     if (ww < 768) {
@@ -60,15 +61,18 @@ $(document).ready(function() {
         e.preventDefault();
         $(this).parent("li").toggleClass("hover");
       });
-    } else if (ww >= 768) {
+    } else if ( ww >= 768 ) {
       $(".toggleMenu").css("display", "none");
-      $(".nav").show();
-
-      $(".nav").css("display", "block");
+      $(".nav")
+          .show()
+              .css("display", "block");
 
       $(".nav li").removeClass("hover");
       $(".nav li a").unbind('click');
-      $(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+      $(".nav li")
+          .removeClass("hover")
+              .unbind('mouseenter mouseleave')
+                  .bind('mouseenter mouseleave', function() {
         // Необходимо привязать к элементу li для предотвращения запуска события mouseleave при перемещении курсора мыши над подменю
         $(this).toggleClass('hover');
       });
