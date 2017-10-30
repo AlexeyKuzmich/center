@@ -7,10 +7,12 @@ $(document).ready(function() {
   // topInfo scroll
   $(window).scroll(function() {
     var $nav = $(".nav");
-    if ( $(this).scrollTop() > 200 ) {
-      $nav.addClass("fixedMenu");
+    if ( $(this).scrollTop() > 190 ) {
+      $nav.addClass("fixedMenu")
+          .css("padding-left", 15);
     } else {
-      $nav.removeClass("fixedMenu");
+      $nav.removeClass("fixedMenu")
+          .css("padding-left", 0);
     }
   });
 

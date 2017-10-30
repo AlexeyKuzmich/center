@@ -13,7 +13,7 @@ h6 {
   font-weight: 400;
   line-height: 1.5;
   color: #555;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -161,7 +161,7 @@ nav {
 
 .nav {
   list-style: none;
-  transition: 1.5s;
+  transition: background 1s;
 }
 
 .nav ul {
@@ -256,8 +256,19 @@ nav .nav a:focus {
   background-size: cover;
 }
 
-#mainSlider .slider-1 {
+/* #mainSlider .slider-1 {
   background-image: url(../images/mainSlider/1.jpg);
+} */
+
+#mainSlider .sliderImage img {
+  width: 100%;
+  height: auto;
+}
+
+.sliderImage,
+.sliderText {
+  float: left;
+  outline: 3px solid red;
 }
 
 #mainSlider .slider-2 {
