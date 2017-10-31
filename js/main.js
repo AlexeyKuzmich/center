@@ -94,7 +94,37 @@ $(document).ready(function() {
 
 
   // owlCarousel
-  $(".owl-carousel").owlCarousel();
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      responsive:{
+          0: {
+              items: 1
+          },
+          575: {
+              items: 2
+          },
+          767: {
+              items: 3
+          },
+          991: {
+              items: 4
+          },
+          1199: {
+              items: 6
+          }
+      }
+  });
+/*  owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY > 0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+  });*/
 
 
   // parallax
