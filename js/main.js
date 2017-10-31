@@ -94,11 +94,10 @@ $(document).ready(function() {
 
 
   // owlCarousel
-  var owl = $('.owl-carousel');
-  owl.owlCarousel({
+  $('.owl-carousel').owlCarousel({
       loop: true,
       margin: 10,
-      nav: false,
+      nav: true,
       responsive:{
           0: {
               items: 1
@@ -117,14 +116,8 @@ $(document).ready(function() {
           }
       }
   });
-/*  owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY > 0) {
-        owl.trigger('next.owl');
-    } else {
-        owl.trigger('prev.owl');
-    }
-    e.preventDefault();
-  });*/
+  $(".owl-nav .owl-prev").text("сюда");
+  $(".owl-nav .owl-next").text("туда");
 
 
   // parallax
