@@ -93,6 +93,10 @@ $(document).ready(function() {
   
 
 
+  // owlCarousel
+  $(".owl-carousel").owlCarousel();
+
+
   // parallax
   $(".parallax-window").parallax({imageSrc: "images/parallax/paralax1.jpg"});
 
