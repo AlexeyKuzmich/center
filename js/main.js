@@ -6,13 +6,16 @@ $(document).ready(function() {
 
   // topInfo scroll
   $(window).scroll(function() {
-    var $nav = $(".nav");
+    var $nav = $(".nav")/*,
+        $fixed = $(".fixedElement")*/;
     if ( $(this).scrollTop() > 190 ) {
       $nav.addClass("fixedMenu")
           .css("padding-left", 15);
+          /*$fixed.show();*/
     } else {
       $nav.removeClass("fixedMenu")
           .css("padding-left", 0);
+          /*$fixed.hide();*/
     }
   });
 
