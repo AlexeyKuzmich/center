@@ -1,6 +1,7 @@
   /*************** COMMON STYLES ***************/
 html, body {
   height: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -263,7 +264,7 @@ nav .nav a:focus {
 
 .nav li li li a {
   background: #249578;
-  z-index: 200;
+  /* z-index: 200; */
 }
 
 .nav li li a:hover {
@@ -304,6 +305,10 @@ nav .nav a:focus {
 
 .carousel-inner div {
   outline: 1px solid red;
+}
+
+.carousel-indicators {
+  display: none;
 }
 
 .carousel-indicators li {
@@ -429,13 +434,11 @@ nav .nav a:focus {
 }
 /*************** / PARALLAX ***************/
 
-.department img {
+/* .department img {
   width: 30%;
   height: auto;
   margin: 0 30px 30px 0;
-}
-
-
+} */
 
 
 
@@ -445,7 +448,6 @@ nav .nav a:focus {
 
 
 /*************** FOOTER ***************/
-
 footer {
   padding-top: 100px;
   height: 250px;
@@ -461,14 +463,14 @@ footer p {
   display: table;
   margin: 0 auto;
 }
-
-
-
 /*************** / FOOTER ***************/
 
 
-/*************** scroll up button ***************/
 
+
+
+
+/*************** scrollToTop ***************/
 .scrollToTop {
   display: none;
   position: fixed;
@@ -486,25 +488,41 @@ footer p {
 .scrollToTop:hover {
   opacity: 1;
 }
+/*************** / scrollToTop ***************/
 
 
 
 
-/*************** / scroll up button ***************/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*************** MEDIAQUERY **************************************/
 
+
+/*************** 1199 ***************/
 @media (max-width: 1199px) {
-  /*************** 1199 ***************/
   .topInfo div:first-child {
     margin-right: 40px;
   }
 }
 
 
+
+/*************** 991 ***************/
 @media (max-width: 991px) {
-  /*************** 991 ***************/
+
   .topInfo {
     height: 120px;
     padding: 30px 20px 0;
@@ -519,12 +537,12 @@ footer p {
     text-align: left;
     padding: 5px 9px;
   }
-
 }
 
 
+
+/*************** 767 ***************/
 @media (max-width: 767px) {
-  /*************** 767 ***************/
   /* COMMON STYLES */
   h1 {
     margin: 50px 0;
@@ -532,27 +550,27 @@ footer p {
   }
 
   /* NAVIGATION */
-.topInfo {
-  height: 62px;
-  padding: 8px 0 0 70px;
-}
-.topInfo div:first-child {
-  font-size: .8em;
-}
-.topInfo div:nth-child(2) {
-  display: none;
-}
+  .topInfo {
+    height: 62px;
+    padding: 8px 0 0 70px;
+  }
+  .topInfo div:first-child {
+    margin-right: 0;
+    font-size: .8em;
+  }
+  .topInfo div:nth-child(2) {
+    display: none;
+  }
   nav {
     height: 0;
   }
-
   .nav {
     position: fixed;
+    padding-top: 70px;
     top: 0;
     bottom: 0;
     left: -100%;
     width: 100%;
-    padding-top: 70px;
     transition: all .3s;
     background-color: rgba(68, 108, 179, .8);
     z-index: 900;
