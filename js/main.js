@@ -75,7 +75,11 @@ $(document).ready(function() {
       });
     } else if ( ww >= 768 ) {
 
-      /*$(".departmentHint").show();*/
+/*      $(".nav li li a").hover(function() {
+        $(".nav li li a + .departmentHint").fadeIn();
+      }, function() {
+        $(".nav li li a + .departmentHint").fadeOut();
+      });*/
 
       // topInfo scroll
       $(window).scroll(function() {
