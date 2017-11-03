@@ -1,7 +1,8 @@
   /*************** COMMON STYLES ***************/
 html, body {
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 
@@ -57,10 +58,7 @@ hr.hrStyle {
   border: 0;
   height: 3px;
   background: #4A70B5;
-  background: -webkit-linear-gradient(to left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
-  background: -moz-linear-gradient(to left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
-  background: -ms-linear-gradient(to left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
-  background: -o-linear-gradient(to left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
+  background: -webkit-gradient(linear, right top, left top, from(rgba(68, 108, 179, 0)), color-stop(rgba(68, 108, 179, 1)), to(rgba(68, 108, 179, 0)));
   background: linear-gradient(to left, rgba(68, 108, 179, 0), rgba(68, 108, 179, 1), rgba(68, 108, 179, 0));
 }
 
@@ -120,6 +118,7 @@ body > div {
   padding-bottom: 10px;
   font-size: 1em;
   color: #7FC560;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -159,9 +158,7 @@ body > div {
 nav {
   height: 50px;
   background: #446CB3;
-  background: -webkit-linear-gradient(90deg, #446CB3, #52B3D9);
-  background: -o-linear-gradient(90deg, #446CB3, #52B3D9);
-  background: -moz-linear-gradient(90deg, #446CB3, #52B3D9);
+  background: -webkit-gradient(linear, left bottom, left top, from(#446CB3), to(#52B3D9));
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
 
@@ -172,6 +169,7 @@ nav {
   cursor: pointer;
   display: none;
   z-index: 9999;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -183,6 +181,7 @@ nav {
 
 .nav {
   list-style: none;
+  -webkit-transition: background 1s;
   transition: background 1s;
 }
 
@@ -219,6 +218,7 @@ nav {
   line-height: 40px;
   color: #fff;
   text-align: center;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -251,6 +251,7 @@ nav .nav a:focus {
   /* min-width: 320px; */
   z-index: 100;
   color: #fff;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -270,6 +271,24 @@ nav .nav a:focus {
 .nav li li a:hover {
   padding-left: 20px;
   padding-right: 10px;
+}
+
+.departmentHint {
+  display: none;
+  position: absolute;
+  padding: 5px 15px;
+  top: 15px;
+  left: 30%;
+  max-width: 350px;
+  background-color: #fafafa;
+  color: #446CB3;
+  white-space: normal;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.nav li li a:hover ~ .departmentHint {
+  display: block;
 }
 
 /*************** / NAVIGATION ***************/
@@ -362,7 +381,8 @@ nav .nav a:focus {
 } */
 
 .owl-carousel .owl-item:hover img {
-  box-shadow: 1px 1px 12px 0px #4A9FFF;
+  -webkit-box-shadow: 1px 1px 12px 0px #4A9FFF;
+          box-shadow: 1px 1px 12px 0px #4A9FFF;
 }
 
 .owl-theme .owl-nav [class*=owl-] {
@@ -406,6 +426,7 @@ nav .nav a:focus {
   color: #fff;
   background: rgba(68, 108, 179, .5);
   text-align: center;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -453,9 +474,7 @@ footer {
   height: 250px;
   color: #fff;
   background: #446CB3;
-  background: -webkit-linear-gradient(90deg, #446CB3, #52B3D9);
-  background: -o-linear-gradient(90deg, #446CB3, #52B3D9);
-  background: -moz-linear-gradient(90deg, #446CB3, #52B3D9);
+  background: -webkit-gradient(linear, left bottom, left top, from(#446CB3), to(#52B3D9));
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
 
@@ -481,6 +500,7 @@ footer p {
   cursor: pointer;
   opacity: .5;
   z-index: 100;
+  -webkit-transition: .3s;
   transition: .3s;
   opacity: .5;
 }
@@ -571,6 +591,7 @@ footer p {
     bottom: 0;
     left: -100%;
     width: 100%;
+    -webkit-transition: all .3s;
     transition: all .3s;
     background-color: rgba(68, 108, 179, .8);
     z-index: 900;

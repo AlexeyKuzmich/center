@@ -23,6 +23,11 @@ $(document).ready(function() {
 
 
 
+  //toolTip
+      $('[data-toggle="tooltip"]').tooltip();
+
+
+
   // resize
   $(window).bind('resize orientationchange', function() {
     ww = document.body.clientWidth;
@@ -38,6 +43,8 @@ $(document).ready(function() {
     var counter = 0;
 
     if (ww < 768) {
+
+      /*$(".departmentHint").hide();*/
 
       $(".toggleMenu").css("display", "block");
 
@@ -67,6 +74,8 @@ $(document).ready(function() {
         $(this).parent("li").toggleClass("hover");
       });
     } else if ( ww >= 768 ) {
+
+      /*$(".departmentHint").show();*/
 
       // topInfo scroll
       $(window).scroll(function() {
