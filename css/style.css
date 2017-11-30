@@ -56,6 +56,7 @@ a:hover {
 }
 
 hr.hrStyle {
+  margin: 100px 0 100px;
   border: 0;
   height: 3px;
   background: #4A70B5;
@@ -291,21 +292,11 @@ nav .nav a:focus {
 .nav li li a:hover ~ .departmentHint {
   display: block;
 }
-
 /*************** / NAVIGATION ***************/
 
 
-/*************** SLIDER ***************/
-
-
-/* #mainSliderC img {
-  width: 100%;
-  height: auto;
-} */
-
-#mainSlider .slider-1,
-#mainSlider .slider-2,
-#mainSlider .slider-3 {
+/*************** MAINSLIDER ***************/
+#mainSlider .item{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -323,37 +314,13 @@ nav .nav a:focus {
   background-image: url(../images/mainSlider/3.jpg);
 }
 
-.carousel-inner div {
-  outline: 1px solid red;
+#mainSlider .owl-mainSlider {
+  margin: 0;
 }
+/*************** / MAINSLIDER ***************/
 
-.carousel-indicators {
-  display: none;
-}
 
-.carousel-indicators li {
-  border-color: #59ABE3;
-  background-color: transparent;
-}
 
-.carousel-indicators .active {
-  border-color: #446CB3;
-  background-color: #446CB3;
-}
-
-.carousel-control {
-  color: #446CB3;
-}
-
-.carousel-control.right,
-.carousel-control.left {
-  background-image: none;
-}
-
-.carousel-control:hover {
-  color: #52B3D9;
-}
-/*************** / SLIDER ***************/
 
 
 

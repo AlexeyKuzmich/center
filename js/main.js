@@ -1,18 +1,6 @@
-/* PERINATAL CENTER */
-
 $(document).ready(function() {
   var ww = document.body.clientWidth,
-      c = console.log;
-
-  // topInfo scroll
-/*  $(window).scroll(function() {
-    var $nav = $("nav");
-    if ( $(this).scrollTop() > 170 ) {
-      $nav.addClass("fixedMenu");
-    } else {
-      $nav.removeClass("fixedMenu");
-    }
-  });*/
+  c = console.log;
 
   // navigation
   $(".nav li a").each(function() {
@@ -21,18 +9,29 @@ $(document).ready(function() {
     }
   });
 
+  // slider
+  $(".owl-mainSlider").owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    items: 1
+  });
 
-
-  //toolTip
-      $('[data-toggle="tooltip"]').tooltip();
-
-
+  // mainSlider
+  function sliderHeightDetect() {
+    var sliderHeight = $(window).height() * .6;
+    $("#mainSlider .item").css("height", sliderHeight);
+  };
+  sliderHeightDetect();
 
   // resize
   $(window).bind('resize orientationchange', function() {
     ww = document.body.clientWidth;
     adjustMenu();
-    caruselHeightDetect();
+    sliderHeightDetect();
   });
 
 
@@ -53,15 +52,15 @@ $(document).ready(function() {
         if ( counter === 0 ) {
           /*console.log("counter = " + counter);*/
           $(this)
-              /*.addClass("activeButton")*/
-                  .css("transform", "rotate(180deg)");
+          /*.addClass("activeButton")*/
+          .css("transform", "rotate(180deg)");
           $(".nav").addClass("activeMenu");
           counter = 1;
         } else {
           /*console.log("counter = " + counter);*/
           $(this)
-              /*.removeClass("activeButton")*/
-                  .css("transform", "rotate(0deg)");
+          /*.removeClass("activeButton")*/
+          .css("transform", "rotate(0deg)");
           $(".nav").removeClass("activeMenu");              
           counter = 0;
         }        
@@ -75,16 +74,10 @@ $(document).ready(function() {
       });
     } else if ( ww >= 768 ) {
 
-/*      $(".nav li li a").hover(function() {
-        $(".nav li li a + .departmentHint").fadeIn();
-      }, function() {
-        $(".nav li li a + .departmentHint").fadeOut();
-      });*/
-
       // topInfo scroll
       $(window).scroll(function() {
         var $nav = $("nav");
-        if ( $(this).scrollTop() > 170 ) {
+        if ( $(this).scrollTop() > 150 ) {
           $nav.addClass("fixedMenu");
         } else {
           $nav.removeClass("fixedMenu");
@@ -93,15 +86,15 @@ $(document).ready(function() {
       
       $(".toggleMenu").css("display", "none");
       $(".nav")
-          .show()
-              .css("display", "block");
+      .show()
+      .css("display", "block");
 
       $(".nav li").removeClass("hover");
       $(".nav li a").unbind('click');
       $(".nav li")
-          .removeClass("hover")
-              .unbind('mouseenter mouseleave')
-                  .bind('mouseenter mouseleave', function() {
+      .removeClass("hover")
+      .unbind('mouseenter mouseleave')
+      .bind('mouseenter mouseleave', function() {
         // Необходимо привязать к элементу li для предотвращения запуска события mouseleave при перемещении курсора мыши над подменю
         $(this).toggleClass('hover');
       });
@@ -110,45 +103,39 @@ $(document).ready(function() {
   adjustMenu();
 
 
-
-  // slider
-  function caruselHeightDetect() {
-    var caruselHeight = $(window).height() * .6;
-    $("#mainSlider .item").css("height", caruselHeight);
-  };
-  caruselHeightDetect();
-  
-
-
-  // owlCarousel
+  // owl-doctors
   $(".owl-doctors").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      autoplay: false,
-      autoplayTimeout: 1000,
+    loop: true,
+    margin: 10,
+    nav: true,
+    autoplay: false,
+    autoplayTimeout: 1000,
 
-      responsive:{
-          0: {
-              items: 1
-          },
-          575: {
-              items: 2
-          },
-          767: {
-              items: 3
-          },
-          991: {
-              items: 4
-          },
-          1199: {
-              items: 6
-          }
+    responsive:{
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      575: {
+        items: 3
+      },
+      767: {
+        items: 4
+      },
+      991: {
+        items: 5
+      },
+      1199: {
+        items: 6
       }
+    }
   });
   $(".owl-nav").addClass("hidden-xs");
   $(".owl-nav .owl-prev").text("<");
   $(".owl-nav .owl-next").text(">");
+
 
 
   // parallax
@@ -159,7 +146,7 @@ $(document).ready(function() {
   // scroll to top
   $(window).scroll(function() {
     var height = $(window).height(),
-        $scrollToTop = $(".scrollToTop");
+    $scrollToTop = $(".scrollToTop");
     if ( $(this).scrollTop() > height ) {
       $scrollToTop.fadeIn();
     } else {
