@@ -121,10 +121,13 @@ $(document).ready(function() {
 
 
   // owlCarousel
-  $('.owl-carousel').owlCarousel({
+  $(".owl-doctors").owlCarousel({
       loop: true,
       margin: 10,
       nav: true,
+      autoplay: false,
+      autoplayTimeout: 1000,
+
       responsive:{
           0: {
               items: 1
@@ -143,8 +146,9 @@ $(document).ready(function() {
           }
       }
   });
-  $(".owl-nav .owl-prev").text("сюда");
-  $(".owl-nav .owl-next").text("туда");
+  $(".owl-nav").addClass("hidden-xs");
+  $(".owl-nav .owl-prev").text("<");
+  $(".owl-nav .owl-next").text(">");
 
 
   // parallax

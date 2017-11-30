@@ -45,7 +45,8 @@ h3 {
 }
 
 p {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
@@ -387,26 +388,30 @@ nav .nav a:focus {
 
 .owl-theme .owl-nav [class*=owl-] {
   position: absolute;
-  top: 50%;
+  top: 33%;
   opacity: 1;
   background: #4A9FFF;
   opacity: .5;
 }
 
 .owl-prev {
-  left: 0;
-}
-
-.owl-prev:hover {
-  left: -5px;
+  left: -32px;
 }
 
 .owl-next {
-  right: 0;
+  right: -32px;
 }
 
-.owl-next:hover {
-  right: -5px;
+.owl-nav .owl-prev:hover {
+  margin-left: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.owl-nav .owl-next:hover {
+  margin-right: 0;
+  padding-right: 12px;
+  padding-left: 12px;
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover {
