@@ -108,6 +108,7 @@ $(document).ready(function() {
     loop: true,
     margin: 10,
     nav: true,
+    touchDrag: true,
     autoplay: false,
     autoplayTimeout: 1000,
 
