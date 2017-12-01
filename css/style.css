@@ -442,8 +442,7 @@ nav .nav a:focus {
 /*************** FOOTER ***************/
 footer {
   margin-top: 50px;
-  padding-top: 100px;
-  height: 250px;
+  padding: 50px 0 50px;
   color: #fff;
   background: #446CB3;
   background: -webkit-gradient(linear, left bottom, left top, from(#446CB3), to(#52B3D9));

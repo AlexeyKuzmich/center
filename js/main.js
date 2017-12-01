@@ -14,7 +14,7 @@ $(document).ready(function() {
     loop: true,
     margin: 0,
     nav: false,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     items: 1
@@ -158,5 +158,15 @@ $(document).ready(function() {
   $(".scrollToTop").click(function() {
     $("body, html").animate({scrollTop: 0}, 500);
   });
+
+  if( ! $("#myCanvas").tagcanvas({
+    textColour : "#ffffff",
+    outlineThickness : 1,
+    maxSpeed : 0.05,
+    depth : .8
+  })) {
+    // TagCanvas failed to load
+    $('#myCanvasContainer').hide();
+  }
 
 }); //$(document).ready(function()
