@@ -9,18 +9,17 @@ $(document).ready(function() {
     }
   });
 
-  // slider
+  // mainSlider
   $(".owl-mainSlider").owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     items: 1
   });
 
-  // mainSlider
   function sliderHeightDetect() {
     var sliderHeight = $(window).height() * .6;
     $("#mainSlider .item").css("height", sliderHeight);
@@ -28,7 +27,7 @@ $(document).ready(function() {
   sliderHeightDetect();
 
   // resize
-  $(window).bind('resize orientationchange', function() {
+  $(window).bind("resize orientationchange", function() {
     ww = document.body.clientWidth;
     adjustMenu();
     sliderHeightDetect();
@@ -50,17 +49,11 @@ $(document).ready(function() {
       $(".toggleMenu").click(function(e) {
         e.preventDefault();
         if ( counter === 0 ) {
-          /*console.log("counter = " + counter);*/
-          $(this)
-          /*.addClass("activeButton")*/
-          .css("transform", "rotate(180deg)");
+          $(this).css("transform", "rotate(180deg)");
           $(".nav").addClass("activeMenu");
           counter = 1;
         } else {
-          /*console.log("counter = " + counter);*/
-          $(this)
-          /*.removeClass("activeButton")*/
-          .css("transform", "rotate(0deg)");
+          $(this).css("transform", "rotate(0deg)");
           $(".nav").removeClass("activeMenu");              
           counter = 0;
         }        
@@ -86,15 +79,14 @@ $(document).ready(function() {
       
       $(".toggleMenu").css("display", "none");
       $(".nav")
-      .show()
-      .css("display", "block");
+        .show()
+          .css("display", "block");
 
-      $(".nav li").removeClass("hover");
       $(".nav li a").unbind('click');
       $(".nav li")
-      .removeClass("hover")
-      .unbind('mouseenter mouseleave')
-      .bind('mouseenter mouseleave', function() {
+        .removeClass("hover")
+          .unbind('mouseenter mouseleave')
+            .bind('mouseenter mouseleave', function() {
         // Необходимо привязать к элементу li для предотвращения запуска события mouseleave при перемещении курсора мыши над подменю
         $(this).toggleClass('hover');
       });
@@ -111,7 +103,6 @@ $(document).ready(function() {
     touchDrag: true,
     autoplay: false,
     autoplayTimeout: 1000,
-
     responsive:{
       0: {
         items: 1
@@ -159,14 +150,15 @@ $(document).ready(function() {
     $("body, html").animate({scrollTop: 0}, 500);
   });
 
-  if( ! $("#myCanvas").tagcanvas({
-    textColour : "#ffffff",
+  //tagCloud
+  if ( !$("#myCanvas").tagcanvas({
+    textColour : "#fff",
     outlineThickness : 1,
     maxSpeed : 0.05,
     depth : .8
   })) {
     // TagCanvas failed to load
-    $('#myCanvasContainer').hide();
+    $("#myCanvasContainer").hide();
   }
 
 }); //$(document).ready(function()

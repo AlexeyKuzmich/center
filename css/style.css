@@ -449,9 +449,27 @@ footer {
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
 
-footer p {
-  display: table;
-  margin: 0 auto;
+
+footer h2,
+footer .glyphicon {
+  color: #446CB3;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer li span {
+  padding-right: 15px;
+}
+
+footer a:link,
+footer a:visited {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #7FC560;;
 }
 /*************** / FOOTER ***************/
 
