@@ -1,6 +1,6 @@
   /*************** COMMON STYLES ***************/
 html, body {
-  touch-action: manipulation;
+  /* touch-action: auto; */
   /* height: 100%; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -449,7 +449,6 @@ footer {
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
 
-
 footer h2,
 footer .glyphicon {
   color: #446CB3;
@@ -471,6 +470,12 @@ footer a:visited {
 footer a:hover {
   color: #7FC560;;
 }
+
+footer div {
+  outline: 1px solid red;
+}
+
+footer 
 /*************** / FOOTER ***************/
 
 
@@ -517,7 +522,7 @@ footer a:hover {
 
 
 
-/*************** MEDIAQUERY **************************************/
+/*************** MEDIAQUERYS **************************************/
 
 
 /*************** 1199 ***************/
@@ -531,7 +536,6 @@ footer a:hover {
 
 /*************** 991 ***************/
 @media (max-width: 991px) {
-
   .topInfo {
     height: 120px;
     padding: 30px 20px 0;
@@ -553,6 +557,9 @@ footer a:hover {
 /*************** 767 ***************/
 @media (max-width: 767px) {
   /* COMMON STYLES */
+  html, body {
+    height: 100%;
+  }
   h1 {
     margin: 50px 0;
     font-size: 30px;
@@ -613,19 +620,23 @@ footer a:hover {
   }
   .nav>li.hover>ul,
   .nav li li.hover ul {
-    position: static;
+    position: static;    
+  }
+
+  .nav > li.hover:hover > ul {
+    background: transparent;
   }
 }
 
   /*************** 575 ***************/
-  @media (max-width: 575px) {
-.topInfo {      
-  padding-top: 12px;
-}
-.topInfo div:first-child {
-  font-size: .6em;
-}
-    /* .nav li li a {
-      min-width: 300px;
-    } */
+@media (max-width: 575px) {
+  .topInfo {      
+    padding-top: 12px;
+  }
+  .topInfo div:first-child {
+    font-size: .6em;
+  }
+  /* .nav li li a {
+    min-width: 300px;
+  } */
 }

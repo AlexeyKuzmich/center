@@ -43,7 +43,7 @@ $(document).ready(function() {
     if (ww < 768) {
 
       /*$(".departmentHint").hide();*/
-
+      
       $(".toggleMenu").css("display", "block");
 
       $(".toggleMenu").click(function(e) {
@@ -54,7 +54,7 @@ $(document).ready(function() {
           counter = 1;
         } else {
           $(this).css("transform", "rotate(0deg)");
-          $(".nav").removeClass("activeMenu");              
+          $(".nav").removeClass("activeMenu");
           counter = 0;
         }        
       });
