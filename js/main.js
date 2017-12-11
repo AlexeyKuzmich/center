@@ -14,7 +14,7 @@ $(document).ready(function() {
     loop: true,
     margin: 0,
     nav: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     items: 1
@@ -31,6 +31,7 @@ $(document).ready(function() {
     ww = document.body.clientWidth;
     adjustMenu();
     sliderHeightDetect();
+    setEqualHeight( $(".direction .item") );
   });
 
 
@@ -95,6 +96,46 @@ $(document).ready(function() {
   adjustMenu();
 
 
+
+
+
+
+
+
+
+
+
+  // direction
+ /* function setEqualHeight(columns) {
+    var tallestcolumn = 0;
+    columns.each(function() {
+        currentHeight = $(this).height();
+        if ( currentHeight > tallestcolumn ) {
+          tallestcolumn = currentHeight;
+        }
+      });
+    columns.height( tallestcolumn );
+  }
+  setEqualHeight( $(".direction .item") );
+
+  $(window).resize( function() {
+    setEqualHeight( $(".direction .item") );
+  });*/
+
+
+  $(".direction .item").matchHeight();
+  $(window).resize( function() {
+    $(".direction .item").matchHeight();
+  });
+
+
+
+
+
+
+
+
+
   // owl-doctors
   $(".owl-doctors").owlCarousel({
     loop: true,
@@ -123,8 +164,8 @@ $(document).ready(function() {
       }
     }
   });
-  $(".owl-doctors .owl-prev").text("");
-  $(".owl-doctors .owl-next").text("");
+  $(".owl-prev").text("");
+  $(".owl-next").text("");
 
 
 
