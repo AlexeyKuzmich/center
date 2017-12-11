@@ -13,7 +13,7 @@ $(document).ready(function() {
   $(".owl-mainSlider").owlCarousel({
     loop: true,
     margin: 0,
-    nav: false,
+    nav: true,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
@@ -43,7 +43,7 @@ $(document).ready(function() {
     if (ww < 768) {
 
       /*$(".departmentHint").hide();*/
-      
+
       $(".toggleMenu").css("display", "block");
 
       $(".toggleMenu").click(function(e) {
@@ -102,7 +102,6 @@ $(document).ready(function() {
     nav: true,
     touchDrag: true,
     autoplay: false,
-    autoplayTimeout: 1000,
     responsive:{
       0: {
         items: 1
@@ -124,9 +123,9 @@ $(document).ready(function() {
       }
     }
   });
-  $(".owl-nav").addClass("hidden-xs");
-  $(".owl-nav .owl-prev").text("<");
-  $(".owl-nav .owl-next").text(">");
+  $(".owl-doctors .owl-prev").text("");
+  $(".owl-doctors .owl-next").text("");
+
 
 
 
