@@ -1,39 +1,10 @@
-$(document).ready(function() {
-  var ww = document.body.clientWidth,
-  c = console.log;
+  
 
-  // navigation
-  $(".nav li a").each(function() {
-    if ( $(this).next().length > 0 ) {
-      $(this).addClass("parent");
-    }
-  });
-
-  // mainSlider
-  $(".owl-mainSlider").owlCarousel({
-    loop: true,
-    margin: 0,
-    nav: true,
-    autoplay: false,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    items: 1
-  });
 
   function sliderHeightDetect() {
     var sliderHeight = $(window).height() * .6;
     $("#mainSlider .item").css("height", sliderHeight);
   };
-  sliderHeightDetect();
-
-  // resize
-  $(window).bind("resize orientationchange", function() {
-    ww = document.body.clientWidth;
-    adjustMenu();
-    sliderHeightDetect();
-    setEqualHeight( $(".direction .item") );
-  });
-
 
 
   // adaptive menu
@@ -42,8 +13,6 @@ $(document).ready(function() {
     var counter = 0;
 
     if (ww < 768) {
-
-      /*$(".departmentHint").hide();*/
 
       $(".toggleMenu").css("display", "block");
 
@@ -57,7 +26,7 @@ $(document).ready(function() {
           $(this).css("transform", "rotate(0deg)");
           $(".nav").removeClass("activeMenu");
           counter = 0;
-        }        
+        }
       });
 
       $(".nav li").unbind('mouseenter mouseleave');
@@ -66,6 +35,13 @@ $(document).ready(function() {
         e.preventDefault();
         $(this).parent("li").toggleClass("hover");
       });
+
+      $(".direction .item").each(function() {
+        $(this)
+            .removeClass("largeScreen")
+                .removeAttr("style");
+      });
+
     } else if ( ww >= 768 ) {
 
       // topInfo scroll
@@ -91,24 +67,20 @@ $(document).ready(function() {
         // Необходимо привязать к элементу li для предотвращения запуска события mouseleave при перемещении курсора мыши над подменю
         $(this).toggleClass('hover');
       });
+
+      $(".direction .item").each(function() {
+        $(this).addClass("largeScreen");
+      });
+
     }
   }
-  adjustMenu();
 
 
-
-
-
-
-
-
-
-
-
-  // direction
- /* function setEqualHeight(columns) {
+  // EqualHeight
+  function setEqualHeight(columns) {
     var tallestcolumn = 0;
     columns.each(function() {
+        columns.removeAttr("style");
         currentHeight = $(this).height();
         if ( currentHeight > tallestcolumn ) {
           tallestcolumn = currentHeight;
@@ -116,23 +88,37 @@ $(document).ready(function() {
       });
     columns.height( tallestcolumn );
   }
-  setEqualHeight( $(".direction .item") );
-
-  $(window).resize( function() {
-    setEqualHeight( $(".direction .item") );
-  });*/
 
 
-  $(".direction .item").matchHeight();
-  $(window).resize( function() {
-    $(".direction .item").matchHeight();
+
+//****************************** ONLOAD ******************************
+$(document).ready(function() {
+  var ww = document.body.clientWidth,
+  c = console.log;
+
+  sliderHeightDetect();
+  adjustMenu();
+  setEqualHeight( $(".largeScreen") );
+
+  // navigation
+  $(".nav li a").each(function() {
+    if ( $(this).next().length > 0 ) {
+      $(this).addClass("parent");
+    }
   });
 
 
 
-
-
-
+  // mainSlider
+  $(".owl-mainSlider").owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    items: 1
+  });
 
 
 
@@ -169,7 +155,6 @@ $(document).ready(function() {
 
 
 
-
   // parallax
   $(".parallax-window").parallax({imageSrc: "images/parallax/paralax1.jpg"});
 
@@ -190,6 +175,8 @@ $(document).ready(function() {
     $("body, html").animate({scrollTop: 0}, 500);
   });
 
+
+
   //tagCloud
   if ( !$("#myCanvas").tagcanvas({
     textColour : "#fff",
@@ -200,5 +187,17 @@ $(document).ready(function() {
     // TagCanvas failed to load
     $("#myCanvasContainer").hide();
   }
+
+
+
+    // resize
+  $(window).bind("resize orientationchange", function() {
+    ww = document.body.clientWidth;
+    adjustMenu();
+    sliderHeightDetect();
+    setEqualHeight( $(".largeScreen") );
+  });
+
+
 
 }); //$(document).ready(function()
