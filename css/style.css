@@ -521,9 +521,11 @@ footer {
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
 
-footer h2,
-footer .glyphicon {
+footer h2 {
   color: #446CB3;
+}
+footer .glyphicon {
+  color: #7FC560;
 }
 
 footer li {
@@ -547,6 +549,7 @@ footer canvas {
   display: block;
   margin: 0 auto;
 }
+
 /*************** / FOOTER ***************/
 
 
