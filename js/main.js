@@ -1,15 +1,16 @@
   
 
 
-  function sliderHeightDetect() {
-    var sliderHeight = $(window).height() * .6;
-    $("#mainSlider .item").css("height", sliderHeight);
-  };
+function sliderHeightDetect() {
+  var sliderHeight = $(window).height() * .6;
+  $("#mainSlider .item").css("height", sliderHeight);
+};
 
 
   // adaptive menu
   function adjustMenu() {
     ww = document.body.clientWidth + 17;
+    var $directionItem = $(".direction .item");
     var counter = 0;
 
     if (ww < 768) {
@@ -30,16 +31,20 @@
       });
 
       $(".nav li").unbind('mouseenter mouseleave');
-      $(".nav li a.parent").unbind('click').bind('click', function(e) {
+      $(".nav li a.parent")
+        .unbind('click')
+          .bind('click', function(e) {
         // Необходимоо привязать к элементу ссылки для предотвращения "всплывания"
         e.preventDefault();
-        $(this).parent("li").toggleClass("hover");
+        $(this)
+          .parent("li")
+            .toggleClass("hover");
       });
 
-      $(".direction .item").each(function() {
+      $directionItem.each(function() {
         $(this)
-            .removeClass("largeScreen")
-                .removeAttr("style");
+          .removeClass("largeScreen")
+            .removeAttr("style");
       });
 
     } else if ( ww >= 768 ) {
@@ -68,7 +73,7 @@
         $(this).toggleClass('hover');
       });
 
-      $(".direction .item").each(function() {
+      $directionItem.each(function() {
         $(this).addClass("largeScreen");
       });
 
@@ -78,22 +83,22 @@
 
   // EqualHeight
   function setEqualHeight(columns) {
-    var tallestcolumn = 0;
+    var tallestColumn = 0;
     columns.each(function() {
-        columns.removeAttr("style");
-        currentHeight = $(this).height();
-        if ( currentHeight > tallestcolumn ) {
-          tallestcolumn = currentHeight;
-        }
-      });
-    columns.height( tallestcolumn );
+      columns.removeAttr("style");
+      currentHeight = $(this).height();
+      if ( currentHeight > tallestColumn ) {
+        tallestColumn = currentHeight;
+      }
+    });
+    columns.height( tallestColumn );
   }
 
 
 
 //****************************** ONLOAD ******************************
 $(document).ready(function() {
-  var ww = document.body.clientWidth,
+  var /*ww = document.body.clientWidth,*/
   c = console.log;
 
   sliderHeightDetect();
@@ -191,13 +196,28 @@ $(document).ready(function() {
 
 
     // resize
-  $(window).bind("resize orientationchange", function() {
-    ww = document.body.clientWidth;
-    adjustMenu();
-    sliderHeightDetect();
-    setEqualHeight( $(".largeScreen") );
-  });
+    $(window).bind("resize orientationchange", function() {
+      /*ww = document.body.clientWidth;*/
+      adjustMenu();
+      sliderHeightDetect();
+      setEqualHeight( $(".largeScreen") );
+      /*testFunc();*/
+    });
 
+
+    // image loading depending on screen size
+    function testFunc() {
+      /*var ww = $(window).width(),*/
+      var $test = $("#test");
+      if (ww <= 767) {
+        $test.css("backgroundImage","url(images/test/3.jpg)")
+      } else if (ww > 767 && ww <= 1199) {
+        $test.css("backgroundImage","url(images/test/2.jpg)")
+      } else {
+        $test.css("backgroundImage","url(images/test/1.jpg)")
+      }
+    }
+    testFunc();
 
 
 }); //$(document).ready(function()

@@ -243,9 +243,9 @@ nav {
   top: 0;
 }
 
+.activeMenuItem,
 nav .nav a:hover,
-nav .nav a:focus,
-.activeMenuItem {
+nav .nav a:focus {
   background: #249578;
 }
 
@@ -577,12 +577,6 @@ footer canvas {
   opacity: 1;
 }
 /*************** / scrollToTop ***************/
-
-
-
-
-
-
 
 
 
