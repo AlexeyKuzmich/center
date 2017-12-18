@@ -162,7 +162,7 @@ $(document).ready(function() {
 
 
   // parallax
-  $(".parallax-window").parallax({imageSrc: "images/parallax/paralax1.jpg"});
+  $(".parallax-window").parallax({imageSrc: "images/parallax/1.jpg"});
 
 
 
