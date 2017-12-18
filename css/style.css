@@ -2,11 +2,11 @@
 
   /*************** COMMON STYLES ***************/
 html, body {
-  /* touch-action: auto; */
+  touch-action: auto;
   /* height: 100%; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-
+  background-color: #E4F1FE;
 }
 
 body,
@@ -93,11 +93,6 @@ hr.hrStyle {
 
 
 /*************** NAVIGATION ***************/
-
-body > div {
-  background-color: #E4F1FE;
-}
-
 .topInfo {
   height: 150px;
   padding: 30px 20px 0;
@@ -299,6 +294,10 @@ nav .nav a:focus {
 
 
 /*************** MAINSLIDER ***************/
+.owl-carousel {
+  touch-action: none;
+}
+
 #mainSlider .item{
   background-repeat: no-repeat;
   background-size: cover;
