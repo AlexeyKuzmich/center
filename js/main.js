@@ -2,8 +2,9 @@
 
 
 function sliderHeightDetect() {
-  var sliderHeight = $(window).height() * .6;
-  $("#mainSlider .item").css("height", sliderHeight);
+  var sliderHeight = $(window).height() * .7,
+      sliderItemHeight = $(".owl-mainSlider .item");
+  sliderItemHeight.css("height", sliderHeight);
 };
 
 
