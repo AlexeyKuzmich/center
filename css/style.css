@@ -64,7 +64,7 @@ a:hover {
 }
 
 hr.hrStyle {
-  margin: 60px 0 30px;
+  margin: 50px 0;
   border: 0;
   height: 3px;
   background: #499FFF;
@@ -160,6 +160,11 @@ nav {
   background: -webkit-gradient(linear, left bottom, left top, from(#446CB3), to(#52B3D9));
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
+
+/* nav > div {
+  -webkit-box-shadow: 0px 0px 30px 1px #000;
+          box-shadow: 0px 0px 30px 1px #000;
+} */
 
 .toggleMenu {
   position: fixed;
@@ -355,6 +360,7 @@ nav .nav a:focus {
 
 
 
+
 /*************** DIRECTIONS ***************/
 .direction .item {
   padding: 10px;
@@ -379,6 +385,28 @@ nav .nav a:focus {
   margin-top: 0;
 }
 /*************** / DIRECTIONS ***************/
+
+
+
+
+
+
+
+
+
+
+/*************** headPhysician ***************/
+.headPhysician img {
+  margin-bottom: 30px;
+  -webkit-box-shadow: 1px 1px 12px 0px #4A9FFF;
+          box-shadow: 1px 1px 12px 0px #4A9FFF;
+}
+.headPhysician p {
+  margin: 0 0 30px 0;
+}
+/*************** / headPhysician ***************/
+
+
 
 
 
@@ -460,27 +488,30 @@ nav .nav a:focus {
 
 /*************** PARALLAX ***************/
 .parallax-window {
-  min-height: 480px;
-  margin: 50px 0;
+  min-height: 600px;
+  margin-top: 50px;
+  padding: 30px 0;
   background: transparent;
   color: #fff;
 }
 
 .parrallax-inner {
-  padding: 30px 30px;
+  padding-bottom: 30px;
 }
 
-.parallax-window h2,
-.parallax-window h3 {
-  margin-top: 0;
-  color: #fff;
+.parallax-window span {
+  display: table;
+  margin: 10px auto;
+  font-size: 45px;
+  color: #249578;
 }
 
-.parallax-window h3 {
-  text-align: left;
+.parallax-window h2 {
+  margin: 10px 0;
+  color: #249578;
 }
 
-.parallax-window i {
+.parallax-window p {
   text-align: center;
 }
 /*************** / PARALLAX ***************/
@@ -497,7 +528,6 @@ nav .nav a:focus {
 
 /*************** FOOTER ***************/
 footer {
-  margin-top: 50px;
   padding: 50px 0 50px;
   color: #fff;
   background: #446CB3;
@@ -694,6 +724,10 @@ footer canvas {
   }
   .nav > li.hover:hover > ul {
     background: transparent;
+  }
+
+  .headPhysician p {
+    margin-bottom: 0;
   }
 }
 
