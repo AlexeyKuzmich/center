@@ -467,7 +467,7 @@ nav .nav a:focus {
 }
 
 .parrallax-inner {
-  padding: 50px 30px;
+  padding: 30px 30px;
 }
 
 .parallax-window h2,
@@ -601,6 +601,13 @@ footer canvas {
   .nav li a {
     text-align: left;
     padding: 5px 9px;
+  }
+  .parallax-window h3 {
+    margin-top: 10px;
+  }
+  .parallax-window h3,
+  .parallax-window p {
+    text-align: center;
   }
   footer ul {
     text-align: center;
