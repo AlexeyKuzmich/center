@@ -99,7 +99,7 @@ function sliderHeightDetect() {
 
 //****************************** ONLOAD ******************************
 $(document).ready(function() {
-  $(".greeting").fadeIn(1500);
+  $(".greeting").css("opacity",1);
   $("#preload")
     .delay(1500)
       .fadeOut(1500);
