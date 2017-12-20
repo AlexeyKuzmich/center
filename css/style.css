@@ -9,6 +9,20 @@ html, body {
   /* background-color: #F0FFFF; */
 }
 
+/* .wrapper {
+  display: none;
+} */
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #499FFF;
+  z-index: 99999;
+}
+
 body,
 h1,
 h2,
@@ -649,9 +663,9 @@ footer canvas {
 /*************** 767 ***************/
 @media (max-width: 767px) {
   /* COMMON STYLES */
-  html, body {
-    height: 100%;
-  }
+html, body {
+  height: 100%;
+}
   h1 {
     margin: 20px 0;
     font-size: 1.5em;

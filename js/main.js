@@ -99,6 +99,10 @@ function sliderHeightDetect() {
 
 //****************************** ONLOAD ******************************
 $(document).ready(function() {
+    $(".loader").fadeOut(1500);
+    /*$(".wrapper").fadeIn(6000);*/
+
+
   var /*ww = document.body.clientWidth,*/
   c = console.log;
 
