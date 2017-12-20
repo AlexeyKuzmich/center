@@ -9,20 +9,6 @@ html, body {
   /* background-color: #F0FFFF; */
 }
 
-/* .wrapper {
-  display: none;
-} */
-
-.loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #499FFF;
-  z-index: 99999;
-}
-
 body,
 h1,
 h2,
@@ -504,7 +490,7 @@ nav .nav a:focus {
 .parallax-window {
   min-height: 600px;
   margin-top: 50px;
-  padding: 30px 0;
+  padding: 100px 0 50px 0;
   background: transparent;
   color: #fff;
 }
@@ -742,6 +728,10 @@ html, body {
 
   .headPhysician p {
     margin-bottom: 0;
+  }
+
+  .headPhysician samall {
+    color: #499FFF;
   }
 }
 
