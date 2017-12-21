@@ -99,10 +99,10 @@ function sliderHeightDetect() {
 
 //****************************** ONLOAD ******************************
 $(document).ready(function() {
-  $(".greeting").css("opacity",1);
+  $(".greeting").css("opacity", 1);
   $("#preload")
-    .delay(1500)
-      .fadeOut(1500);
+    .delay(15)
+      .fadeOut(15);
 
 
   var /*ww = document.body.clientWidth,*/
