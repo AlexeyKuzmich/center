@@ -1,4 +1,6 @@
-  
+
+
+ 
 
 
 function sliderHeightDetect() {
@@ -101,8 +103,8 @@ function sliderHeightDetect() {
 $(document).ready(function() {
   $(".greeting").css("opacity", 1);
   $("#preload")
-    .delay(15)
-      .fadeOut(15);
+    .delay(1500)
+      .fadeOut(1500);
 
 
   var /*ww = document.body.clientWidth,*/
@@ -111,6 +113,8 @@ $(document).ready(function() {
   sliderHeightDetect();
   adjustMenu();
   setEqualHeight( $(".largeScreen") );
+
+
 
   // navigation
   $(".nav li a").each(function() {
@@ -126,7 +130,7 @@ $(document).ready(function() {
     loop: true,
     margin: 0,
     nav: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     items: 1
@@ -134,11 +138,19 @@ $(document).ready(function() {
 
 
 
-  // owl-doctors
+
+  // owl-doctors  
+  var $owl = $(".owl-doctors");
   $(".owl-doctors").owlCarousel({
+    onRefresh: function () { // установка одинаковой высоты owl-item
+        $owl.find(".owl-item").height("");
+    },
+    onRefreshed: function () {
+        $owl.find(".owl-item").height($owl.height() + 45);
+    },
     loop: true,
     margin: 10,
-    nav: true,
+    nav: false,
     touchDrag: true,
     autoplay: false,
     responsive:{
@@ -162,8 +174,17 @@ $(document).ready(function() {
       }
     }
   });
+  // исчезают значки навигации (причина непонятна). решение:
+  var $owlNav = $owl.find('.owl-nav');
+  $owlNav.removeClass('disabled');
+  $owl.on('changed.owl.carousel', function(event) {
+    $owlNav.removeClass('disabled');
+  });
+  // убрать текст с кнопок навигации
   $(".owl-prev").text("");
   $(".owl-next").text("");
+
+
 
 
 

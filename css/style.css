@@ -432,18 +432,24 @@ nav .nav a:focus {
 
 
 /*************** OWLCARUSEL ***************/
-.owl-doctors .owl-item {
-  -webkit-transition: .3s;
-  transition: .3s;
+.owl-doctors {
+  position: relative;
+}
+
+.grabbable {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.grabbable:active { 
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
 }
 
 .owl-doctors .owl-item:hover img {
   -webkit-box-shadow: 1px 1px 12px 0px #4A9FFF;
           box-shadow: 1px 1px 12px 0px #4A9FFF;
-}
-
-.owl-doctors .owl-item:hover {
-  background-color: #D7F0F4;
 }
 
 .owl-doctors .owl-prev, 
@@ -466,15 +472,20 @@ nav .nav a:focus {
   right: 0;
 }
 
+.owl-doctors h3 {
+  line-height: 1.2;
+}
+
 .owl-doctors p {
   text-align: center;
   line-height: 1.2;
 }
 
 .owl-doctors a {
-  display: table;
-  margin: 0 auto 25px;
+  position: absolute;
+  bottom: 0;
   padding: 5px 10px;
+  width: 100%;
   color: #fff;
   background: rgba(68, 108, 179, .5);
   text-align: center;
@@ -483,8 +494,7 @@ nav .nav a:focus {
 }
 
 .owl-doctors a:hover {
-  background: rgba(68, 108, 179, .8);
-  width: 100%;
+  background: rgba(68, 108, 179, 1);
 }
 /*************** / OWLCARUSEL ***************/
 
