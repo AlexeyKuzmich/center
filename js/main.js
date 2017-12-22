@@ -1,7 +1,6 @@
 function sliderHeightDetect() {
-  var sliderHeight = $(window).height() * .7,
-      sliderItemHeight = $(".owl-mainSlider .item");
-  sliderItemHeight.css("height", sliderHeight);
+  var sliderHeight = $(window).height() - $("header").height() - $("nav").height();
+  $(".owl-mainSlider .item").css("height", sliderHeight);
 };
 
 
@@ -28,10 +27,10 @@ function adjustMenu() {
       }
     });
 
-    $(".nav li").unbind('mouseenter mouseleave');
+    $(".nav li").off('mouseenter mouseleave');
     $(".nav li a.parent")
-      .unbind('click')
-        .bind('click', function(e) {
+      .off('click')
+        .on('click', function(e) {
       // Необходимоо привязать к элементу ссылки для предотвращения "всплывания"
       e.preventDefault();
       $(this)
@@ -62,11 +61,11 @@ function adjustMenu() {
       .show()
         .css("display", "block");
 
-    $(".nav li a").unbind('click');
+    $(".nav li a").off('click');
     $(".nav li")
       .removeClass("hover")
-        .unbind('mouseenter mouseleave')
-          .bind('mouseenter mouseleave', function() {
+        .off('mouseenter mouseleave')
+          .on('mouseenter mouseleave', function() {
       // Необходимо привязать к элементу li для предотвращения запуска события mouseleave при перемещении курсора мыши над подменю
       $(this).toggleClass('hover');
     });
@@ -105,7 +104,6 @@ function parallaxImageDetect() {
   } else {
     image = "images/parallax/1-lg.jpg";
   }
-  console.log("imageParallax = " + image);
   return image;
 }
 
