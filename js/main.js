@@ -7,9 +7,9 @@ function sliderHeightDetect() {
 
 // adaptive menu
 function adjustMenu() {
-  ww = document.body.clientWidth + 17;
-  var $directionItem = $(".direction .item");
-  var counter = 0;
+  var ww = document.body.clientWidth,
+      $directionItem = $(".direction .item"),
+      counter = 0;
 
   if (ww < 768) {
 
@@ -99,11 +99,11 @@ function parallaxImageDetect() {
   var ww = $(window).width(),
       image = "";
   if (ww <= 360) {
-    image = "images/test/3.jpg";
+    image = "images/parallax/1-sm.jpg";
   } else if (ww > 360 && ww <= 767) {
-    image = "images/test/2.jpg";
+    image = "images/parallax/1-md.jpg";
   } else {
-    image = "images/test/1.jpg";
+    image = "images/parallax/1-lg.jpg";
   }
   console.log("imageParallax = " + image);
   return image;
@@ -114,12 +114,11 @@ function parallaxImageDetect() {
 $(document).ready(function() {
   $(".greeting").css("opacity", 1);
   $("#preload")
-    .delay(15)
-      .fadeOut(15);
+    .delay(1500)
+      .fadeOut(1500);
 
 
-  var /*ww = document.body.clientWidth,*/
-  c = console.log;
+ /* var ww = document.body.clientWidth;*/
 
   sliderHeightDetect();
   adjustMenu();
@@ -141,7 +140,7 @@ $(document).ready(function() {
     loop: true,
     margin: 0,
     nav: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     items: 1
