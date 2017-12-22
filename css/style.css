@@ -322,19 +322,19 @@ nav .nav a:focus {
   background-position: center center;
 }
 
-.owl-mainSlider .slider-1 {
+.owl-mainSlider .slide1 {
   background-image: url(../images/mainSlider/3.jpg);
 }
 
-.owl-mainSlider .slider-2 {
+.owl-mainSlider .slide2 {
   background-image: url(../images/mainSlider/2.jpg);
 }
 
-.owl-mainSlider .slider-3 {
+.owl-mainSlider .slide3 {
   background-image: url(../images/mainSlider/1.jpg);
 }
 
-.owl-mainSlider .owl-prev, 
+.owl-mainSlider .owl-prev,
 .owl-mainSlider .owl-next {
   position: absolute;
   top: 50%;
@@ -513,7 +513,6 @@ nav .nav a:focus {
 /*************** PARALLAX ***************/
 .parallax-window {
   min-height: 600px;
-  
   padding: 100px 0 50px 0;
   background: transparent;
   color: #fff;
@@ -527,12 +526,12 @@ nav .nav a:focus {
   display: table;
   margin: 10px auto;
   font-size: 45px;
-  color: #249578;
+  color: #7fc560;
 }
 
 .parallax-window h2 {
   margin: 10px 0;
-  color: #249578;
+  color: #7fc560;
 }
 
 .parallax-window p {
@@ -762,4 +761,42 @@ html, body {
   /* .nav li li a {
     min-width: 300px;
   } */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************** IMAGE LOADING DEPENDING ON SCREEN SIZE ***************/
+@media (max-width: 767px) {
+  .owl-mainSlider .slide1 {
+    background-image: url(../images/test/2.jpg);
+  }
+  .owl-mainSlider .slide2 {
+    background-image: url(../images/test/2.jpg);
+  }
+  .owl-mainSlider .slide3 {
+    background-image: url(../images/test/2.jpg);
+  }
+}
+
+@media (max-width: 360px) {
+  .owl-mainSlider .slide1 {
+    background-image: url(../images/test/3.jpg);
+  }
+  .owl-mainSlider .slide2 {
+    background-image: url(../images/test/3.jpg);
+  }
+  .owl-mainSlider .slide3 {
+    background-image: url(../images/test/3.jpg);
+  }
 }
