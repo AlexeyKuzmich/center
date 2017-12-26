@@ -20,49 +20,49 @@
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <style>
-  #preload {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #499FFF;
-    z-index: 99999;
-  }
-  #preload > div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  .preloadSvg {
-    margin: 0 auto;
-    width: 48px;
-    height: 48px;
-    background: url(images/preload.svg) center center no-repeat;
-    background-size: 70px;
-  }
-  #preload p {
-    font-size: 1.8em;
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  </style>
+<!--   <style>
+#preload {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #499FFF;
+  z-index: 99999;
+}
+#preload > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.preloadSvg {
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  background: url(images/preload.svg) center center no-repeat;
+  background-size: 70px;
+}
+#preload p {
+  font-size: 1.8em;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+</style> -->
 </head>
 
 <body>
   <!-- <div class="preloader"></div> -->
 
-  <div id="preload">
-      <div>
-        <div class="preloadSvg"></div>
-        <p><small>Консультативно-діагностичне відділення</small></p>
-      </div>
-  </div>
+<!--   <div id="preload">
+    <div>
+      <div class="preloadSvg"></div>
+      <p><small>Консультативно-діагностичне відділення</small></p>
+    </div>
+</div> -->
 
   <header class="container-fluid">
     <div class="row clearfix topInfo">
@@ -174,214 +174,14 @@
     </div>
   </nav>
 
-  <!-- mainSlider -->
-  <div class="owl-carousel owl-mainSlider grabbable">
-    <div class="item slide1"></div>
-    <div class="item slide2"></div>
-    <div class="item slide3"></div>
-  </div>
-  <!-- / mainSlider -->
 
-
-  <!-- direction -->
-  <section class="coloredSection">
-    <div class="container">
-      <div class="row direction">
-        <!-- <hr class="hrStyle hidden-xs"> -->
-        <h1>Напрямки діяльності</h1>
-        <div class="col-sm-4">
-          <a href="#">
-            <div class="item">
-              <img class="img-responsive center-block" src="images/tempImages/treat.png" alt="img" />
-              <h3><strong><em>Лікувально-діагностична робота</em></strong></h3>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="#">
-            <div class="item">
-              <img class="img-responsive center-block" src="images/tempImages/consult.png" alt="img" />
-              <h3><strong><em>Консультативна та організаційно-методична робота</em></strong></h3>
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="#">
-            <div class="item">
-              <img class="img-responsive center-block" src="images/tempImages/research.png" alt="img" />
-              <h3><strong><em>Наукова робота</em></strong></h3>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / direction -->
-
-
-
-  <!-- headPhysician -->
-  <section class="headPhysician">
-    <div class="container">
-      <div class="row">
-        <!-- <hr class="hrStyle hidden-xs"> -->
-        <h1>звернення головного лікаря</h1>
-        <div class="col-sm-5">
-          <img src="images/doctors/padalko.jpg" alt="headPhysician" class="img-responsive" />
-        </div>
-        <div class="col-sm-7">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo accusantium ipsam assumenda neque illo eum dolorem soluta sunt similique non reprehenderit quam asperiores, suscipit dolores. Consequatur enim aliquam, suscipit, odit nemo illum ratione itaque porro repudiandae vel voluptatibus perspiciatis dolorem accusantium tempora reiciendis nulla voluptates perferendis sapiente culpa! Veniam placeat a dolorum eligendi laudantium ea eaque dicta ut quod laborum sequi deleniti iusto dolor, est quis quos aut totam ducimus nihil vitae repellendus. Excepturi aliquid animi similique omnis sint nulla consectetur a praesentium ex assumenda in, dicta recusandae quidem necessitatibus qui ea odit, officia ad blanditiis? Voluptates eligendi quibusdam, quae!</p>
-          <h3 class="text-right">З повагою,<br />Л.I. Падалко</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ headPhysician -->
-
-
-
-
-  <!-- owlcarousel -->
-  <section class="coloredSection">
-    <div class="container">
-      <!-- <hr class="hrStyle hidden-xs"> -->
-      <h1>завiдуючi відділеннями</h1>
-      <div class="owl-carousel owl-doctors grabbable">
-
-        <div class="item">
-          <img src="images/doctors/1.jpg" alt="owl" />
-          <h3>Савельєва Олена Альбертівна</h3>
-          <p>Перше акушерське відділення</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/2.jpg" alt="owl" />
-          <h3>Самарець Світлана Анатоліївна</h3>
-          <p>Друге акушерське відділення</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/3.jpg" alt="owl" />
-          <h3>Боровкова  Л.Г.</h3>
-          <p>Відділення патології вагітних</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/4.jpg" alt="owl" />
-          <h3>Філімонова Л.Р.</h3>
-          <p>Відділення інтенсивної терапії</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/1.jpg" alt="owl" />
-          <h3>doctor's name and surname</h3>
-          <p>Відділення гіпербаричної оксігенації</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/2.jpg" alt="owl" />
-          <h3>doctor's name and surname</h3>
-          <p>Відділення новонароджених</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/1.jpg" alt="owl" />
-          <h3>Савельєва Олена Альбертівна</h3>
-          <p>Перше акушерське відділення</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/2.jpg" alt="owl" />
-          <h3>Самарець Світлана Анатоліївна</h3>
-          <p>Друге акушерське відділення</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/3.jpg" alt="owl" />
-          <h3>Боровкова  Л.Г.</h3>
-          <p>Відділення патології вагітних</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/4.jpg" alt="owl" />
-          <h3>Філімонова Л.Р.</h3>
-          <p>Відділення інтенсивної терапії</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/1.jpg" alt="owl" />
-          <h3>doctor's name and surname</h3>
-          <p>Відділення гіпербаричної оксігенації</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-        <div class="item">
-          <img src="images/doctors/2.jpg" alt="owl" />
-          <h3>doctor's name and surname</h3>
-          <p>Відділення новонароджених</p>
-          <a href="#">Докладнiше &gt;&gt;</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- / owlcarousel -->
   
   <section>
     <div class="container">
-      <p>Комунальний заклад «Дніпропетровський обласний перинатальний центр зі стаціонаром» Дніпропетровської обласної ради», є заклад охорони здоров’я, в якому передбачається надання високоспеціалізованої медичної допомоги в умовах цілодобового стаціонару, денного стаціонару та амбулаторних умовах,  переважно, найбільш важкому контингенту вагітних, роділь, породіль, новонароджених дітей, а також жінкам з порушенням репродуктивної функції, що потребують високої інтенсивності лікування та догляду на основі використання новітніх технологій з доведеною ефективністю.</p>
-      <p>Цей медичній заклад, продовжує більш ніж 25 -річну славну історію плідної праці на благо жінки та дитини. Дніпропетровського міського пологового будинку № 2.</p>
-      <p>У 2012 році наш лікувальний заклад вийшов на новий рівень. В рамках Національного проекту «Нове життя – нова якість материнства та дитинства» його було реорганізовано в Комунальний заклад «Обласний перинатальний центр зі стаціонаром» Дніпропетровської обласної ради». Для цього був проведений  капітальний ремонт будівлі та приміщень, встановлено нове сучасне обладнання. І тепер центр гостинно відчинив свої двері для жінок всього Дніпропетровського регіону, маючи змогу надати їм медичну допомогу, без перебільшення, на найсучаснішому світовому рівні, як того вимагають реалії сьогодення.</p>
+            
     </div>    
   </section>
 
-  <!-- parallax -->
-  <div class="parallax-window">
-    <div class="container"> 
-
-      <div class="row">
-
-        <div class="col-sm-6 parrallax-inner">
-          <span class="glyphicon glyphicon-thumbs-up"></span>
-          <h2>підтримка грудного вигодовування</h2>
-          <p>Ми живемо в світі, де люди та спільноти можуть миттєво контактувати один з одним, незважаючи на відстань. Кожен день створюються нові можливості для спілкування, і ми можемо використовувати ці інформаційні канали, щоб розширювати наші горизонти і поширювати інформацію та досвід про грудне вигодовування, незважаючи на відстані.</p>
-        </div>
-
-        <div class="col-sm-6 parrallax-inner">
-          <span class="glyphicon glyphicon-leaf"></span>
-          <h2>Орієнтованість на потреби пацієнта</h2>
-          <p>«Пацієнт - понад усе!». Ми уважні до потреб наших пацієнтів. Ми виправдовуємо і намагаємося перевершити очікування.</p>
-        </div>
-
-      </div>
-
-      <div class="col-sm-6 parrallax-inner">
-        <span class="glyphicon glyphicon-heart"></span>
-        <h2>Наші принципи</h2>
-        <p>Наші цінності базуються на досвіді і слугують основою нашого розвитку. Наша задача – керуватися нишими цінностями в щоденній роботі.</p>
-      </div>
-
-      <div class="row">
-
-        <div class="col-sm-6 parrallax-inner">
-          <span class="glyphicon glyphicon-exclamation-sign"></span>
-          <h2>Взаємна повага і довіра</h2>
-          <p>Ми відрізняємося атмосферою довіри і відкритості. Ми поважаємо, підтримуємо і довіряємо один одному. Ми завжди готові подати руку допомоги колезі у важку мить.</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <footer>
     <div class="container">
