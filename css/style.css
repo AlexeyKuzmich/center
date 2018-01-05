@@ -235,8 +235,8 @@ nav {
   line-height: 40px;
   color: #fff;
   text-align: center;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
 }
 
 .nav li ul {
@@ -553,6 +553,8 @@ nav .nav a:focus {
 
 
 
+
+
 /*************** FOOTER ***************/
 footer {
   padding: 50px 0 50px;
@@ -565,6 +567,12 @@ footer {
 footer h2 {
   color: #446CB3;
 }
+
+/* footer .col-md-4 {
+  outline: 1px solid red;
+} */
+
+.schedule .glyphicon, /* contacts */
 footer .glyphicon {
   color: #7FC560;
 }
@@ -573,6 +581,7 @@ footer li {
   margin-bottom: 5px;
 }
 
+.schedule .glyphicon, /* contacts */
 footer li span {
   padding-right: 15px;
 }
@@ -618,6 +627,51 @@ footer canvas {
   opacity: 1;
 }
 /*************** / scrollToTop ***************/
+
+
+
+
+
+
+
+
+
+
+
+/*************** PAGES **************************************/
+/*************** SCHEDULE ***************/
+.schedule .item {
+  /* outline: 1px solid red; */
+}
+
+.schedule .inner {
+  padding-left: 20px;
+  /* outline: 1px solid blue; */
+  border-left: 5px solid #52B3D9;
+}
+/*************** / SCHEDULE ***************/
+
+
+
+
+/*************** MAP ***************/
+.mapResponsive {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.mapResponsive iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+/*************** / MAP ***************/
+
+
+
 
 
 
@@ -751,6 +805,10 @@ html, body {
   }
   .nav > li.hover:hover > ul {
     background: transparent;
+  }
+
+  .schedule p:last-child {
+    margin-bottom: 30px;
   }
 }
 

@@ -8,9 +8,10 @@ function sliderHeightDetect() {
 function adjustMenu() {
   var ww = document.body.clientWidth,
       $directionItem = $(".direction .item"),
+      $scheduleItem = $(".schedule .inner"),
       counter = 0;
 
-  if (ww < 768) {
+  if (ww < 751) { // = 768 - 17
 
     $(".toggleMenu").css("display", "block");
 
@@ -38,13 +39,13 @@ function adjustMenu() {
           .toggleClass("hover");
     });
 
-    $directionItem.each(function() {
+    ($directionItem, $scheduleItem).each(function() {
       $(this)
         .removeClass("largeScreen")
           .removeAttr("style");
     });
 
-  } else if ( ww >= 768 ) {
+  } else if ( ww >= 751 ) { // = 768 - 17
 
     // topInfo scroll
     $(window).scroll(function() {
@@ -70,10 +71,13 @@ function adjustMenu() {
       $(this).toggleClass('hover');
     });
 
-    $directionItem.each(function() {
+    ($directionItem, $scheduleItem).each(function() {
       $(this).addClass("largeScreen");
     });
 
+    /*$scheduleItem.each(function() {
+      $(this).addClass("largeScreen");
+    });*/
   }
 }
 
@@ -112,11 +116,11 @@ function parallaxImageDetect() {
 $(document).ready(function() {
   $(".greeting").css("opacity", 1);
   $("#preload")
-    .delay(15)
-      .fadeOut(15);
+    .delay(1500)
+      .fadeOut(1500);
 
 
- /* var ww = document.body.clientWidth;*/
+  /*var ww = document.body.clientWidth;*/
 
   sliderHeightDetect();
   adjustMenu();
