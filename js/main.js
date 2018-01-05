@@ -8,7 +8,7 @@ function sliderHeightDetect() {
 function adjustMenu() {
   var ww = document.body.clientWidth,
       $directionItem = $(".direction .item"),
-      $scheduleItem = $(".schedule .inner"),
+      $scheduleInner = $(".schedule .inner"),
       counter = 0;
 
   if (ww < 751) { // = 768 - 17
@@ -39,7 +39,13 @@ function adjustMenu() {
           .toggleClass("hover");
     });
 
-    ($directionItem, $scheduleItem).each(function() {
+    $directionItem.each(function() { // equal height of .direction
+      $(this)
+        .removeClass("largeScreen")
+          .removeAttr("style");
+    });
+
+    $scheduleInner.each(function() { // equal height of .schedule
       $(this)
         .removeClass("largeScreen")
           .removeAttr("style");
@@ -71,13 +77,13 @@ function adjustMenu() {
       $(this).toggleClass('hover');
     });
 
-    ($directionItem, $scheduleItem).each(function() {
+    $directionItem.each(function() { // equal height of .direction
       $(this).addClass("largeScreen");
     });
 
-    /*$scheduleItem.each(function() {
+    $scheduleInner.each(function() { // equal height of .schedule
       $(this).addClass("largeScreen");
-    });*/
+    });
   }
 }
 
@@ -116,8 +122,8 @@ function parallaxImageDetect() {
 $(document).ready(function() {
   $(".greeting").css("opacity", 1);
   $("#preload")
-    .delay(1500)
-      .fadeOut(1500);
+    .delay(15)
+      .fadeOut(15);
 
 
   /*var ww = document.body.clientWidth;*/

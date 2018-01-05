@@ -73,7 +73,7 @@ a:hover {
 } */
 
 section {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
 }
 
 .coloredSection {
@@ -583,7 +583,7 @@ footer li {
 
 .schedule .glyphicon, /* contacts */
 footer li span {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 footer a:link,
@@ -641,20 +641,37 @@ footer canvas {
 /*************** PAGES **************************************/
 /*************** SCHEDULE ***************/
 .schedule .item {
-  /* outline: 1px solid red; */
+  padding-bottom: 15px;
 }
 
 .schedule .inner {
-  padding-left: 20px;
-  /* outline: 1px solid blue; */
-  border-left: 5px solid #52B3D9;
+  padding: 0 20px 20px 20px;
+  border-top: 5px solid #499FFF;
+  -webkit-box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
+        box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
 }
+
+.schedule h2 {
+  color: #7FC560;
+}
+
 /*************** / SCHEDULE ***************/
 
 
 
 
+
+
+
+
+
+
+
+
 /*************** MAP ***************/
+.map {
+  padding-bottom: 50px;
+}
 .mapResponsive {
     position: relative;
     height: 0;
@@ -667,6 +684,7 @@ footer canvas {
     top: 0;
     height: 100%;
     width: 100%;
+    margin-bottom: 50px;
 }
 /*************** / MAP ***************/
 
@@ -807,9 +825,6 @@ html, body {
     background: transparent;
   }
 
-  .schedule p:last-child {
-    margin-bottom: 30px;
-  }
 }
 
 
@@ -824,6 +839,9 @@ html, body {
   /* .nav li li a {
     min-width: 300px;
   } */
+
+  .schedule .inner {
+  padding: 0 5px 5px 5px;
 }
 
 
@@ -862,4 +880,4 @@ html, body {
   .owl-mainSlider .slide3 {
     background-image: url(../images/mainSlider/3-sm.jpg);
   }
-}
+}}
