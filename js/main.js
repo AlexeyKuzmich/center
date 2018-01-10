@@ -34,6 +34,7 @@ function adjustMenu() {
         .on('click', function(e) {
       // Необходимоо привязать к элементу ссылки для предотвращения "всплывания"
       e.preventDefault();
+
       $(this)
         .parent("li")
           .toggleClass("hover");
@@ -127,6 +128,12 @@ $(document).ready(function() {
 
 
   /*var ww = document.body.clientWidth;*/
+  // navigation
+  $(".nav li a").each(function() {
+    if ( $(this).next().length > 0 ) {
+      $(this).addClass("parent");
+    }
+  });
 
   sliderHeightDetect();
   adjustMenu();
@@ -134,12 +141,6 @@ $(document).ready(function() {
 
 
 
-  // navigation
-  $(".nav li a").each(function() {
-    if ( $(this).next().length > 0 ) {
-      $(this).addClass("parent");
-    }
-  });
 
 
 
@@ -214,8 +215,11 @@ $(document).ready(function() {
   // scroll to top
   $(window).scroll(function() {
     var height = $(window).height(),
-    $scrollToTop = $(".scrollToTop");
+        $scrollToTop = $(".scrollToTop");
     if ( $(this).scrollTop() > height ) {
+
+      console.log("say hi");
+
       $scrollToTop.fadeIn();
     } else {
       $scrollToTop.fadeOut();
