@@ -119,12 +119,27 @@ function parallaxImageDetect() {
 }
 
 
-//****************************** ONLOAD ******************************
+
+
+
+
+
+
+
+
+//***********************************************************************
+//****************************** DOM READY ******************************
+//***********************************************************************
 $(document).ready(function() {
   $(".greeting").css("opacity", 1);
   $("#preload")
     .delay(15)
       .fadeOut(15);
+
+
+
+
+
 
 
   /*var ww = document.body.clientWidth;*/
@@ -212,14 +227,28 @@ $(document).ready(function() {
 
 
 
+  //tagCloud
+  if ( !$("#myCanvas").tagcanvas({
+    textColour : "#fff",
+    outlineThickness : 1,
+    maxSpeed : 0.05,
+    depth : .8
+  })) {
+    // TagCanvas failed to load
+    $("#myCanvasContainer").hide();
+  }
+
+
+
+
+
+
+
+
   // scroll to top
   $(window).scroll(function() {
-    var height = $(window).height(),
-        $scrollToTop = $(".scrollToTop");
-    if ( $(this).scrollTop() > height ) {
-
-      console.log("say hi");
-
+    var $scrollToTop = $(".scrollToTop");
+    if ( $(this).scrollTop() > $(window).height() ) {
       $scrollToTop.fadeIn();
     } else {
       $scrollToTop.fadeOut();
@@ -232,16 +261,8 @@ $(document).ready(function() {
 
 
 
-  //tagCloud
-  if ( !$("#myCanvas").tagcanvas({
-    textColour : "#fff",
-    outlineThickness : 1,
-    maxSpeed : 0.05,
-    depth : .8
-  })) {
-    // TagCanvas failed to load
-    $("#myCanvasContainer").hide();
-  }
+
+
 
 
 
