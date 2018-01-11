@@ -105,17 +105,17 @@ function setEqualHeight(columns) {
 
 
 // parallaxImage loading depending on screen size
-function parallaxImageDetect() {
+function imageSizeDetect() {
   var ww = $(window).width(),
-      image = "";
+      imageSize = "";
   if (ww <= 360) {
-    image = "images/parallax/1-sm.jpg";
+    imageSize = "sm";
   } else if (ww > 360 && ww <= 767) {
-    image = "images/parallax/1-md.jpg";
+    imageSize = "md";
   } else {
-    image = "images/parallax/1-lg.jpg";
+    imageSize = "lg";
   }
-  return image;
+  return imageSize;
 }
 
 
@@ -222,7 +222,7 @@ $(document).ready(function() {
 
 
   // parallax
-  $(".parallax-window").parallax({imageSrc: parallaxImageDetect()}); // в parallaxImageDetect() определяестся загружаемое изображение в зависимости от ширины экрана
+  $(".parallax-window").parallax({ imageSrc: "images/parallax/" + imageSizeDetect() + ".jpg"}); // в parallaxImageDetect() определяестся загружаемое изображение в зависимости от ширины экрана
 
 
 
@@ -245,19 +245,22 @@ $(document).ready(function() {
 
 
 
-  // scroll to top
-  $(window).scroll(function() {
-    var $scrollToTop = $(".scrollToTop");
-    if ( $(this).scrollTop() > $(window).height() ) {
-      $scrollToTop.fadeIn();
-    } else {
-      $scrollToTop.fadeOut();
-    }
-  });
 
-  $(".scrollToTop").click(function() {
-    $("body, html").animate({scrollTop: 0}, 500);
-  });
+  // scroll to top
+  (function() {
+    var $scrollToTop = $(".scrollToTop");
+    $(window).scroll(function() {
+      if ( $(this).scrollTop() > $(window).height() ) {
+        $scrollToTop.fadeIn();
+      } else {
+        $scrollToTop.fadeOut();
+      }
+    });
+
+    $scrollToTop.click(function() {
+      $("body, html").animate({scrollTop: 0}, 500);
+    });
+  })();
 
 
 
