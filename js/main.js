@@ -266,7 +266,7 @@ $(document).ready(function() {
 
   //*************** PAGES **************************************
   //*************** KDO ***************
-    (function func() {
+    (function() {
       $(".kdo img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
     })();
   //*************** / KDO ***************

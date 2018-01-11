@@ -72,7 +72,7 @@ a:hover {
 } */
 
 section {
-  padding: 50px 0 0 0;
+  padding: 50px 0;
 }
 
 .coloredSection {
@@ -515,6 +515,7 @@ nav .nav a:focus {
 
 /*************** PARALLAX ***************/
 .parallax-window {
+  margin-bottom:-50px;
   min-height: 600px;
   padding: 100px 0 50px 0;
   background: transparent;
@@ -555,6 +556,7 @@ nav .nav a:focus {
 
 /*************** FOOTER ***************/
 footer {
+  margin-top: 50px;
   padding: 50px 0 50px;
   color: #fff;
   background: #446CB3;
@@ -749,7 +751,7 @@ footer canvas {
 /*************** 767 ***************/
 @media (max-width: 767px) {
 
-.owl-mainSlider .slide1 {
+  .owl-mainSlider .slide1 {
     background-image: url(../images/mainSlider/1-md.jpg);
   }
   .owl-mainSlider .slide2 {
@@ -760,9 +762,9 @@ footer canvas {
   }
 
   /* COMMON STYLES */
-html, body {
-  height: 100%;
-}
+  html, body {
+    height: 100%;
+  }
   h1 {
     margin: 20px 0;
     font-size: 1.5em;
@@ -856,9 +858,9 @@ html, body {
   } */
 
   .schedule .inner {
-  padding: 0 5px 5px 5px;
+    padding: 0 5px 5px 5px;
+  }
 }
-
 
 
 
@@ -876,4 +878,4 @@ html, body {
   .owl-mainSlider .slide3 {
     background-image: url(../images/mainSlider/3-sm.jpg);
   }
-}}
+}
