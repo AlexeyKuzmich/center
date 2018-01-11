@@ -106,10 +106,9 @@ header {
 }
 
 .topInfo {
-  height: 150px;
-  padding: 30px 20px 0;
+  padding: 30px 20px;
   line-height: 1;
-  font-size: 1.2em;  
+  font-size: 1.2em;
 }
 
 .topInfo div {
@@ -567,10 +566,6 @@ footer h2 {
   color: #446CB3;
 }
 
-/* footer .col-md-4 {
-  outline: 1px solid red;
-} */
-
 .schedule .glyphicon, /* contacts */
 footer .glyphicon {
   color: #7FC560;
@@ -638,22 +633,19 @@ footer canvas {
 
 
 /*************** PAGES **************************************/
-/*************** KDO ***************/
-
-/*************** / KDO ***************/
+/* KDO */
 .departmentImg img {
   width: 100%;
   height: auto;
 }
+/* / KDO */
 
 
 
 
 
 
-
-
-/*************** CONTACTS ***************/
+/* CONTACTS */
 .schedule .item {
   padding-bottom: 15px;
 }
@@ -686,7 +678,7 @@ footer canvas {
     width: 100%;
     margin-bottom: 50px;
 }
-/*************** / SCHCONTACTS ***************/
+/* / CONTACTS */
 /*************** / PAGES **************************************/
 
 
@@ -705,14 +697,18 @@ footer canvas {
 
 
 /*************** MEDIAQUERYS **************************************/
-
-
 /*************** 1199 ***************/
 @media (max-width: 1199px) {
   .topInfo div:first-child {
     margin-right: 40px;
   }
 }
+
+
+
+
+
+
 
 
 
@@ -746,8 +742,23 @@ footer canvas {
 
 
 
+
+
+
+
 /*************** 767 ***************/
 @media (max-width: 767px) {
+
+.owl-mainSlider .slide1 {
+    background-image: url(../images/mainSlider/1-md.jpg);
+  }
+  .owl-mainSlider .slide2 {
+    background-image: url(../images/mainSlider/2-md.jpg);
+  }
+  .owl-mainSlider .slide3 {
+    background-image: url(../images/mainSlider/3-md.jpg);
+  }
+
   /* COMMON STYLES */
 html, body {
   height: 100%;
@@ -829,6 +840,9 @@ html, body {
 }
 
 
+
+
+
   /*************** 575 ***************/
 @media (max-width: 575px) {
   .topInfo {      
@@ -851,26 +865,7 @@ html, body {
 
 
 
-
-
-
-
-
-
-
-/*************** IMAGE LOADING DEPENDING ON SCREEN SIZE ***************/
-@media (max-width: 767px) {
-  .owl-mainSlider .slide1 {
-    background-image: url(../images/mainSlider/1-md.jpg);
-  }
-  .owl-mainSlider .slide2 {
-    background-image: url(../images/mainSlider/2-md.jpg);
-  }
-  .owl-mainSlider .slide3 {
-    background-image: url(../images/mainSlider/3-md.jpg);
-  }
-}
-
+/* IMAGE LOADING DEPENDING ON SCREEN SIZE */
 @media (max-width: 360px) {
   .owl-mainSlider .slide1 {
     background-image: url(../images/mainSlider/1-sm.jpg);

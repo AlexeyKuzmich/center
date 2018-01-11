@@ -10,9 +10,9 @@ function adjustMenu() {
       $directionItem = $(".direction .item"),
       $scheduleInner = $(".schedule .inner"),
       counter = 0;
+      
 
-  if (ww < 751) { // = 768 - 17
-
+  if (ww < 751) { // = 768 - 17 (verticasl scroll width)
     $(".toggleMenu").css("display", "block");
 
     $(".toggleMenu").click(function(e) {
@@ -52,12 +52,12 @@ function adjustMenu() {
           .removeAttr("style");
     });
 
-  } else if ( ww >= 751 ) { // = 768 - 17
+  } else if ( ww >= 751 ) { // = 768 - 17 (verticasl scroll width)
 
     // topInfo scroll
     $(window).scroll(function() {
       var $nav = $("nav");
-      if ( $(this).scrollTop() > 150 ) {
+      if ( $(this).scrollTop() > 147 ) {
         $nav.addClass("fixedMenu");
       } else {
         $nav.removeClass("fixedMenu");
@@ -263,6 +263,13 @@ $(document).ready(function() {
   })();
 
 
+
+  //*************** PAGES **************************************
+  //*************** KDO ***************
+    (function func() {
+      $(".kdo img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
+    })();
+  //*************** / KDO ***************
 
 
 
