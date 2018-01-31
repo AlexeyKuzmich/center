@@ -133,8 +133,8 @@ function imageSizeDetect() {
 $(document).ready(function() {
   $(".greeting").css("opacity", 1);
   $("#preload")
-    .delay(1500)
-      .fadeOut(1500);
+    .delay(15)
+      .fadeOut(15);
 
 
 
@@ -164,7 +164,7 @@ $(document).ready(function() {
     loop: true,
     margin: 0,
     nav: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     items: 1
