@@ -8,7 +8,8 @@ function sliderHeightDetect() {
 function adjustMenu() {
   var ww = document.body.clientWidth,
       $directionItem = $(".direction .item"),
-      $scheduleInner = $(".schedule .inner"),
+      $scheduleInner = $(".schedule .inner")
+      $nav = $(".nav"),
       counter = 0;
       
 
@@ -19,11 +20,11 @@ function adjustMenu() {
       e.preventDefault();
       if ( counter === 0 ) {
         $(this).css("transform", "rotate(180deg)");
-        $(".nav").addClass("activeMenu");
+        $nav.addClass("activeMenu");
         counter = 1;
       } else {
         $(this).css("transform", "rotate(0deg)");
-        $(".nav").removeClass("activeMenu");
+        $nav.removeClass("activeMenu");
         counter = 0;
       }
     });
@@ -85,6 +86,7 @@ function adjustMenu() {
     $scheduleInner.each(function() { // equal height of .schedule
       $(this).addClass("largeScreen");
     });
+
   }
 }
 
@@ -144,11 +146,30 @@ $(document).ready(function() {
 
   /*var ww = document.body.clientWidth;*/
   // navigation
-  $(".nav li a").each(function() {
-    if ( $(this).next().length > 0 ) {
-      $(this).addClass("parent");
-    }
-  });
+  (function () {
+    var $navRef = $(".nav li a");
+    $navRef.each(function() {
+      if ( $(this).next().length > 0 ) {
+        $(this).addClass("parent");
+      }
+    });
+  })();
+
+
+
+
+
+
+
+    $(".test").click(function() {
+      $(this).addClass("classsssssssssssssss");
+      console.log("classsssssssssssssss!");
+    });
+
+
+
+
+
 
   sliderHeightDetect();
   adjustMenu();
@@ -227,6 +248,26 @@ $(document).ready(function() {
 
 
 
+  // toggleText
+  (function() {
+    var $button = $(".descriptionText button"),
+        $text = $button.siblings().not(".textShow");
+    $text.hide();
+    $button.click(function() {
+      if ($text.is(':hidden')) {
+        $text.slideDown();
+        $button.text("Згорнути");
+      } else {
+        $text.slideUp();
+        $button.text("Розгорнути");
+      }
+    });
+  })();
+  
+
+
+
+
   //tagCloud
   if ( !$("#myCanvas").tagcanvas({
     textColour : "#fff",
@@ -279,6 +320,7 @@ $(document).ready(function() {
   // resize
   $(window).on("resize orientationchange", function() {
     /*ww = document.body.clientWidth;*/
+
     adjustMenu();
     sliderHeightDetect();
     setEqualHeight( $(".largeScreen") );

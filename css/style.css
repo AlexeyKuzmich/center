@@ -9,6 +9,17 @@ html, body {
   /* background-color: #F0FFFF; */
 }
 
+/* .test { 
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 60000;
+  background-color: red;
+} */
+
 body,
 h1,
 h2,
@@ -212,12 +223,6 @@ nav {
   float: left;
   white-space: nowrap;
 }
-
-/* .nav .fixedElement { 
-  padding-right: 15px;
-  float: right;
-  display: none;
-} */
 
 .nav > li > a.parent,
 .nav > li > a.parent:hover,
@@ -490,7 +495,7 @@ nav .nav a:focus {
   padding: 5px 10px;
   width: 100%;
   color: #fff;
-  background: rgba(68, 108, 179, .5);
+  background: rgba(68, 108, 179, .8);
   text-align: center;
   -webkit-transition: .3s;
   transition: .3s;
@@ -498,6 +503,10 @@ nav .nav a:focus {
 
 .owl-doctors a:hover {
   background: rgba(68, 108, 179, 1);
+}
+
+.owl-doctors a:hover:active {
+  background: #7FC560;
 }
 /*************** / OWLCARUSEL ***************/
 
@@ -515,7 +524,7 @@ nav .nav a:focus {
 
 /*************** PARALLAX ***************/
 .parallax-window {
-  margin-bottom:-50px;
+  /* margin-bottom:-50px; */
   min-height: 600px;
   padding: 100px 0 50px 0;
   background: transparent;
@@ -554,9 +563,51 @@ nav .nav a:focus {
 
 
 
+
+
+
+/*************** descriptionText ***************/
+.descriptionText button {
+  padding: 5px 10px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgba(68, 108, 179, 1);
+  border: none;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: .15s;
+          transition: .15s;
+  outline: none;
+}
+
+.descriptionText button:hover {
+  background-color: rgba(68, 108, 179, .8);
+}
+
+.descriptionText button:active {
+  background-color: #249578;
+}
+/*************** / descriptionText ***************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*************** FOOTER ***************/
 footer {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding: 50px 0 50px;
   color: #fff;
   background: #446CB3;
