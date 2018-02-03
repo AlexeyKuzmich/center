@@ -2,7 +2,7 @@
 
   /*************** COMMON STYLES ***************/
 html, body {
-/*   -ms-touch-action: auto;
+/* -ms-touch-action: auto;
     touch-action: auto; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

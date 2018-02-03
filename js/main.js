@@ -8,8 +8,7 @@ function sliderHeightDetect() {
 function adjustMenu() {
   var ww = document.body.clientWidth,
       $directionItem = $(".direction .item"),
-      $scheduleInner = $(".schedule .inner")
-      $nav = $(".nav"),
+      $scheduleInner = $(".schedule .inner"),
       counter = 0;
       
 
@@ -17,14 +16,14 @@ function adjustMenu() {
     $(".toggleMenu").css("display", "block");
 
     $(".toggleMenu").click(function(e) {
-      e.preventDefault();
+      /*e.preventDefault();*/
       if ( counter === 0 ) {
         $(this).css("transform", "rotate(180deg)");
-        $nav.addClass("activeMenu");
+        $(".nav").addClass("activeMenu");
         counter = 1;
       } else {
         $(this).css("transform", "rotate(0deg)");
-        $nav.removeClass("activeMenu");
+        $(".nav").removeClass("activeMenu");
         counter = 0;
       }
     });
@@ -161,10 +160,10 @@ $(document).ready(function() {
 
 
 
-    $(".test").click(function() {
+/*    $(".test").click(function() {
       $(this).addClass("classsssssssssssssss");
       console.log("classsssssssssssssss!");
-    });
+    });*/
 
 
 
@@ -243,7 +242,7 @@ $(document).ready(function() {
 
 
   // parallax
-  $(".parallax-window").delay(10000).parallax({ imageSrc: "images/parallax/" + imageSizeDetect() + ".jpg"}); // в parallaxImageDetect() определяестся загружаемое изображение в зависимости от ширины экрана
+  $(".parallax-window").parallax({ imageSrc: "images/parallax/" + imageSizeDetect() + ".jpg"}); // в parallaxImageDetect() определяестся загружаемое изображение в зависимости от ширины экрана
 
 
 
