@@ -243,7 +243,7 @@ $(document).ready(function() {
 
 
   // parallax
-  $(".parallax-window").parallax({ imageSrc: "images/parallax/" + imageSizeDetect() + ".jpg"}); // в parallaxImageDetect() определяестся загружаемое изображение в зависимости от ширины экрана
+  $(".parallax-window").delay(10000).parallax({ imageSrc: "images/parallax/" + imageSizeDetect() + ".jpg"}); // в parallaxImageDetect() определяестся загружаемое изображение в зависимости от ширины экрана
 
 
 
@@ -254,7 +254,7 @@ $(document).ready(function() {
         $text = $button.siblings().not(".textShow");
     $text.hide();
     $button.click(function() {
-      if ($text.is(':hidden')) {
+      if ( $text.is(":hidden") ) {
         $text.slideDown();
         $button.text("Згорнути");
       } else {
