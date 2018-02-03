@@ -132,11 +132,16 @@ function imageSizeDetect() {
 //****************************** DOM READY ******************************
 //***********************************************************************
 $(document).ready(function() {
-  $(".greeting").css("opacity", 1);
-  $("#preload")
-    .delay(15)
-      .fadeOut(15);
 
+  var preload = 1500;
+
+  (function () {      
+      $(".greeting").css("opacity", 1);
+      $("#preload")
+        .delay(preload)
+          .fadeOut(preload);
+      preload = 0;
+  })();
 
 
 
@@ -160,10 +165,18 @@ $(document).ready(function() {
 
 
 
-/*    $(".test").click(function() {
-      $(this).addClass("classsssssssssssssss");
-      console.log("classsssssssssssssss!");
-    });*/
+  (function() {
+    var location = window.location.href,
+        $navRef = $(".nav li li a");
+
+      $navRef.each(function() {
+        if (location.search($(this).attr("href")) > -1) {
+          $(this).addClass("activeMenuItem");
+          $(this).parent().parent().parent().find(".parent").addClass("activeMenuItem");
+        }
+      });
+  })();
+
 
 
 
