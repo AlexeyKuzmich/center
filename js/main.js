@@ -164,15 +164,24 @@ $(document).ready(function() {
 
 
 
-
+  // tab lighting
   (function() {
     var location = window.location.href,
-        $navRef = $(".nav li li a");
+        $navRef = $(".nav li li a"),
+        $navMainRef = $(".nav > li > a");
 
       $navRef.each(function() {
         if (location.search($(this).attr("href")) > -1) {
+          $navRef.removeClass("activeMenuItem");
           $(this).addClass("activeMenuItem");
           $(this).parent().parent().parent().find(".parent").addClass("activeMenuItem");
+        }
+      });
+
+      $navMainRef.each(function() {
+        if (location.search($(this).attr("href")) > -1) {
+          $navMainRef.removeClass("activeMenuItem");
+          $(this).addClass("activeMenuItem");
         }
       });
   })();
