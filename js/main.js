@@ -133,7 +133,7 @@ function imageSizeDetect() {
 //***********************************************************************
 $(document).ready(function() {
 
-  var preload = 1500;
+  var preload = 15;
 
   (function () {      
       $(".greeting").css("opacity", 1);
@@ -270,7 +270,13 @@ $(document).ready(function() {
 
 
   // toggleText
+    
   (function() {
+    var $testShow = $(".descriptionText p");
+    for (var i = 0; i < 2; i++) {
+      $testShow.eq(i).addClass("textShow");
+    }
+
     var $button = $(".descriptionText button"),
         $text = $button.siblings().not(".textShow");
     $text.hide();
