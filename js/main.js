@@ -15,7 +15,7 @@ function adjustMenu() {
     $(".toggleMenu").css("display", "block");
 
     $(".toggleMenu").click(function(e) {
-      /*e.preventDefault();*/
+      e.preventDefault();
       if ( counter === 0 ) {
         $(this).css("transform", "rotate(180deg)");
         $(".nav").addClass("activeMenu");

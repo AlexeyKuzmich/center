@@ -588,6 +588,41 @@ nav .nav a:focus {
 
 
 
+/*************** deparmentContacts ***************/
+.deparmentContacts a {
+  display: inline-block;
+  color: #446CB3;
+}
+
+.deparmentContacts img {
+  margin-top: 30px;
+}
+
+.deparmentContacts img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.deparmentContacts .glyphicon {
+  color: #7FC560;
+  padding-right: 10px; 
+}
+/*************** / deparmentContacts ***************/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*************** FOOTER ***************/
