@@ -9,8 +9,7 @@ function adjustMenu() {
   var ww = document.body.clientWidth,
       $directionItem = $(".direction .item"),
       $scheduleInner = $(".schedule .inner"),
-      counter = 0;
-      
+      counter = 0;      
 
   if (ww < 751) { // = 768 - 17 (verticasl scroll width)
     $(".toggleMenu").css("display", "block");
@@ -133,7 +132,7 @@ function imageSizeDetect() {
 //***********************************************************************
 $(document).ready(function() {
 
-  var preload = 15;
+  var preload = 1500;
 
   (function () {      
       $(".greeting").css("opacity", 1);
@@ -270,7 +269,6 @@ $(document).ready(function() {
 
 
   // toggleText
-    
   (function() {
     var $testShow = $(".descriptionText p");
     for (var i = 0; i < 2; i++) {
@@ -334,9 +332,9 @@ $(document).ready(function() {
 
   //*************** PAGES **************************************
   //*************** KDO ***************
-    (function() {
-      $(".kdo img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
-    })();
+  (function() {
+    $(".kdo img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
+  })();
   //*************** / KDO ***************
 
 
