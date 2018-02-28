@@ -132,7 +132,7 @@ function imageSizeDetect() {
 //***********************************************************************
 $(document).ready(function() {
 
-  var preload = 1500;
+  var preload = 15;
 
   (function () {      
       $(".greeting").css("opacity", 1);

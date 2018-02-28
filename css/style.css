@@ -4,8 +4,7 @@
 html, body {
 /* -ms-touch-action: auto;
     touch-action: auto; */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* background-color: #F0FFFF; */
 }
 
@@ -112,7 +111,6 @@ section {
 
 /*************** NAVIGATION ***************/
 header {
-  background: -webkit-gradient(linear, left bottom, left top, from(#C9F4CD), to(#C4DDF4));
   background: linear-gradient(0deg, #C9F4CD, #C4DDF4);
 }
 
@@ -139,7 +137,6 @@ header {
   padding-bottom: 10px;
   font-size: 1em;
   color: #7FC560;
-  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -179,7 +176,6 @@ header {
 nav {
   height: 50px;
   background: #446CB3;
-  background: -webkit-gradient(linear, left bottom, left top, from(#446CB3), to(#52B3D9));
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
 
@@ -195,7 +191,6 @@ nav {
   cursor: pointer;
   display: none;
   z-index: 9999;
-  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -207,7 +202,6 @@ nav {
 
 .nav {
   list-style: none;
-  -webkit-transition: background 1s;
   transition: background 1s;
 }
 
@@ -238,7 +232,6 @@ nav {
   line-height: 40px;
   color: #fff;
   text-align: center;
-  -webkit-transition: background-color .3s;
   transition: background-color .3s;
 }
 
@@ -272,7 +265,6 @@ nav .nav a:focus {
   /* min-width: 320px; */
   z-index: 100;
   color: #fff;
-  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -316,8 +308,7 @@ nav .nav a:focus {
 
 /*************** MAINSLIDER ***************/
 .owl-carousel {
-  -ms-touch-action: none;
-      touch-action: none;
+  touch-action: none;
 }
 
 .owl-mainSlider {
@@ -384,13 +375,11 @@ nav .nav a:focus {
   margin-bottom: 30px;
   background-color: transparent;
   border: 1px solid rgb(74, 159, 255);
-  -webkit-transition: all .15s;
   transition: all .15s;
 }
 
 .direction .item:hover {
-  -webkit-box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
-          box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
+  box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
 }
 
 .direction .item:hover h3 {
@@ -414,8 +403,7 @@ nav .nav a:focus {
 /*************** headPhysician ***************/
 .headPhysician img {
   margin-bottom: 30px;
-  -webkit-box-shadow: 1px 1px 12px 0px #4A9FFF;
-          box-shadow: 1px 1px 12px 0px #4A9FFF;
+  box-shadow: 1px 1px 12px 0px #4A9FFF;
 }
 
 .headPhysician p {
@@ -456,8 +444,7 @@ nav .nav a:focus {
 }
 
 .owl-doctors .owl-item:hover img {
-  -webkit-box-shadow: 1px 1px 12px 0px #4A9FFF;
-          box-shadow: 1px 1px 12px 0px #4A9FFF;
+  box-shadow: 1px 1px 12px 0px #4A9FFF;
 }
 
 .owl-doctors .owl-prev, 
@@ -497,7 +484,6 @@ nav .nav a:focus {
   color: #fff;
   background: rgba(68, 108, 179, .8);
   text-align: center;
-  -webkit-transition: .3s;
   transition: .3s;
 }
 
@@ -575,8 +561,7 @@ nav .nav a:focus {
   border: none;
   color: #fff;
   text-align: center;
-  -webkit-transition: .15s;
-          transition: .15s;
+  transition: .15s;
   outline: none;
 }
 
@@ -611,7 +596,6 @@ footer {
   padding: 50px 0 50px;
   color: #fff;
   background: #446CB3;
-  background: -webkit-gradient(linear, left bottom, left top, from(#446CB3), to(#52B3D9));
   background: linear-gradient(0deg, #446CB3, #52B3D9);
 }
 
@@ -665,7 +649,6 @@ footer canvas {
   cursor: pointer;
   opacity: .5;
   z-index: 100;
-  -webkit-transition: .3s;
   transition: .3s;
   opacity: .5;
 }
@@ -707,8 +690,7 @@ footer canvas {
   position: relative;
   padding: 0 20px 20px 20px;
   border-top: 5px solid #499FFF;
-  -webkit-box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
-        box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
+  box-shadow: 5px 5px 30px 0px rgba(74, 159, 255, .25);
   overflow: hidden;
 }
 
@@ -723,7 +705,6 @@ footer canvas {
   bottom: -30px;
   left: 0;
   background: rgba(68, 108, 179, .8);
-        -webkit-transition: all .3s;
         transition: all .3s;
 }
 
@@ -851,7 +832,6 @@ footer canvas {
     font-size: 1.2em;
   }
   h3 {
-    margin: 5px 0;
     font-size: 1em;
   }
 
@@ -877,7 +857,6 @@ footer canvas {
     bottom: 0;
     left: -100%;
     width: 100%;
-    -webkit-transition: all .3s;
     transition: all .3s;
     background-color: rgba(68, 108, 179, .8);
     z-index: 900;
