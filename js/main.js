@@ -351,6 +351,9 @@ $(document).ready(function() {
   });
 
 
+
+
+
   // feedback
   $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
         var form_data = $(this).serialize(); //собераем все данные из формы
