@@ -27,11 +27,13 @@ h4,
 h5,
 h6 {
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font: 16px/1.8 GothamPro Regular, sans-serif;
+  font-weight: normal;
+  /* font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #555;
+  line-height: 1.5; */
+  color: #7b8696;
+  letter-spacing: 2px;
 }
 
 h1 {
@@ -40,7 +42,6 @@ h1 {
   font-size: 2.5em;
   color: #499FFF;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 h2 {
@@ -65,6 +66,7 @@ h3 {
 p {
   margin: 10px 0 10px;
   text-align: left;
+  letter-spacing: 1.5px;
 }
 
 a,
@@ -118,6 +120,7 @@ header {
   padding: 30px 20px;
   line-height: 1;
   font-size: 1.2em;
+  letter-spacing: normal;
 }
 
 .topInfo div {
@@ -177,6 +180,7 @@ nav {
   height: 50px;
   background: #446CB3;
   background: linear-gradient(0deg, #446CB3, #52B3D9);
+  letter-spacing: normal;
 }
 
 /* nav > div {
@@ -645,7 +649,8 @@ nav .nav a:focus {
   width: 100%;
   height: 100%;
   padding: 10px 0;
-  border: 3px solid #7fc560;
+  border: 1px solid #fafafa;
+  border-bottom: 1px solid #7fc560;
   outline: none;
   text-align: center;
   background-color: #fafafa;
@@ -656,10 +661,10 @@ nav .nav a:focus {
 }
 
 .feedback input[type="text"]:focus {
-  border: 3px solid #7fc560;
-  border-radius: 25px;
+  border: 1px solid #7fc560;
+  /* border-radius: 25px;
   background-color: #499FFF;
-  color: #fff;
+  color: #fff; */
 }
 
 .feedback input[type="text"]:focus h3 {
@@ -887,6 +892,22 @@ footer canvas {
   .parallax-window p {
     text-align: center;
   }
+  .feedback form {
+    margin: 0;
+  }
+  .feedback h3 {
+    margin-top: 30px;
+    text-align: center;
+  }
+   .feedback label {
+    margin-bottom: 0;
+  }
+  .feedback input[type="text"] {
+    padding: 5px 0;
+  }
+  .feedback input[type="submit"] {
+    margin-top: 20px;
+  }
   footer ul {
     text-align: center;
   }
@@ -917,6 +938,9 @@ footer canvas {
   /* COMMON STYLES */
   html, body {
     height: 100%;
+  }
+  section {
+    padding: 0 0 20px 0;
   }
   h1 {
     margin: 20px 0;
