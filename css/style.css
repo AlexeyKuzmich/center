@@ -266,10 +266,10 @@ nav .nav a:focus {
   display: block;
   position: relative;
   padding: 0 15px;
-  /* min-width: 320px; */
   z-index: 100;
   color: #fff;
   transition: .3s;
+  min-width: 235px;
 }
 
 .nav li li:first-child {
@@ -641,6 +641,10 @@ nav .nav a:focus {
   padding-top: 10px;
 }
 
+.feedback h3 span {
+  color: #7fc560;
+}
+
 .feedback label {
   cursor: pointer;
 }
@@ -661,10 +665,10 @@ nav .nav a:focus {
 }
 
 .feedback input[type="text"]:focus {
-  border: 1px solid #7fc560;
-  /* border-radius: 25px;
+  border-bottom-color: transparent;
+  border-radius: 25px;
   background-color: #499FFF;
-  color: #fff; */
+  color: #fff;
 }
 
 .feedback input[type="text"]:focus h3 {
@@ -906,7 +910,7 @@ footer canvas {
     padding: 5px 0;
   }
   .feedback input[type="submit"] {
-    margin-top: 20px;
+    margin: 20px 0;
   }
   footer ul {
     text-align: center;
@@ -1028,9 +1032,9 @@ footer canvas {
   .topInfo div:first-child {
     font-size: .6em;
   }
-  /* .nav li li a {
-    min-width: 300px;
-  } */
+ /*  .nav li li a {
+   min-width: 300px;
+ } */
 
   .schedule .inner {
     padding: 0 5px 5px 5px;
