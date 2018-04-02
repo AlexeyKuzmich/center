@@ -273,59 +273,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-  // mixitup
-
-  (function() {
-    var mixer = mixItUp("#specialistsMix");
-
-    $(".specialists li").click(function() {
-      $(".specialists li").removeClass("active");
-      $(this).addClass("active");
-    });
-
-    $(".mix").mouseenter(function() {
-      $(".dark", this).css({
-        transform: "scale(1)",
-        transition: "transform 0.5s ease"
-      });
-      $(this).find("h5").css({
-        transform: "scale(1)",
-        transition: "transform 0.5s ease .35s"
-      });
-      $(this).find("h6").css({
-        transform: "scale(1)",
-        transition: "transform 0.5s ease .55s"
-      });
-    });
-    $(".mix").mouseleave(function() {
-      $(".dark, h5, h6", this).css("transform", "scale(0)");
-    });
-  })();
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   // toggleText
   (function() {
     var $testShow = $(".descriptionText p");
@@ -347,6 +294,51 @@ $(document).ready(function() {
     });
   })();
   
+
+
+
+
+
+
+
+
+
+
+  // mixitup
+  (function() {
+    var checkMixElem = document.querySelector("#specialistsMix"),
+        mixer = "",
+        li = $(".specialists li"),
+        mix = $(".mix");
+
+    if ( checkMixElem ) {
+
+      mixer = mixitup(checkMixElem);
+
+      li.click(function() {
+        li.removeClass("active");
+        $(this).addClass("active");
+      });
+
+      mix.mouseenter(function() {
+        $(".dark", this).css({
+          transform: "scale(1)",
+          transition: "transform 0.3s ease"
+        });
+        $("p", this).css({
+          transform: "scale(1)",
+          transition: "transform 0.3s ease .3s"
+        });
+      });
+      mix.mouseleave(function() {
+        $(".dark, p").css("transform", "scale(0)");
+      });
+    }
+  })();
+
+
+
+
 
 
 
