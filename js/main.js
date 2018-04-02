@@ -267,6 +267,65 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+  // mixitup
+
+  (function() {
+    var mixer = mixItUp("#specialistsMix");
+
+    $(".specialists li").click(function() {
+      $(".specialists li").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    $(".mix").mouseenter(function() {
+      $(".dark", this).css({
+        transform: "scale(1)",
+        transition: "transform 0.5s ease"
+      });
+      $(this).find("h5").css({
+        transform: "scale(1)",
+        transition: "transform 0.5s ease .35s"
+      });
+      $(this).find("h6").css({
+        transform: "scale(1)",
+        transition: "transform 0.5s ease .55s"
+      });
+    });
+    $(".mix").mouseleave(function() {
+      $(".dark, h5, h6", this).css("transform", "scale(0)");
+    });
+  })();
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // toggleText
   (function() {
     var $testShow = $(".descriptionText p");
