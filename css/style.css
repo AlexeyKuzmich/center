@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
 
   /*************** COMMON STYLES ***************/
 html, body {
@@ -604,6 +604,8 @@ nav .nav a:focus {
 
 .deparmentContacts img {
   margin-top: 30px;
+  width: 150px;
+  height: auto;
 }
 
 .deparmentContacts img:hover {
@@ -871,16 +873,24 @@ footer canvas {
 
 /* SPECIALISTS */
 .specialists ul  {
-  margin: -30px 0 50px 0;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .specialists ul li  {
   display: inline-block;
   padding: 0 15px;
-  text-transform: uppercase;
+  border-bottom: 3px solid #249578;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: all .3s;
+}
+
+.specialists ul li:focus,
+.specialists ul li:hover {
+  color: #555;
+  background-color: #249578;
+  opacity: .6;
 }
 
 .specialists ul li.active,
@@ -888,13 +898,13 @@ footer canvas {
 .specialists ul li.active:hover  {
   color: #fff;
   background-color: #249578;
+  opacity: 1;
 }
 
 .mix {
   max-width: 400px;
   margin: 0;
   padding: 0;
-  line-height: 0.74;
   margin: auto;
 }
 
@@ -911,7 +921,7 @@ footer canvas {
   top: 0;
   left: 0;
   color: #fff;
-  background: rgba(68, 108, 179, .8);
+  background: rgba(19, 19, 22, 0.6);
   overflow: hidden;
 }
 
@@ -919,12 +929,13 @@ footer canvas {
 .mix .dark p {
   -webkit-transform: scale(0);
           transform: scale(0);
-  text-align: center;
 }
 
 .mix .dark p {
-  color: #fff;
+  text-align: center;
   margin-top: 40%;
+  color: #fff;
+  letter-spacing: 1px;
 }
 /* / SPECIALISTS */
 /*************** / PAGES **************************************/

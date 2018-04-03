@@ -267,12 +267,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
   // toggleText
   (function() {
     var $testShow = $(".descriptionText p");
@@ -297,23 +291,23 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
   // mixitup
   (function() {
     var checkMixElem = document.querySelector("#specialistsMix"),
         mixer = "",
         li = $(".specialists li"),
-        mix = $(".mix");
+        mix = $(".mix"),
+        mixConfig = {
+          animation: {
+            enable: true,
+            duration: 300,
+            effects: "rotateZ fade",
+            easing: "cubic-bezier(0.645, 0.045, 0.355, 1)"
+          }
+        }
 
-    if ( checkMixElem ) {
-
-      mixer = mixitup(checkMixElem);
+    if ( checkMixElem ) {      
+      mixer = mixitup(checkMixElem, mixConfig);
 
       li.click(function() {
         li.removeClass("active");
@@ -341,8 +335,6 @@ $(document).ready(function() {
 
 
 
-
-
   //tagCloud
   if ( !$("#myCanvas").tagcanvas({
     textColour : "#fff",
@@ -353,10 +345,6 @@ $(document).ready(function() {
     // TagCanvas failed to load
     $("#myCanvasContainer").hide();
   }
-
-
-
-
 
 
 
