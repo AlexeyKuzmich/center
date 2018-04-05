@@ -15,58 +15,69 @@
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-<!-- <style>
-#preload {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #499FFF;
-  z-index: 99999;
-}
-#preload > div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.preloadSvg {
-  margin: 0 auto;
-  width: 48px;
-  height: 48px;
-  background: url(images/preload.svg) center center no-repeat;
-  background-size: 70px;
-}
-#preload p {
-  font-size: 1.8em;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-</style> -->
+<style>
+  #preload {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #499FFF;
+    z-index: 99999;
+  }
+  #preload > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .preloadSvg {
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+    background: url(images/preload.svg) center center no-repeat;
+    background-size: 70px;
+  }
+  #preload p {
+    font-size: 1.8em;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  #preload p:last-child {
+    opacity: 0;
+    font-size: 1.2em;
+    text-align: center;
+    color: blue;
+    text-transform: none;
+    letter-spacing: 1px;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+</style>
 </head>
 
-<body>
+<body class="kdo_page">
 
-<!--   <div id="preload">
+<div id="preload">
   <div>
     <div class="preloadSvg"></div>
-    <p><small>Консультативно-діагностичне відділення</small></p>
+    <p>Дніпропетровський обласний<br /><small>Перинатальний центр</small></p>
+    <p class="greeting">ми радi, що Ви з нами !</p>
   </div>
-</div> -->
+</div>
 
 <header class="container-fluid">
   <div class="row clearfix topInfo">
     <div>
-      <a href="index.html">Днiпропетровський<br /><span>Перинатальний центр</span></a>
+      <a href="index.html">Дніпропетровський<br /><span>Перинатальний центр</span></a>
     </div>
     <div>
-      <a href="tel:+380500308203">+38 0562 68 50 60</a>
-      <a href="tel:+380500308203">+38 0562 68 50 60</a>
-      <a href="mailto:dnepr@perinatal.com.ua"><span>e-mail: </span>dnepr@perinatal.com.ua</a>
+      <a href="tel:+380562685060">+38 0562 68 50 60</a>
+      <a href="tel:+380562685060">+38 0562 68 50 60</a>
+      <a href="mailto:dmpb2_glvr@ukr.net"><span>e-mail: </span>dmpb2_glvr@ukr.net</a>
     </div>
     <div>
       <a href="#">вiртуальный тур</a>
@@ -132,17 +143,17 @@
         </ul>
       </li>
       <li><a href="specialists.html">Спеціалисти</a></li>
-      <li><a href="info.html">Інформація для пацієнтів</a>
+      <li><a href="#">Для пацієнтів</a>
         <ul>
-          <li><a href="forMen.html">Для чоловiкiв</a></li>
-          <li><a href="forWomen.html">Для жiнок</a></li>
+          <li><a href="forMen.html">Чоловiкам</a></li>
+          <li><a href="forWomen.html">Жiнкам</a></li>
         </ul>
       </li>
-      <li><a href="addServices.html">Iнші послуги</a>
+      <li><a href="#">Додаткова iнформацiя</a>
         <ul>
-          <li><a href="addServices_3.html">Додатковi послуги</a></li>
-          <li><a href="addServices_4.html">Додатковi послуги</a></li>
-          <li><a href="addServices_5.html">Додатковi послуги</a></li>
+          <li><a href="addServices_1.html">Фотогалерея</a></li>
+          <li><a href="addServices_2.html">Новини центру</a></li>
+          <li><a href="addServices_3.html">Статтi</a></li>
         </ul>                  
       </li>
       <li><a href="contacts.html">Контакти</a></li>
@@ -152,7 +163,7 @@
 
 
 
-<section class="departmentImg kdo">
+<section class="departmentImg">
   <div class="container">
     <div class="row">
       <h1>Консультативно-діагностичне відділення</h1>
@@ -173,7 +184,7 @@
 
       <div class="item">
         <img src="images/kdo/1.jpg" alt="owl" />
-        <h3>ЗАЯЦЬ ОЛЕНА В'ЯЧЕСЛАВІВНА</h3>
+        <h3>Заяць Олена В'ячеславiвна</h3>
         <p>Завідувач відділенням<br />Лікар акушер-гінеколог вищої категорії</p>
         <a href="#">Докладнiше</a>
       </div>
@@ -278,8 +289,8 @@
 
       <div class="item">
         <img src="images/kdo/16.jpg" alt="owl" />
-        <h3>Лайло Дмитро Ігорович</h3>
-        <p>Лікар функціональної діагностики вищої категорії</p>
+        <h3>Зубко Ірина Миколаївна</h3>
+        <p>Лікар функціональної діагностики другої категорії</p>
         <a href="#">Докладнiше</a>
       </div>
 
@@ -287,6 +298,20 @@
         <img src="images/kdo/17.jpg" alt="owl" />
         <h3>Спільник Тетяна Миколаівна</h3>
         <p>Лікар акушер-гінеколог</p>
+        <a href="#">Докладнiше</a>
+      </div>
+
+      <div class="item">
+        <img src="images/kdo/18.jpg" alt="owl" />
+        <h3>Жмур Світлана Валентинівна</h3>
+        <p>Старша медична сестра</p>
+        <a href="#">Докладнiше</a>
+      </div>
+
+      <div class="item">
+        <img src="images/kdo/19.jpg" alt="owl" />
+        <h3>Лайло Дмитро Ігорович</h3>
+        <p>Лікар функціональної діагностики вищої категорії</p>
         <a href="#">Докладнiше</a>
       </div>
 
@@ -328,8 +353,9 @@
     <p><a href="tel:+380562685145"><span class="glyphicon glyphicon-earphone"></span>+38 0562 68 51 45</a> - телефон довідкового столу поліклініки, цокольний поверх, відразу при вході наліво</p>
     <p><a href="tel:+380563766014"><span class="glyphicon glyphicon-earphone"></span>+38 056 376 60 14</a> - телефон отделения УЗИ - 5-й этаж (к сожалению, на данный момент не работает по причине обрыва кабеля вне нашего лечебного учреждения)</p>
     <p><a href="mailto:percentro@i.ua"><span class="glyphicon glyphicon-envelope"></span>percentro@i.ua</a> - e-mail кабинета телемедицины, где Вы можете получить ответ на любой вопрос не только по электронной почте, но и через Skype!</p>
+    <br />
+    <h3>Также, более подробно с коллективом нашего отделения и медицинскими услугами, Вы можете познакомиться через социальные сети:</h3>
     <div class="row">
-      <h3>Также, более подробно с коллективом нашего отделения и медицинскими услугами, Вы можете познакомиться через социальные сети:</h3>
       <div class="col-md-6 text-center">
         <a href="https://www.facebook.com/diagnostic.otdelenie" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
       </div>

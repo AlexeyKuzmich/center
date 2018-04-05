@@ -213,7 +213,7 @@ $(document).ready(function() {
 
 
 
-  // owl-doctors  
+  // owl-doctors
   var $owl = $(".owl-doctors");
   $(".owl-doctors").owlCarousel({
     onRefresh: function () { // установка одинаковой высоты owl-item
@@ -371,7 +371,7 @@ $(document).ready(function() {
   //*************** PAGES **************************************
   //*************** KDO ***************
   (function() {
-    $(".kdo img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
+    $(".kdo_page .departmentImg img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
   })();
   //*************** / KDO ***************
 
@@ -411,3 +411,17 @@ $(document).ready(function() {
 
 
 }); //$(document).ready(function()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
