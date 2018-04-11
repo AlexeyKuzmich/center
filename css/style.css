@@ -5,7 +5,7 @@ html, body {
 /* -ms-touch-action: auto;
     touch-action: auto; */
   box-sizing: border-box;
-  /* background-color: #F0FFFF; */
+  /* background-color: lightgreen; */
 }
 
 /* .test { 
@@ -924,8 +924,15 @@ footer canvas {
   overflow: hidden;
 }
 
+.specialists .mix .dark span {
+  display: block;
+  text-align: center;
+  color: #499FFF;
+}
+
 .specialists .mix .dark,
-.specialists .mix .dark p {
+.specialists .mix .dark p,
+.specialists .mix .dark span {
   -webkit-transform: scale(0);
           transform: scale(0);
 }

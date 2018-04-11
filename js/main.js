@@ -319,13 +319,13 @@ $(document).ready(function() {
           transform: "scale(1)",
           transition: "transform 0.3s ease"
         });
-        $("p", this).css({
+        $("p, span", this).css({
           transform: "scale(1)",
           transition: "transform 0.3s ease .3s"
         });
       });
       mix.mouseleave(function() {
-        $(".dark, p").css("transform", "scale(0)");
+        $(".dark, p, span").css("transform", "scale(0)");
       });
     }
   })();
@@ -411,17 +411,3 @@ $(document).ready(function() {
 
 
 }); //$(document).ready(function()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
