@@ -287,7 +287,51 @@ $(document).ready(function() {
       }
     });
   })();
-  
+
+
+
+
+
+
+/*  function storePagePosition() {
+    var page_y = window.pageYOffset;
+    localStorage.setItem("page_y", page_y);
+    console.log("page_y = " + page_y);
+  }
+
+
+  window.addEventListener("scroll", storePagePosition);
+
+
+  var currentPageY;
+
+  try {
+    currentPageY = localStorage.getItem("page_y");
+
+    if (currentPageY === undefined) {
+      localStorage.setItem("page_y") = 0;
+    }
+
+    window.scrollTo( 0, currentPageY );
+  } catch (e) {
+      // no localStorage available
+    }*/
+
+
+
+
+
+
+
+/*    var url = window.location.href;
+    console.log("url = " + url);
+    console.log( "url.indexOf('#') = " + url.indexOf("#") );
+    if ( url.indexOf('#') < 0 ) {
+      window.location.replace(url + "#");
+    } else {
+      window.location.replace(url);
+    }*/
+
 
 
 
@@ -314,21 +358,43 @@ $(document).ready(function() {
         $(this).addClass("active");
       });
 
+      console.log("hash = " + location.hash);
+
       mix.mouseenter(function() {
         $(".dark", this).css({
-          transform: "scale(1)",
-          transition: "transform 0.3s ease"
+          transform: "scale(1)"
         });
         $("p, span", this).css({
-          transform: "scale(1)",
-          transition: "transform 0.3s ease .3s"
+          transform: "scale(1)"
         });
       });
       mix.mouseleave(function() {
-        $(".dark, p, span").css("transform", "scale(0)");
+        $(".dark, p, span", this).css("transform", "scale(0)");
       });
     }
   })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
