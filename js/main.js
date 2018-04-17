@@ -358,8 +358,6 @@ $(document).ready(function() {
         $(this).addClass("active");
       });
 
-      console.log("hash = " + location.hash);
-
       mix.mouseenter(function() {
         $(".dark", this).css({
           transform: "scale(1)"
