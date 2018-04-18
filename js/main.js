@@ -108,9 +108,9 @@ function setEqualHeight(columns) {
 function imageSizeDetect() {
   var ww = $(window).width(),
       imageSize = "";
-  if (ww <= 360) {
+  if (ww <= 544) {
     imageSize = "sm";
-  } else if (ww > 360 && ww <= 767) {
+  } else if (ww > 545 && ww <= 992) {
     imageSize = "md";
   } else {
     imageSize = "lg";
@@ -433,35 +433,16 @@ $(document).ready(function() {
 
 
   //*************** PAGES **************************************
-  //*************** KDO ***************
   (function() {
-
     var body = $("body"),
-    pageMark = "";
-
-    if ( body.attr("class") ) {
+        pageMark = "";
+    if ( body.attr("class") ) { 
       pageMark = body.attr("class");
-      console.log( "pageMark before switch = " + pageMark );
+      console.log( "pageMark = " + pageMark );
+      $("." + pageMark + " .departmentImg img").attr("src", "images/" + pageMark + "/" + imageSizeDetect() + ".jpg");
     }
-
-    switch ( pageMark ) {      
-      case "kdo_page":
-      console.log( "pageMark switch = " + pageMark );
-      $(".kdo_page .departmentImg img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
-      break;
-
-      case "cps_page":
-      console.log( "pageMark switch = " + pageMark );
-      $(".cps_page .departmentImg img").attr("src", "images/cps/" + imageSizeDetect() + ".jpg");
-      break;
-    }
-
-    /*var kdo_page = $(".kdo_page");
-    if (kdo_page) {
-      $(".kdo_page .departmentImg img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
-    }*/
   })();
-  //*************** / KDO ***************
+  //*************** / PAGES ************************************
 
 
 
@@ -471,7 +452,6 @@ $(document).ready(function() {
   // resize
   $(window).on("resize orientationchange", function() {
     /*ww = document.body.clientWidth;*/
-
     adjustMenu();
     sliderHeightDetect();
     setEqualHeight( $(".largeScreen") );

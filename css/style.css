@@ -5,6 +5,7 @@ html, body {
 /* -ms-touch-action: auto;
     touch-action: auto; */
   box-sizing: border-box;
+  overflow-x: hidden;
   /* background-color: lightgreen; */
 }
 
