@@ -350,7 +350,7 @@ $(document).ready(function() {
           }
         }
 
-    if ( checkMixElem ) {      
+    if ( checkMixElem ) {
       mixer = mixitup(checkMixElem, mixConfig);
 
       li.click(function() {
@@ -435,7 +435,31 @@ $(document).ready(function() {
   //*************** PAGES **************************************
   //*************** KDO ***************
   (function() {
-    $(".kdo_page .departmentImg img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
+
+    var body = $("body"),
+    pageMark = "";
+
+    if ( body.attr("class") ) {
+      pageMark = body.attr("class");
+      console.log( "pageMark before switch = " + pageMark );
+    }
+
+    switch ( pageMark ) {      
+      case "kdo_page":
+      console.log( "pageMark switch = " + pageMark );
+      $(".kdo_page .departmentImg img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
+      break;
+
+      case "cps_page":
+      console.log( "pageMark switch = " + pageMark );
+      $(".cps_page .departmentImg img").attr("src", "images/cps/" + imageSizeDetect() + ".jpg");
+      break;
+    }
+
+    /*var kdo_page = $(".kdo_page");
+    if (kdo_page) {
+      $(".kdo_page .departmentImg img").attr("src", "images/kdo/" + imageSizeDetect() + ".jpg");
+    }*/
   })();
   //*************** / KDO ***************
 

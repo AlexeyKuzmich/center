@@ -42,6 +42,7 @@ h1 {
   font-size: 2.5em;
   color: #499FFF;
   text-transform: uppercase;
+  line-height: 120%;
 }
 
 h2 {
@@ -51,6 +52,7 @@ h2 {
   color: #499FFF;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  line-height: 120%;
 }
 
 h3 {
@@ -908,8 +910,8 @@ footer canvas {
 .specialists .mix img {
   /* width: 100%;
   height: auto; */
-  width: 200px;
-  height: 300px;
+  width: 200px; /* удалить после вставки */
+  height: 300px; /* фото с одинаковыми размерами */
   position: relative;
 }
 
