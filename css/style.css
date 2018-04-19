@@ -77,15 +77,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* hr.hrStyle {
-  margin: 50px 0;
-  border: 0;
-  height: 3px;
-  background: #499FFF;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(73,159,255, 0)), color-stop(rgba(73,159,255, 1)), to(rgba(73,159,255, 0)));
-  background: linear-gradient(to left, rgba(73,159,255, 0), rgba(73,159,255, 1), rgba(73,159,255, 0));
-} */
-
 section {
   padding: 50px 0;
 }
@@ -209,12 +200,12 @@ nav {
   }
 
 .nav {
-  list-style: none;
+  /* list-style: none; */
   transition: background 1s;
 }
 
 .nav ul {
-  list-style: none;
+  /* list-style: none; */
 }
 
 .nav li {
@@ -562,7 +553,16 @@ nav .nav a:focus {
 
 /*************** descriptionText ***************/
 .descriptionText ul {
-  margin-left: 40px;
+  margin: 30px;
+}
+
+.descriptionText ul li {
+  line-height: 200%;
+}
+
+.descriptionText ul li:before {
+  content: "\27A4 \00A0";
+  color: #499FFF;
 }
 
 .descriptionText button,
@@ -605,10 +605,26 @@ nav .nav a:focus {
 
 
 /*************** deparmentContacts ***************/
+.deparmentContacts .glyphicon {
+  color: #7FC560;
+  padding-right: 10px;
+  transition: .3s;
+}
+
 .deparmentContacts a {
   display: inline-block;
   color: #446CB3;
   padding-right: 10px;
+}
+
+.deparmentContacts a:hover {
+  color: #7FC560;
+}
+
+.deparmentContacts a:hover .glyphicon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #499FFF;
 }
 
 .deparmentContacts img {
@@ -625,10 +641,7 @@ nav .nav a:focus {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.deparmentContacts .glyphicon {
-  color: #7FC560;
-  padding-right: 10px; 
-}
+
 /*************** / deparmentContacts ***************/
 
 
@@ -1138,6 +1151,10 @@ footer canvas {
   }
   .nav > li.hover:hover > ul {
     background: transparent;
+  }
+
+  .descriptionText ul {
+    margin: 0;
   }
 
 }
