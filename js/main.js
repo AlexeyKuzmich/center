@@ -6,24 +6,25 @@ function sliderHeightDetect() {
 
 // adaptive menu
 function adjustMenu() {
-  var ww = document.body.clientWidth,
+  var ww = $(window).width(),
       $directionItem = $(".direction .item"),
       $scheduleInner = $(".schedule .inner"),
-      counter = 0;      
+      $scrollBlock = $(".scrollBlock"),
+      $counter = 0;
 
   if (ww < 751) { // = 768 - 17 (verticasl scroll width)
     $(".toggleMenu").css("display", "block");
 
     $(".toggleMenu").click(function(e) {
       e.preventDefault();
-      if ( counter === 0 ) {
+      if ( $counter === 0 ) {
         $(this).css("transform", "rotate(180deg)");
         $(".nav").addClass("activeMenu");
-        counter = 1;
+        $counter = 1;
       } else {
         $(this).css("transform", "rotate(0deg)");
         $(".nav").removeClass("activeMenu");
-        counter = 0;
+        $counter = 0;
       }
     });
 
@@ -58,8 +59,10 @@ function adjustMenu() {
       var $nav = $("nav");
       if ( $(this).scrollTop() > 147 ) {
         $nav.addClass("fixedMenu");
+        $scrollBlock.show();
       } else {
         $nav.removeClass("fixedMenu");
+        $scrollBlock.hide();
       }
     });
     
@@ -108,11 +111,11 @@ function setEqualHeight(columns) {
 function imageSizeDetect() {
   var ww = $(window).width(),
       imageSize = "";
-  if (ww <= 544) {
+  if (ww <= 599) {
     imageSize = "sm";
-  } else if (ww > 545 && ww <= 992) {
+  } else if (ww > 600 && ww <= 992) {
     imageSize = "md";
-  } else {
+  } else if (ww > 993) {
     imageSize = "lg";
   }
   return imageSize;
@@ -378,27 +381,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //tagCloud
   if ( !$("#myCanvas").tagcanvas({
     textColour : "#fff",
@@ -419,9 +401,9 @@ $(document).ready(function() {
     var $scrollToTop = $(".scrollToTop");
     $(window).scroll(function() {
       if ( $(this).scrollTop() > $(window).height() ) {
-        $scrollToTop.fadeIn();
+        $scrollToTop.css("right","20px");
       } else {
-        $scrollToTop.fadeOut();
+        $scrollToTop.css("right","-40px");
       }
     });
 
@@ -434,10 +416,10 @@ $(document).ready(function() {
 
   //*************** PAGES **************************************
   (function() {
-    var body = $("body"),
+    var $main = $("main"),
         pageMark = "";
-    if ( body.attr("class") ) { 
-      pageMark = body.attr("class");
+    if ( $main.attr("class") ) { 
+      pageMark = $main.attr("class");
       console.log( "pageMark = " + pageMark );
       $("." + pageMark + " .departmentImg img").attr("src", "images/" + pageMark + "/" + imageSizeDetect() + ".jpg");
     }
